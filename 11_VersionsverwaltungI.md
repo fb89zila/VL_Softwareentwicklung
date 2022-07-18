@@ -2,7 +2,7 @@
 
 author:   Sebastian Zug, Galina Rudolf, André Dietrich & `JohannaKlinke`
 email:    sebastian.zug@informatik.tu-freiberg.de
-version:  1.0.6
+version:  1.0.7
 
 language: de
 narrator: Deutsch Female
@@ -22,7 +22,7 @@ icon: https://upload.wikimedia.org/wikipedia/commons/d/de/Logo_TU_Bergakademie_F
 | Parameter                | Kursinformationen                                                                                                                                                                          |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Veranstaltung:**       | `Vorlesung Softwareentwicklung`                                                                                                                                                            |
-| **Semester**             | `Sommersemester 2021`                                                                                                                                                                      |
+| **Semester**             | `Sommersemester 2022`                                                                                                                                                                      |
 | **Hochschule:**          | `Technische Universität Freiberg`                                                                                                                                                          |
 | **Inhalte:**             | `Motivation der Versionsverwaltung in der Softwareentwicklung`                                                                                                                                |
 | **Link auf den GitHub:** | [https://github.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/blob/master/11_VersionsverwaltungI.md](https://github.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/blob/master/11_VersionsverwaltungI.md) |
@@ -293,7 +293,7 @@ style="width: 100%; max-width: 560px; display: block; margin-left: auto; margin-
 
 Ablauf:
 
-+ Harry und Sally kopierendas das Dokument A in ihre lokalen Ordner.
++ Harry und Sally kopieren das das Dokument A in ihre lokalen Ordner.
 + Beide arbeiten unabhängig daran und erzeugen die Versionen A' und A''
 + Sally schreibt als Erste das Dokument in das Repository zurück.
 + Harry kann das Dokument nun nicht mehr zurückschreiben, seine Version ist veraltet
@@ -367,7 +367,7 @@ Dahinter steht das _Longest Common Subsequence_ Problem, dessen Umsetzung kurz d
 def lcs_algo(S1, S2, m, n):
     L = [[0 for x in range(n+1)] for x in range(m+1)]
 
-    # Building the mtrix in bottom-up way
+    # Building the matrix in bottom-up way
     for i in range(m+1):
         for j in range(n+1):
             if i == 0 or j == 0:

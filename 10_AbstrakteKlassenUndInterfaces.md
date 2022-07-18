@@ -2,7 +2,7 @@
 
 author:   Sebastian Zug, Galina Rudolf, André Dietrich, `Lina` & `Florian2501`
 email:    sebastian.zug@informatik.tu-freiberg.de
-version:  1.0.9
+version:  1.0.11
 language: de
 narrator: Deutsch Female
 
@@ -19,7 +19,7 @@ icon: https://upload.wikimedia.org/wikipedia/commons/d/de/Logo_TU_Bergakademie_F
 | Parameter                | Kursinformationen                                                                                                                                                                          |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Veranstaltung:**       | `Vorlesung Softwareentwicklung`                                                                                                                                                            |
-| **Semester**             | `Sommersemester 2021`                                                                                                                                                                      |
+| **Semester**             | `Sommersemester 2022`                                                                                                                                                                      |
 | **Hochschule:**          | `Technische Universität Freiberg`                                                                                                                                                          |
 | **Inhalte:**             | `Konzepte Abstrakter Klassen und Interfaces`                                                                                                                                |
 | **Link auf den GitHub:** | [https://github.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/blob/master/10_AbstrakteKlassenUndInterfaces.md](https://github.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/blob/master/10_AbstrakteKlassenUndInterfaces.md) |
@@ -28,13 +28,6 @@ icon: https://upload.wikimedia.org/wikipedia/commons/d/de/Logo_TU_Bergakademie_F
 ![](https://media.giphy.com/media/26tn33aiTi1jkl6H6/source.gif)
 
 ---------------------------------------------------------------------
-
-## Auf Nachfrage ...
-
-Wozu brauche ich das? Bisher bin ich auch gut ohne OOP ausgekommen ...
-
-Nutzung von objektorientierten Konzepten im Python Projekt [github2pandas](https://github.com/TUBAF-IFI-DiPiT/github2pandas).
-
 
 ## Abstrakte Klassen / Abstrakte Methoden
 
@@ -347,3 +340,159 @@ Allerdings kann diese Funktion dann nur über die Schnittstelle und nicht über 
 !?[Interfaces](https://www.youtube.com/watch?v=_Zvi21_kMw4)
 
 !?[Interfaces](https://www.youtube.com/watch?v=A7qwuFnyIpM)
+
+## Beispiel der Woche
+
+       {{0-2}}
+***************************************************************
+
+Aufgabe
+===============
+
+Nehmen wir an, das Prüfungsamt engagiert Sie für einen Auftrag. Im Laufe mehrerer Wochen sind viele Prüfungszertifikate eingegangen. Unglücklicherweise geht aus den Dateinamen nicht hervor, auf welche Lehrveranstaltung diese sich beziehen. Ihr Auftrag besteht darin, diese Frage automatisiert zu beantworten.
+
+Dabei existiert eine erste Lösung, das Beispielprojekt mit allen Textdateien finden Sie im [Repository](https://github.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/tree/master/code/10_AbstrakteKlassen/CsharpFileAnalyser).
+
+```csharp
+using System;
+using System.IO;
+
+public class CertificateEvaluator{
+    private string fileName;
+    public CertificateEvaluator(string fileName)
+    {
+        this.fileName = fileName;
+    }
+    public void RunEvaluation(string patter)
+    {
+        bool result = false;
+        using (StreamReader file = File.OpenText(fileName))
+        {
+            string line = file.ReadLine();
+            result = line.Contains(patter);
+        }
+        Console.Write("{0:-20} - ", fileName);
+        if (result) Console.WriteLine($"references {patter}!");
+        else Console.WriteLine("contains unknown certificate");
+    }
+}
+
+public class RunCode
+{
+    public static void Main(string[] args)
+    {
+        string fileName = "./files/textfile_0.txt";
+        const string pattern = "VL Softwareentwicklung";
+        CertificateEvaluator CertProcessor = new CertificateEvaluator(fileName);
+        CertProcessor.RunEvaluation(pattern);
+    }
+}
+```
+
+__Welche Verbesserungsmöglichkeiten sehen Sie?__
+
+***************************************************************
+
+          {{1-2}}
+***************************************************************
+
+1. `RunEvaluation` mischt zwei Dinge, das Management aller Dateien und die eigentlichen Business-Logik - die "Textanalyse"
+2. Es wird nur ein Typ von Dateien überhaupt unterstützt, zudem ist die Art hart codiert - `txt`
+3. Es existiert keinerlei Fehlerhandling, weder in Bezug auf die Prüfung der Dateinamen noch mit Blick auf die eingelesen Informationen (`Nullable` Check für das Streamreader Objekt)
+4. Die Parameter - Ordner und Dateiname - werden im Code hinterlegt.
+5. ...
+
+***************************************************************
+
+        {{2-3}}
+***************************************************************
+
+> Was müssen wir anpassen, wenn nun auch plötzlich `docx` Dateien zusätzlich auftauchen? Diese können wir nicht als Streamobjekt lesen!.
+
+***************************************************************
+
+
+
+        {{3-4}}
+***************************************************************
+
+```csharp         Start.cs
+using System;
+using System.IO;
+using DocumentFormat.OpenXml;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Wordprocessing;
+
+public abstract class Certificate{      // <- Warum nutzen wir hier kein Interface?
+    public string? fileName;
+    public string? folderName;
+    public abstract string getFirstLineContent();
+}
+
+public class CertificateTxt : Certificate
+{
+   public CertificateTxt(string fileName)
+    {
+        this.fileName = fileName;
+    }
+   public override string getFirstLineContent(){
+        string line = "";
+        using (StreamReader file = File.OpenText(fileName))
+        {
+            line = file.ReadLine();
+        }
+        return line;
+   }
+}
+
+public class CertificateDocx : Certificate
+{
+   public CertificateDocx(string fileName)
+    {
+        this.fileName = fileName;
+    }
+   public override string getFirstLineContent(){
+        string line = "";
+        using (WordprocessingDocument wordDocument = WordprocessingDocument.Open(fileName, false))
+        {
+            var firstParagraph = wordDocument.MainDocumentPart.RootElement.Descendants<Paragraph>().First();   
+            line = firstParagraph.InnerText;
+        }
+        return line;
+   }
+}
+
+public class RunCode
+{
+    // Business Logik für unseren Anwendungsfall
+    public static void CheckCertificates(Certificate cert, string pattern){
+        // Datenaggregation
+        string line = cert.getFirstLineContent();
+        // Patternüberprüfung
+        bool result = line.Contains(pattern);
+        // Ausgabe des Resultates
+        Console.Write("{0:-20} - ", cert.fileName);
+        if (result) Console.WriteLine($"references {pattern}!");
+        else Console.WriteLine("contains unknown certificate");
+    }
+
+    public static void Main(string[] args)
+    {
+        string fileName = "./files/docxfile_1.docx";
+        const string pattern = "VL Softwareentwicklung";
+
+        CertificateDocx certTxtFile = new CertificateDocx(fileName);
+        CheckCertificates(certTxtFile, pattern);
+    }
+}
+```
+
+Für die Nutzung der `DocumentFormat` Bibliothek müssen wir diese im Projekt noch als Dependency installieren.
+
+```
+dotnet add package DocumentFormat.OpenXml
+```
+
+> __Achtung!__ Die Lösung ignoriert eine Vielzahl von Hinweisen des Compilers auf mögliche `null references`. In einer realen Implementierung sollte dies berücksichtigt werden.
+
+***************************************************************

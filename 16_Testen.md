@@ -2,7 +2,7 @@
 
 author:   Sebastian Zug, Galina Rudolf & André Dietrich
 email:    sebastian.zug@informatik.tu-freiberg.de
-version:  1.0.2
+version:  1.0.5
 language: de
 narrator: Deutsch Female
 
@@ -20,7 +20,7 @@ icon: https://upload.wikimedia.org/wikipedia/commons/d/de/Logo_TU_Bergakademie_F
 | Parameter                | Kursinformationen                                                                                                                                                                |
 | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Veranstaltung:**       | `Vorlesung Softwareentwicklung`                                                                                                                                                  |
-| **Semester**             | `Sommersemester 2021`                                                                                                                                                            |
+| **Semester**             | `Sommersemester 2022`                                                                                                                                                            |
 | **Hochschule:**          | `Technische Universität Freiberg`                                                                                                                                                |
 | **Inhalte:**             | `Einbettung des Testens in den Softwareentwicklungsprozess`                                                                                                                      |
 | **Link auf den GitHub:** | [https://github.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/blob/master/16_Testen.md](https://github.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/blob/master/16_Testen.md) |
@@ -30,40 +30,169 @@ icon: https://upload.wikimedia.org/wikipedia/commons/d/de/Logo_TU_Bergakademie_F
 
 ---------------------------------------------------------------------
 
-## Organisatorisches
-
-+ Alternative Prüfungsleistung für die Veranstaltung Softwareentwicklung
-+ Prüfungsvorleistung für Einführung in die Softwareentwicklung
-
 ## Neues aus der GitHub Woche
 
+                  {{0-1}}
+****************************************************************
+
+Wann arbeiten Sie üblicherweise?
+-------------------------------
+
+<!--
+data-type="heatmap"
+data-title="Commit Anzahl"
+data-xlabel="Wochentage"
+data-ylabel="Stunden des Tages"
+-->
+|            | 9   | 10  | 11  | 12  | 13  | 14  | 15  | 16  | 17  | 18  | 19  | 20  | 21  | 22  |
+| ---------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Montag     |     |     |     |     | 3   | 38  | 37  |     |     |     |     |     |     |     |
+| Dienstag   |     |     | 36  | 36  |     | 15  | 1   |     |     |     |     | 1   |     | 1   |
+| Mittwoch   | 19  | 12  | 1   |     |     |     |     | 3   |     |     |     |     |     |     |
+| Donnerstag |     |     |     |     |     |     |     |     |     |     |     |     | 2   |     |
+| Freitag    |     |     | 3   |     |     |     | 3   | 1   |     |     | 3   |     |     |     |
+
+
+Zum Vergleich die Übungsslots:
+
+ + Mo 14 Uhr
+ + Di 14 Uhr
+ + Di 11 Uhr
+ + Mi 9:15
+
+****************************************************************
+
+
+             {{1-2}}
+****************************************************************
+
+
 Wie stabil sind die Teams?
+-------------------------------
 
 <!--
 data-type="none"
 data-title="Commit Anzahl"
 data-transpose="false"
 -->
-| teamKey | 3          | 4          | 5       |
-| -------:|:---------- |:---------- |:------- |
-|       0 | [2 3]      |            |         |
-|       1 | [4 5]      | [4 5]      |         |
-|       2 | [6 7]      | [6 7]      |         |
-|       3 | [8 9]      | [31  8  9] | [8 9]   |
-|       4 | [10 11]    | [10 11]    | [10 11] |
-|       5 | [12 13]    | [12 13]    |         |
-|       6 | [14]       | [14]       |         |
-|       7 | [15 16]    | [15]       |         |
-|       8 | [17 18]    | [17]       |         |
-|       9 | [19 20]    | [19 20]    | [19]    |
-|      10 | [21 22]    | [21 22]    |         |
-|      11 | [23 24]    | [23 24]    |         |
-|      12 | [25 26]    | [26 25]    | [25 26] |
-|      13 | [27 28]    | [27 28]    |         |
-|      14 | [29 30 31] | [29 30]    |         |
-|      15 | [32 33]    | [32 33]    | [33 32] |
-|      16 | [34]       | [34]       | [34]    |
-|      17 |            | [ 2 15]    |         |
+| teamKey | Task 3                             | Task 4                                     |
+| ------- | ----------------------------------- | ------------------------------------- |
+| 0       | [0, 1]                              | <!-- style="background: coral"-->[0]  |
+| 1       | [5]                                 | [5]                                   |
+| 2       | [8, 7]                              | [8, 7]                                |
+| 3       | <!-- style="background: red"-->  [] | <!-- style="background: red"-->[]     |
+| 4       | [9, 10]                             | [9, 10]                               |
+| 5       | [11, 12]                            | [11, 12]                              |
+| 6       | [13, 14]                            | [13, 14]                              |
+| 7       | [16, 15]                            | <!-- style="background: coral"-->[16] |
+| 8       | [18, 19]                            | [18, 19]                              |
+| 9       | [20, 21]                            | [20, 21]                              |
+| 10      | [22, 23]                            | [22, 23]                              |
+| 11      | [24, 25]                            | [24, 25]                              |
+| 12      | [26, 27]                            | [26, 27]                              |
+| 13      | [28, 29]                            | <!-- style="background: coral"-->[28] |
+| 14      | [30, 31]                            | [30, 31]                              |
+| 15      | [32, 33]                            | [32, 33]                              |
+| 16      | [34, 35]                            | <!-- style="background: red"-->[]     |
+| 17      | [36, 37]                            | [36, 37]                              |
+
+****************************************************************
+
+## Exkurs - Abhängigkeitsmanagment / Paketmanagement
+
+> **Merke:** Erfinde das Rad nicht neu!
+
+Wie schaffen es erfahrene Entwickler innerhalb kürzester Zeit Prototypen mit beeindruckender Funktionalität zu entwerfen? Sicher, die Erfahrung spielt hier eine Große Rolle aber auch die Wiederverwendung von existierendem Code. Häufig wiederkehrende Aufgaben wie zum Beispiel:
+
++ das Logging
++ der Zugriff auf Datenquellen
++ mathematische Operationen
++ Datenkapselung und Abstraktion
++ ...
+
+werden bereits durch umfangreiche Bibliotheken implementiert und werden entsprechend nicht neu geschrieben.
+
+Ok, dann ziehe ich mir eben die zugehörigen Repositories in mein Projekt und kann die Bibliotheken nutzen. In individuell genutzten Implementierungen mag das ein gangbarer Weg sein, aber das Wissen um die zugehörigen Abhängigkeiten - Welche Subbibliotheken und welches .NET Framework werden vorausgesetzt? -  liegt so nur implizit vor.
+
+Entsprechend brauchen wir ein Tool, mit dem wir die Abhängigkeiten UND den eigentlichen Code kombinieren und einem Projekt hinzufügen können.
+`NuGet` löst diese Aufgabe für .NET und schließt auch gleich die Mechanismen zur Freigabe von Code ein. NuGet definiert dabei, wie Pakete für .NET erstellt, gehostet und verarbeitet werden.
+
+Ein `NuGet`-Paket ist eine gepackte Datei mit der Erweiterung `.nupkg` die:
++ den kompilierten Code (DLLs),
++ ein beschreibendes Manifest, in dem Informationen wie die Versionsnummer des Pakets, ggf. der Speicherort des Source Codes oder die Projektwebseite enthalten sind sowie
++ die Abhängigkeiten von anderen Paketen und dessen Versionen
+enthalten sind
+Ein Entwickler, der seinen Code veröffentlichen möchte generiert die zugehörige Struktur und läd diese auf einen `NuGet` Server. Unter dem [Link](https://www.nuget.org/) kann dieser durchsucht werden.
+
+**Anwendungsbeispiel: Symbolisches Lösen von Mathematischen Gleichungen**
+
+Eine entsprechende Bibliothek steht unter [Projektwebseite](https://symbolics.mathdotnet.com/). Das Ganze wird als `Nuget` Paket gehostet [MathNet](https://www.nuget.org/packages/MathNet.Symbolics/).
+
+Unter der Annahme, dass wir `dotnet` als Buildtool benutzen ist die Einbindung denkbar einfach.
+
+```
+dotnet new console -o SymbolicMath
+cd SymbolicMath
+dotnet add package MathNet.Symbolics
+Determining projects to restore...
+Writing /tmp/tmpNsaYtc.tmp
+info : Adding PackageReference for package 'MathNet.Symbolics' into project '/home/zug/Desktop/Vorlesungen/VL_Softwareentwicklung/code/16_Testen/ConditionalBuild/ConditionalBuild.csproj'.
+info :   GET https://api.nuget.org/v3/registration5-gz-semver2/mathnet.symbolics/index.json
+...
+```
+
+Danach findet sich in unserer Projektdatei `.csproj` ein entsprechender Eintrag
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MathNet.Symbolics" Version="0.24.0" />
+  </ItemGroup>
+</Project>
+```
+
+```csharp PreprocessorConsts.cs
+using System;
+using System.Collections.Generic;
+using MathNet.Symbolics;
+using Expr = MathNet.Symbolics.SymbolicExpression;  // Platzhalter für verkürzte Schreibweise
+
+class Program
+{
+  static void Main(string[] args)
+  {
+    Console.WriteLine("Beispiele für die Verwendung des MathNet.Symbolics Paketes");
+    var x = Expr.Variable("x");
+    var y = Expr.Variable("y");
+    var a = Expr.Variable("a");
+    var b = Expr.Variable("b");
+    var c = Expr.Variable("c");
+    var d = Expr.Variable("d");
+    Console.WriteLine("a+a =" + (a + a + a).ToString());
+    Console.WriteLine("(2 + 1 / x - 1) =" + (2 + 1 / x - 1).ToString());
+    Console.WriteLine("((a / b / (c * a)) * (c * d / a) / d) =" + ((a / b / (c * a)) * (c * d / a) / d).ToString());
+    Console.WriteLine("Der zugehörige Latex Code lautet " + ((a / b / (c * a)) * (c * d / a) / d).ToLaTeX());
+  }
+}
+```
+```-xml  PreprocessorConsts.csproj
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MathNet.Symbolics" Version="0.24.0" />
+  </ItemGroup>
+</Project>
+```
+@LIA.eval(`["Program.cs", "project.csproj"]`, `dotnet build -nologo`, `dotnet run -nologo`)
 
 
 ## Softwarefehler
@@ -71,15 +200,9 @@ data-transpose="false"
                                     {{0-1}}
 *******************************************************************************
 
-Bekannte Softwarefehler und deren Folgen:
+Zu Erinnerung an die bereits diskutierten Softwarefehler ...
 
-+ Beim Kampfflugzeug F-16 brachte der Autopilot das Flugzeug in Rückenlage, wenn der Äquator überflogen wurde. Dies kam daher, dass man keine „negativen“ Breitengrade als Eingabedaten bedacht hatte. Dieser Fehler wurde sehr spät während der Entwicklung der F-16 anhand eines Simulators entdeckt und beseitigt.
-
-+ 1999 verpasste die NASA-Sonde Mars Climate Orbiter den Landeanflug auf den Mars, weil die Programmierer unterschiedliche Maßsysteme verwendeten (ein Team verwendete das metrische und das andere das angloamerikanische) und beim Datenaustausch es so zu falschen Berechnungen kam. Eine Software wurde so programmiert, dass sie sich nicht an die vereinbarte Schnittstelle hielt, in der die metrische Einheit Newton × Sekunde festgelegt war. Die NASA verlor dadurch die Sonde.
-
-+ Zwischen 1985 und 1987 gab es mehrere Unfälle mit dem medizinischen Bestrahlungsgerät Therac-25. Infolge einer Überdosis, die durch fehlerhafte Programmierung und fehlende Sicherungsmaßnahmen verursacht wurde, mussten Organe entfernt werden, und es verstarben drei Patienten.
-
-+ Das Jahr-2000-Problem, auch als Millennium-Bug (zu deutsch „Millennium-Fehler“) oder Y2K-Bug bezeichnet, ist ein Computer­problem, das im Wesentlichen durch die Behandlung von Jahreszahlen als zweistellige Angabe innerhalb von Computersystemen entstanden ist.
+> 1999 verpasste die NASA-Sonde Mars Climate Orbiter den Landeanflug auf den Mars, weil die Programmierer unterschiedliche Maßsysteme verwendeten (ein Team verwendete das metrische und das andere das angloamerikanische) und beim Datenaustausch es so zu falschen Berechnungen kam. Eine Software wurde so programmiert, dass sie sich nicht an die vereinbarte Schnittstelle hielt, in der die metrische Einheit Newton × Sekunde festgelegt war. Die NASA verlor dadurch die Sonde. [Quelle](https://www.bernd-leitenberger.de/mco.shtml)
 
 Softwarefehler sind sowohl sicherheitstechnisch wie ökonomisch ein erhebliches Risiko. Eine Studie der Zeitschrift iX ermittelte 2013 für Deutschland folgende Werte:
 
@@ -202,13 +325,12 @@ style="width: 100%; max-width: 560px; display: block; margin-left: auto; margin-
          v
 ````````````
 
-Der Modultest, auch Komponententest oder Unittest genannt, ist ein Test auf der Ebene der einzelnen Module der Software. Testgegenstand ist die Funktionalität innerhalb einzelner abgrenzbarer Teile der Software (Module, Programme oder Unterprogramme, Units oder Klassen). Testziel dieser häufig durch den Softwareentwickler selbst durchgeführten Tests ist der Nachweis der technischen Lauffähigkeit und korrekter fachlicher (Teil-) Ergebnisse.
-
-Der Integrationstest bzw. Interaktionstest testet die Zusammenarbeit voneinander abhängiger Komponenten. Der Testschwerpunkt liegt auf den Schnittstellen der beteiligten Komponenten und soll korrekte Ergebnisse über komplette Abläufe hinweg nachweisen.
-
-Der Systemtest ist die Teststufe, bei der das gesamte System gegen die gesamten Anforderungen (funktionale und nicht-funktionale Anforderungen) getestet wird. Gewöhnlich findet der Test auf einer Testumgebung statt und wird mit Testdaten durchgeführt. Die Testumgebung soll die Produktivumgebung des Kunden simulieren, d. h. ihr möglichst ähnlich sein. In der Regel wird der Systemtest durch die realisierende Organisation durchgeführt.
-
-Ein Abnahmetest, Verfahrenstest, Akzeptanztest oder auch User Acceptance Test (UAT) ist das Testen der gelieferten Software durch den Kunden. Der erfolgreiche Abschluss dieser Teststufe ist meist Voraussetzung für die rechtswirksame Übernahme der Software und deren Bezahlung. Dieser Test kann unter Umständen (z. B. bei neuen Anwendungen) bereits auf der Produktionsumgebung mit Kopien aus Echtdaten durchgeführt werden.
+| Bezeichnung                                | Ebene                                                                                                                          | Durchführender / Ziel                                                                                                                                     |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Modultest, Komponententest oder Unittest   | Funktionalität innerhalb einzelner abgrenzbarer Teile der Software (Module, Programme oder Unterprogramme, Units oder Klassen) | häufig durch den Softwareentwickler selbst, Nachweis der technischen Lauffähigkeit und korrekter fachlicher (Teil-) Ergebnisse                            |
+| Integrationstest, Interaktionstest         | Zusammenarbeit voneinander abhängiger Komponenten                                                                              | Testschwerpunkt liegt auf den Schnittstellen der beteiligten Komponenten und soll korrekte Ergebnisse über komplette Abläufe hinweg nachweisen            |
+| Systemtest                                 | Gesamtes System wird gegen die gesamten Anforderungen (funktionale und nicht-funktionale Anforderungen) getestet               | Test in einer Testumgebung statt / wird mit Testdaten  durchgeführt - Simulation einer realistischen Umgebung                                             |
+| Abnahmetest, Verfahrenstest, Akzeptanztest | Testen der gelieferten Software durch den Kunden                                                                               | Rechtlich bindende Evaluation der Software und deren Bezahlung, unter Umständen bereits auf der Produktionsumgebung mit Kopien aus Echtdaten durchgeführt |
 
 *******************************************************************************
 
@@ -266,6 +388,22 @@ Abbildung motiviert durch [^Somm01]
 
 [^Somm01]:  Ian Sommerville: Software Engineering, Pearson Education, 6. Auflage, 2001
 
+1. Entwerfen der Testfälle
+
++ Analyse der Anforderungen, Dokumentationen um erforderliche Testbedingungen festzulegen
++ Nachvollziehbarkeit der Entscheidungen, Weiterentwicklung bei Anpassungen in den Anforderungen bzw. der Spezifikation
+
+2. Spezifizieren der Testfälle
+
++ Ausarbeitung der eigentlichen Beschreibung der Testfälle und Testdaten
++ Definition der erwarteten Resultate
+
+3. Testausführung
+
++ (variable) Reihung der Testfälle  unter Berücksichtigung von Vor- und Nachbedingungen um Quereffekte abzubilden
+
+4. Evaluation der Ergebnisse
+
 ### Klassifikation Testmethoden
 
 <!--
@@ -292,7 +430,6 @@ style="width: 100%; display: block; margin-left: auto; margin-right: auto;"
 
 ````````````
 Abbildung motivierte aus [^Liggesmeyer]
-
 
 **Statische Code Analysen**
 
@@ -339,23 +476,27 @@ Wesentliche Aufgabe der einzelnen Verfahren ist die Bestimmung geeigneter Testf�
 
 ## Planung von Tests
 
-Im folgenden sollen unterschiedliche Black- und White-Box-Tests angewandt werden
-um eine Klasse MyMathFunctions, die zwei Methoden implementiert, zu testen:
+Nehmen wir an, wir hätten eine Klasse MyMathFunctions mit zwei Methoden implementiert und sollen diese testen ...
 
 ```csharp
 static class MyMathFunctions{
   //Fakultät der Zahl i
-  public int fak(int i) {...}
+  public static int fak(int i) {...}
   // Grösstergemeinsamer Teiler von i, j und k
-  public int ggt(int i, int j, int k) {...}
+  public static int ggt(int i, int j, int k) {...}
 }
 ```
 
-Ein vollständiges Testen aller `int` Werte ($2^{31}$ bis $2^{31}-1$) bedeutet für die Funktion
-`fak()` $2^{32}$ und für `ggt()` $2^{32} \cdot 2^{32} \cdot 2^{32}$ Kombinationen. Testen aller möglichen Eingaben ist damit nicht möglich. Für Variablen mit unbestimmtem Wertebereich (`string`) lässt sich nicht einmal die Menge der möglichen Kombinationen darstellen.
+> **Frage:** Mit wie vielen Tests könnten wir die Korrektheit der Implementierung nachweisen?
+
+                 {{1-2}}
+********************************************************************************
+
+Ein vollständiges Testen aller `int` Werte ($2^{31}$ bis $2^{31}-1$) bedeutet für die Funktion `fak()` $2^{32}$ und für `ggt()` $2^{32} \cdot 2^{32} \cdot 2^{32}$ Kombinationen. Testen aller möglichen Eingaben ist damit nicht möglich. Für Variablen mit unbestimmtem Wertebereich (`string`) lässt sich nicht einmal die Menge der möglichen Kombinationen darstellen.
+
+********************************************************************************
 
 ### Black-Box-Testing / Spezifikationsorientiert
-
 > Black-Box-Testing ... Grundlage der Testfallentwicklung ist die Spezifikation
 > des Moduls. Die Interna des Softwareelements sind nicht bekannt.
 
@@ -366,7 +507,6 @@ Für Black-Box-Testing existieren unterschiedliche Ausprägungen:
 
 + Äquivalenzklassenanalyse
 + Grenzwertanalyse [Link](https://www.youtube.com/watch?v=GshMbff3mzw)
-+ Ursache Wirkungsgraphen
 + Zustandsbasierte Testmethoden
 
 Problematisch ist dabei, dass spezifische Lösungen, wie zum Beispiel in folgendem Fall. Der Entwickler hat hier beschlossen die Performance der Berechnung der Fakultät zu steigern, um die Performance des Algorithmus für Werte kleiner 5 zu verbessern (hypothetisches Beispiel!).
@@ -715,58 +855,49 @@ Hierzu nutzen wir das xunit Framework. Eine Folge von Tests für unsere `DivideT
 ```csharp
 using Xunit;
 
-namespace MyMathMethods.Test
+public class Test_DivideTwoValues
 {
-    public class Test_DivideTwoValues
+    [Fact]
+    public void Check_StateEqualPositiveInputs()
     {
-        [Fact]
-        public void Check_StateEqualPositiveInputs()
-        {
-            // Arrange
-            double result = 0;
-            double dividend = 5;
-            double divisor = dividend;
-            int expected = 0;
+        // Arrange
+        double result = 0;
+        double dividend = 5;
+        double divisor = dividend;
+        int expected = 0;
+        // Act
+        var state = Calculator.DivideTwoValues(dividend, divisor, ref result);
+        // Assert
+        Assert.Equal(expected, state);
+    }
 
-            // Act
-            var state = Calculator.DivideTwoValues(dividend, divisor, ref result);
+    [Fact]
+    public void Check_StateZeroAsDivended()
+    {
+        // Arrange
+        double result = 0;
+        double dividend = 5;
+        double divisor = 0;
+        int expected = -1;
+        // Act
+        var state = Calculator.DivideTwoValues(dividend, divisor, ref result);
+        // Assert
+        Assert.True(expected == state);
+    }
 
-            // Assert
-            Assert.Equal(expected, state);
-        }
-
-        [Fact]
-        public void Check_StateZeroAsDivended()
-        {
-            // Arrange
-            double result = 0;
-            double dividend = 5;
-            double divisor = 0;
-            int expected = -1;
-
-            // Act
-            var state = Calculator.DivideTwoValues(dividend, divisor, ref result);
-
-            // Assert
-            Assert.True(expected == state);
-        }
-
-        [Theory]                                             // Übergabe von variablen Parametersets
-        [InlineData(10, 2, 5)]
-        [InlineData(5, 2, 2.5)]
-        [InlineData(double.MaxValue, double.MaxValue, 1)]    // Edge Cases
-        [InlineData(double.MaxValue, 1, double.MaxValue)]
-        public void Check_ResultCalculation(double dividend, double divisor, double expected)
-        {
-            // Arrange
-            double result = 0;
-
-            // Act
-            var state = Calculator.DivideTwoValues(dividend, divisor, ref result);
-
-            // Assert
-            Assert.Equal(expected, result);
-        }
+    [Theory]                                             // Übergabe von variablen Parametersets
+    [InlineData(10, 2, 5)]
+    [InlineData(5, 2, 2.5)]
+    [InlineData(double.MaxValue, double.MaxValue, 1)]    // Edge Cases
+    [InlineData(double.MaxValue, 1, double.MaxValue)]
+    public void Check_ResultCalculation(double dividend, double divisor, double expected)
+    {
+        // Arrange
+        double result = 0;
+        // Act
+        var state = Calculator.DivideTwoValues(dividend, divisor, ref result);
+        // Assert
+        Assert.Equal(expected, result);
     }
 }
 ```
