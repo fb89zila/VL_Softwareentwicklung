@@ -325,23 +325,22 @@ Woche & Tag & Inhalt der Vorlesung & Bemerkung\tabularnewline
 7 & 16. Mai & Klassenelemente in C\# / Vererbung &\tabularnewline
 & 20. Mai & Versionsmanagement im Softwareentwicklungsprozess
 &\tabularnewline
-8 & 23. Mai & Git und Continuous integration in GitHub &\tabularnewline
-& 27. Mai & UML Konzepte &\tabularnewline
-9 & 30. Mai & UML Diagrammtypen & Ende EiS
-Vorlesungsinhalte\tabularnewline
-& 3. Juni & UML Anwendungsbeispiel &\tabularnewline
+8 & 23. Mai & UML Konzepte &\tabularnewline
+& 27. Mai & UML Diagrammtypen &\tabularnewline
+9 & 30. Mai & UML Anwendungsbeispiel &\tabularnewline
+& 3. Juni & Testen & Ende EiS Vorlesungsinhalte\tabularnewline
 10 & 6. Juni & \emph{Pfingstmontag} &\tabularnewline
-& 10. Juni & Testen &\tabularnewline
-11 & 13. Juni & Dokumentation &\tabularnewline
-& 17. Juni & Build Toolchains und ihr Einsatz &\tabularnewline
-12 & 20. Juni & Generics &\tabularnewline
-& 24. Juni & Container &\tabularnewline
-13 & 27. Juni & Delegaten &\tabularnewline
-& 1. Juli & Events &\tabularnewline
-14 & 4. Juli & Threadkonzepte in C\# &\tabularnewline
-& 8. Juli & Taskmodell &\tabularnewline
-15 & 11. Juli & Language Integrated Query &\tabularnewline
-& 15. Juli & Design Pattern &\tabularnewline
+& 10. Juni & Dokumentation und Build Toolchains &\tabularnewline
+11 & 13. Juni & Continuous Integration in GitHub &\tabularnewline
+& 17. Juni & Generics &\tabularnewline
+12 & 20. Juni & Container &\tabularnewline
+& 24. Juni & Delegaten &\tabularnewline
+13 & 27. Juni & Events &\tabularnewline
+& 1. Juli & Threadkonzepte in C\# &\tabularnewline
+14 & 4. Juli & Taskmodell &\tabularnewline
+& 8. Juli & Language Integrated Query &\tabularnewline
+15 & 11. Juli & Design Pattern &\tabularnewline
+& 15. Juli & &\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -6153,7 +6152,7 @@ Exception-Handling}\label{beispiel-exception-handling}}
 Schreiben Sie die Einträge eines Arrays in eine Datei!
 
 Lösung unter
-\href{https://github.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/blob/mastercode/05_GrundlagenIII/ExceptionHandling/ExceptionHandling.cs}{ExceptionHandling.cs}
+\href{https://github.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/blob/master/code/05_GrundlagenIII/ExceptionHandling/ExceptionHandling.cs}{ExceptionHandling.cs}
 
 \begin{longtable}[]{@{}ll@{}}
 \toprule
@@ -6890,6 +6889,12 @@ Rückgabewert, sie werden entsprechend als \texttt{void} deklariert.
 \NormalTok{\}}
 \end{Highlighting}
 \end{Shaded}
+
+Des Weiteren für alle die auch mit C programmieren: in C ist es
+notwendig Funktionen über der Main-Funktion zu deklarieren! Da diese vom
+Compiler sonst nicht erkannt werden können. In C\# spielt das keine
+Rolle, Funktionen bzw. hier nun Methoden können belieibg ober- oder
+unterhalb der Main deklaitert werden.
 
 \hypertarget{verkuxfcrzte-darstellung}{%
 \subsection{Verkürzte Darstellung}\label{verkuxfcrzte-darstellung}}
@@ -11152,15 +11157,6 @@ umgangen werden.
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{aufgaben-8}{%
-\section{Aufgaben}\label{aufgaben-8}}
-
-\begin{itemize}
-\tightlist
-\item
-  {[} {]}
-\end{itemize}
-
 \hypertarget{abstrakte-klassen-und-interfaces}{%
 \chapter{Abstrakte Klassen und
 Interfaces}\label{abstrakte-klassen-und-interfaces}}
@@ -11182,7 +11178,7 @@ Kursinformationen\strut
 \begin{minipage}[t]{0.11\columnwidth}\raggedright
 \textbf{Semester}\strut
 \end{minipage} & \begin{minipage}[t]{0.83\columnwidth}\raggedright
-\texttt{Sommersemester\ 2021}\strut
+\texttt{Sommersemester\ 2022}\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.11\columnwidth}\raggedright
 \textbf{Hochschule:}\strut
@@ -11208,15 +11204,6 @@ Kursinformationen\strut
 \end{longtable}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\hypertarget{auf-nachfrage-3}{%
-\section{Auf Nachfrage \ldots{}}\label{auf-nachfrage-3}}
-
-Wozu brauche ich das? Bisher bin ich auch gut ohne OOP ausgekommen
-\ldots{}
-
-Nutzung von objektorientierten Konzepten im Python Projekt
-\href{https://github.com/TUBAF-IFI-DiPiT/github2pandas}{github2pandas}.
 
 \hypertarget{abstrakte-klassen-abstrakte-methoden}{%
 \section{Abstrakte Klassen / Abstrakte
@@ -11613,8 +11600,8 @@ den Namen der Schnittstelle benennt.
 Allerdings kann diese Funktion dann nur über die Schnittstelle und nicht
 über die Klasse aufgerufen werden.
 
-\hypertarget{aufgaben-9}{%
-\section{Aufgaben}\label{aufgaben-9}}
+\hypertarget{aufgaben-8}{%
+\section{Aufgaben}\label{aufgaben-8}}
 
 \begin{itemize}
 \tightlist
@@ -11625,6 +11612,172 @@ Allerdings kann diese Funktion dann nur über die Schnittstelle und nicht
 !?\href{https://www.youtube.com/watch?v=_Zvi21_kMw4}{Interfaces}
 
 !?\href{https://www.youtube.com/watch?v=A7qwuFnyIpM}{Interfaces}
+
+\hypertarget{beispiel-der-woche-2}{%
+\section{Beispiel der Woche}\label{beispiel-der-woche-2}}
+
+\hypertarget{aufgabe-1}{%
+\chapter{Aufgabe}\label{aufgabe-1}}
+
+Nehmen wir an, das Prüfungsamt engagiert Sie für einen Auftrag. Im Laufe
+mehrerer Wochen sind viele Prüfungszertifikate eingegangen.
+Unglücklicherweise geht aus den Dateinamen nicht hervor, auf welche
+Lehrveranstaltung diese sich beziehen. Ihr Auftrag besteht darin, diese
+Frage automatisiert zu beantworten.
+
+Dabei existiert eine erste Lösung, das Beispielprojekt mit allen
+Textdateien finden Sie im
+\href{https://github.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/tree/master/code/10_AbstrakteKlassen/CsharpFileAnalyser}{Repository}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{using}\NormalTok{ System;}
+\KeywordTok{using}\NormalTok{ System.}\FunctionTok{IO}\NormalTok{;}
+
+\KeywordTok{public} \KeywordTok{class}\NormalTok{ CertificateEvaluator\{}
+    \KeywordTok{private} \DataTypeTok{string}\NormalTok{ fileName;}
+    \KeywordTok{public} \FunctionTok{CertificateEvaluator}\NormalTok{(}\DataTypeTok{string}\NormalTok{ fileName)}
+\NormalTok{    \{}
+        \KeywordTok{this}\NormalTok{.}\FunctionTok{fileName}\NormalTok{ = fileName;}
+\NormalTok{    \}}
+    \KeywordTok{public} \DataTypeTok{void} \FunctionTok{RunEvaluation}\NormalTok{(}\DataTypeTok{string}\NormalTok{ patter)}
+\NormalTok{    \{}
+        \DataTypeTok{bool}\NormalTok{ result = }\KeywordTok{false}\NormalTok{;}
+        \KeywordTok{using}\NormalTok{ (StreamReader file = File.}\FunctionTok{OpenText}\NormalTok{(fileName))}
+\NormalTok{        \{}
+            \DataTypeTok{string}\NormalTok{ line = file.}\FunctionTok{ReadLine}\NormalTok{();}
+\NormalTok{            result = line.}\FunctionTok{Contains}\NormalTok{(patter);}
+\NormalTok{        \}}
+\NormalTok{        Console.}\FunctionTok{Write}\NormalTok{(}\StringTok{"\{0:-20\} - "}\NormalTok{, fileName);}
+        \KeywordTok{if}\NormalTok{ (result) Console.}\FunctionTok{WriteLine}\NormalTok{($}\StringTok{"references \{patter\}!"}\NormalTok{);}
+        \KeywordTok{else}\NormalTok{ Console.}\FunctionTok{WriteLine}\NormalTok{(}\StringTok{"contains unknown certificate"}\NormalTok{);}
+\NormalTok{    \}}
+\NormalTok{\}}
+
+\KeywordTok{public} \KeywordTok{class}\NormalTok{ RunCode}
+\NormalTok{\{}
+    \KeywordTok{public} \KeywordTok{static} \DataTypeTok{void} \FunctionTok{Main}\NormalTok{(}\DataTypeTok{string}\NormalTok{[] args)}
+\NormalTok{    \{}
+        \DataTypeTok{string}\NormalTok{ fileName = }\StringTok{"./files/textfile_0.txt"}\NormalTok{;}
+        \DataTypeTok{const} \DataTypeTok{string}\NormalTok{ pattern = }\StringTok{"VL Softwareentwicklung"}\NormalTok{;}
+\NormalTok{        CertificateEvaluator CertProcessor = }\KeywordTok{new} \FunctionTok{CertificateEvaluator}\NormalTok{(fileName);}
+\NormalTok{        CertProcessor.}\FunctionTok{RunEvaluation}\NormalTok{(pattern);}
+\NormalTok{    \}}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Welche Verbesserungsmöglichkeiten sehen Sie?}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \texttt{RunEvaluation} mischt zwei Dinge, das Management aller Dateien
+  und die eigentlichen Business-Logik - die ``Textanalyse''
+\item
+  Es wird nur ein Typ von Dateien überhaupt unterstützt, zudem ist die
+  Art hart codiert - \texttt{txt}
+\item
+  Es existiert keinerlei Fehlerhandling, weder in Bezug auf die Prüfung
+  der Dateinamen noch mit Blick auf die eingelesen Informationen
+  (\texttt{Nullable} Check für das Streamreader Objekt)
+\item
+  Die Parameter - Ordner und Dateiname - werden im Code hinterlegt.
+\item
+  \ldots{}
+\end{enumerate}
+
+\begin{quote}
+Was müssen wir anpassen, wenn nun auch plötzlich \texttt{docx} Dateien
+zusätzlich auftauchen? Diese können wir nicht als Streamobjekt lesen!.
+\end{quote}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{using}\NormalTok{ System;}
+\KeywordTok{using}\NormalTok{ System.}\FunctionTok{IO}\NormalTok{;}
+\KeywordTok{using}\NormalTok{ DocumentFormat.}\FunctionTok{OpenXml}\NormalTok{;}
+\KeywordTok{using}\NormalTok{ DocumentFormat.}\FunctionTok{OpenXml}\NormalTok{.}\FunctionTok{Packaging}\NormalTok{;}
+\KeywordTok{using}\NormalTok{ DocumentFormat.}\FunctionTok{OpenXml}\NormalTok{.}\FunctionTok{Wordprocessing}\NormalTok{;}
+
+\KeywordTok{public} \KeywordTok{abstract} \KeywordTok{class}\NormalTok{ Certificate\{      }\CommentTok{// <- Warum nutzen wir hier kein Interface?}
+    \KeywordTok{public} \DataTypeTok{string}\NormalTok{? fileName;}
+    \KeywordTok{public} \DataTypeTok{string}\NormalTok{? folderName;}
+    \KeywordTok{public} \KeywordTok{abstract} \DataTypeTok{string} \FunctionTok{getFirstLineContent}\NormalTok{();}
+\NormalTok{\}}
+
+\KeywordTok{public} \KeywordTok{class}\NormalTok{ CertificateTxt : Certificate}
+\NormalTok{\{}
+   \KeywordTok{public} \FunctionTok{CertificateTxt}\NormalTok{(}\DataTypeTok{string}\NormalTok{ fileName)}
+\NormalTok{    \{}
+        \KeywordTok{this}\NormalTok{.}\FunctionTok{fileName}\NormalTok{ = fileName;}
+\NormalTok{    \}}
+   \KeywordTok{public} \KeywordTok{override} \DataTypeTok{string} \FunctionTok{getFirstLineContent}\NormalTok{()\{}
+        \DataTypeTok{string}\NormalTok{ line = }\StringTok{""}\NormalTok{;}
+        \KeywordTok{using}\NormalTok{ (StreamReader file = File.}\FunctionTok{OpenText}\NormalTok{(fileName))}
+\NormalTok{        \{}
+\NormalTok{            line = file.}\FunctionTok{ReadLine}\NormalTok{();}
+\NormalTok{        \}}
+        \KeywordTok{return}\NormalTok{ line;}
+\NormalTok{   \}}
+\NormalTok{\}}
+
+\KeywordTok{public} \KeywordTok{class}\NormalTok{ CertificateDocx : Certificate}
+\NormalTok{\{}
+   \KeywordTok{public} \FunctionTok{CertificateDocx}\NormalTok{(}\DataTypeTok{string}\NormalTok{ fileName)}
+\NormalTok{    \{}
+        \KeywordTok{this}\NormalTok{.}\FunctionTok{fileName}\NormalTok{ = fileName;}
+\NormalTok{    \}}
+   \KeywordTok{public} \KeywordTok{override} \DataTypeTok{string} \FunctionTok{getFirstLineContent}\NormalTok{()\{}
+        \DataTypeTok{string}\NormalTok{ line = }\StringTok{""}\NormalTok{;}
+        \KeywordTok{using}\NormalTok{ (WordprocessingDocument wordDocument = WordprocessingDocument.}\FunctionTok{Open}\NormalTok{(fileName, }\KeywordTok{false}\NormalTok{))}
+\NormalTok{        \{}
+            \DataTypeTok{var}\NormalTok{ firstParagraph = wordDocument.}\FunctionTok{MainDocumentPart}\NormalTok{.}\FunctionTok{RootElement}\NormalTok{.}\FunctionTok{Descendants}\NormalTok{<Paragraph>().}\FunctionTok{First}\NormalTok{();   }
+\NormalTok{            line = firstParagraph.}\FunctionTok{InnerText}\NormalTok{;}
+\NormalTok{        \}}
+        \KeywordTok{return}\NormalTok{ line;}
+\NormalTok{   \}}
+\NormalTok{\}}
+
+\KeywordTok{public} \KeywordTok{class}\NormalTok{ RunCode}
+\NormalTok{\{}
+    \CommentTok{// Business Logik für unseren Anwendungsfall}
+    \KeywordTok{public} \KeywordTok{static} \DataTypeTok{void} \FunctionTok{CheckCertificates}\NormalTok{(Certificate cert, }\DataTypeTok{string}\NormalTok{ pattern)\{}
+        \CommentTok{// Datenaggregation}
+        \DataTypeTok{string}\NormalTok{ line = cert.}\FunctionTok{getFirstLineContent}\NormalTok{();}
+        \CommentTok{// Patternüberprüfung}
+        \DataTypeTok{bool}\NormalTok{ result = line.}\FunctionTok{Contains}\NormalTok{(pattern);}
+        \CommentTok{// Ausgabe des Resultates}
+\NormalTok{        Console.}\FunctionTok{Write}\NormalTok{(}\StringTok{"\{0:-20\} - "}\NormalTok{, cert.}\FunctionTok{fileName}\NormalTok{);}
+        \KeywordTok{if}\NormalTok{ (result) Console.}\FunctionTok{WriteLine}\NormalTok{($}\StringTok{"references \{pattern\}!"}\NormalTok{);}
+        \KeywordTok{else}\NormalTok{ Console.}\FunctionTok{WriteLine}\NormalTok{(}\StringTok{"contains unknown certificate"}\NormalTok{);}
+\NormalTok{    \}}
+
+    \KeywordTok{public} \KeywordTok{static} \DataTypeTok{void} \FunctionTok{Main}\NormalTok{(}\DataTypeTok{string}\NormalTok{[] args)}
+\NormalTok{    \{}
+        \DataTypeTok{string}\NormalTok{ fileName = }\StringTok{"./files/docxfile_1.docx"}\NormalTok{;}
+        \DataTypeTok{const} \DataTypeTok{string}\NormalTok{ pattern = }\StringTok{"VL Softwareentwicklung"}\NormalTok{;}
+
+\NormalTok{        CertificateDocx certTxtFile = }\KeywordTok{new} \FunctionTok{CertificateDocx}\NormalTok{(fileName);}
+        \FunctionTok{CheckCertificates}\NormalTok{(certTxtFile, pattern);}
+\NormalTok{    \}}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+Für die Nutzung der \texttt{DocumentFormat} Bibliothek müssen wir diese
+im Projekt noch als Dependency installieren.
+
+\begin{verbatim}
+dotnet add package DocumentFormat.OpenXml
+\end{verbatim}
+
+\begin{quote}
+\textbf{Achtung!} Die Lösung ignoriert eine Vielzahl von Hinweisen des
+Compilers auf mögliche \texttt{null\ references}. In einer realen
+Implementierung sollte dies berücksichtigt werden.
+\end{quote}
 
 \hypertarget{versionsverwaltung-i}{%
 \chapter{Versionsverwaltung I}\label{versionsverwaltung-i}}
@@ -11646,7 +11799,7 @@ Kursinformationen\strut
 \begin{minipage}[t]{0.11\columnwidth}\raggedright
 \textbf{Semester}\strut
 \end{minipage} & \begin{minipage}[t]{0.83\columnwidth}\raggedright
-\texttt{Sommersemester\ 2021}\strut
+\texttt{Sommersemester\ 2022}\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.11\columnwidth}\raggedright
 \textbf{Hochschule:}\strut
@@ -12018,7 +12171,7 @@ Ablauf:
 \begin{itemize}
 \tightlist
 \item
-  Harry und Sally kopierendas das Dokument A in ihre lokalen Ordner.
+  Harry und Sally kopieren das das Dokument A in ihre lokalen Ordner.
 \item
   Beide arbeiten unabhängig daran und erzeugen die Versionen A' und A''
 \item
@@ -12130,7 +12283,7 @@ Umsetzung kurz dargestellt werden soll.
 \KeywordTok{def}\NormalTok{ lcs_algo(S1, S2, m, n):}
 \NormalTok{    L }\OperatorTok{=}\NormalTok{ [[}\DecValTok{0} \ControlFlowTok{for}\NormalTok{ x }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(n}\OperatorTok{+}\DecValTok{1}\NormalTok{)] }\ControlFlowTok{for}\NormalTok{ x }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(m}\OperatorTok{+}\DecValTok{1}\NormalTok{)]}
 
-    \CommentTok{# Building the mtrix in bottom-up way}
+    \CommentTok{# Building the matrix in bottom-up way}
     \ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(m}\OperatorTok{+}\DecValTok{1}\NormalTok{):}
         \ControlFlowTok{for}\NormalTok{ j }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(n}\OperatorTok{+}\DecValTok{1}\NormalTok{):}
             \ControlFlowTok{if}\NormalTok{ i }\OperatorTok{==} \DecValTok{0} \KeywordTok{or}\NormalTok{ j }\OperatorTok{==} \DecValTok{0}\NormalTok{:}
@@ -12854,8 +13007,8 @@ Date:   Tue Apr 7 07:01:02 2020 +0200
 ....
 \end{verbatim}
 
-\hypertarget{aufgaben-10}{%
-\section{Aufgaben}\label{aufgaben-10}}
+\hypertarget{aufgaben-9}{%
+\section{Aufgaben}\label{aufgaben-9}}
 
 \begin{itemize}
 \tightlist
@@ -12885,7 +13038,7 @@ Kursinformationen\strut
 \begin{minipage}[t]{0.11\columnwidth}\raggedright
 \textbf{Semester}\strut
 \end{minipage} & \begin{minipage}[t]{0.83\columnwidth}\raggedright
-\texttt{Sommersemester\ 2021}\strut
+\texttt{Sommersemester\ 2022}\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.11\columnwidth}\raggedright
 \textbf{Hochschule:}\strut
@@ -13020,7 +13173,7 @@ Wie sieht das zum Beispiel für unsere Kursmaterialien aus?
 \begin{verbatim}
 
         vSoSe2019                                                   vSoSe2020
-Master   O-----------------------------------------  ....  ---------O
+main     O-----------------------------------------  ....  ---------O
           \                                                        ^
            \               Offizielle Versionen                   /
 SoSe2020    \              O-->O                 O          ---->O
@@ -13200,7 +13353,7 @@ werden. Eine kurze Einführung zur Syntax findet sich unter
 \end{Highlighting}
 \end{Shaded}
 
-Spanndend wird die Sache nun dadurch, dass es eine breite Community rund
+Spannend wird die Sache nun dadurch, dass es eine breite Community rund
 um die Actions gibt. Diese stellen häufig benötigte \emph{Steps} bereits
 zur Verfügung, fertige Tools für das Bauen und Testen von .NET Code.
 
@@ -13222,7 +13375,7 @@ Zusammenarbeit}\label{ein-wort-zur-zusammenarbeit}}
 
 Bitte haben Sie immer den spezifischen Kontext Ihres Projektes vor
 Augen. Üblicherweise legt man am Anfang, bei einem ``kleinen Hack''
-keinen Wert auf formelle Abläufe und Stukturen. Diese sind aber in
+keinen Wert auf formelle Abläufe und Strukturen. Diese sind aber in
 großen Projekten unablässig.
 
 Ein neues Feature wird in einem Issue beschrieben, in einem eigenen
@@ -13354,8 +13507,8 @@ deactivate Maintainer
 ist für uns erkennbar, dass Sie die Aufgabe erfolgreich umgesetzt haben.
 \end{quote}
 
-\hypertarget{aufgaben-11}{%
-\section{Aufgaben}\label{aufgaben-11}}
+\hypertarget{aufgaben-10}{%
+\section{Aufgaben}\label{aufgaben-10}}
 
 !?\href{https://www.youtube.com/watch?v=SWYqp7iY_Tc}{alt-text}
 
@@ -13372,10 +13525,10 @@ ist für uns erkennbar, dass Sie die Aufgabe erfolgreich umgesetzt haben.
   Zugriff ein (erspart einem das fortwährende Eingeben eines
   Passwortes).
 \item
-  {[} {]} Sie erhalten im Laufe der Woche Ihre erste Einladung für einen
-  GitHub Classroom. Ausgehend davon werden Sie aufgefordert sich in
-  Zweierteams zu organisieren und werden dann gemeinsam erste
-  Gehversuche unter git zu unternehmen.
+  {[} {]} Sie sollten Ihre erste Einladung für einen GitHub Classroom
+  bereits per OPAL erhalten haben. Ausgehend davon werden Sie
+  aufgefordert sich in Zweierteams zu organisieren und werden dann
+  gemeinsam erste Gehversuche unter git zu unternehmen.
 \end{itemize}
 
 \hypertarget{modellierung-von-software}{%
@@ -13673,12 +13826,11 @@ gegen die Idee des SRP vor.
 Das Liskovsche Substitutionsprinzip (LSP) oder Ersetzbarkeitsprinzip
 besagt, dass ein Programm, das Objekte einer Basisklasse T verwendet,
 auch mit Objekten der davon abgeleiteten Klasse S korrekt funktionieren
-muss, ohne dabei das Programm zu verändern:
+muss, ohne dabei das Programm zu verändern: \emph{"Sei \(q(x)\) eine
+beweisbare Eigenschaft von Objekten \(x\) des Typs \(T\). Dann soll
+\(q(y)\) für Objekte \(y\) des Typs \(S\) wahr sein, wobei \(S\)bein
+Untertyp von \(T\) ist.``} {[}\^{}Liskov{]}
 \end{quote}
-
-\emph{"Sei \(q(x)\) eine beweisbare Eigenschaft von Objekten \(x\) des
-Typs \(T\). Dann soll \(q(y)\) für Objekte \(y\) des Typs \(S\) wahr
-sein, wobei \(S\)bein Untertyp von \(T\) ist.``}
 
 Beispiel: Grafische Darstellung von verschiedenen Primitiven
 
@@ -13987,8 +14139,10 @@ Kunde TU Freiberg: \emph{Entwickeln Sie für mich ein webbasiertes
 System, mit dem Sie die Anmeldung und Bewertung von Prüfungsleistung
 erfassen.}
 
+\begin{quote}
 Welche Fragen sollten Sie dem Kunden stellen, bevor Sie sich daran
 machen und munter Code schreiben?
+\end{quote}
 
 Betrachten Sie die Darstellung auf der
 \href{https://www.programmwechsel.de/lustig/management/schaukel-baum.html}{Webseite}.
@@ -14303,17 +14457,18 @@ entwickeln.
 \caption{Modelle}
 \end{figure}
 
-\hypertarget{aufgaben-12}{%
-\section{Aufgaben}\label{aufgaben-12}}
+\hypertarget{aufgaben-11}{%
+\section{Aufgaben}\label{aufgaben-11}}
 
 \begin{itemize}
 \tightlist
 \item
   {[} {]} Bearbeiten Sie die Aufgabe 3 im GitHub Classroom
 \item
-  {[} {]} Experimentieren Sie mit
-  \href{https://umbrello.kde.org/}{Umbrello}
+  {[} {]} Machen Sie sich mit den SOLID Prinzipien weiter vertraut:
 \end{itemize}
+
+!?\href{https://www.youtube.com/watch?v=R1AimDBGtkY}{alt-text}
 
 \hypertarget{modellierung-von-software-1}{%
 \chapter{Modellierung von Software}\label{modellierung-von-software-1}}
@@ -14335,7 +14490,7 @@ Kursinformationen\strut
 \begin{minipage}[t]{0.11\columnwidth}\raggedright
 \textbf{Semester}\strut
 \end{minipage} & \begin{minipage}[t]{0.83\columnwidth}\raggedright
-\texttt{Sommersemester\ 2021}\strut
+\texttt{Sommersemester\ 2022}\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.11\columnwidth}\raggedright
 \textbf{Hochschule:}\strut
@@ -14362,72 +14517,103 @@ Kursinformationen\strut
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
+\hypertarget{hinweis-auf-die-pruxfcfungen}{%
+\section{Hinweis auf die Prüfungen}\label{hinweis-auf-die-pruxfcfungen}}
+
+\begin{itemize}
+\item
+  Softwareentwicklung
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Miniprojekt als Prüfungsleistung -
+    \href{https://github.com/ComputerScienceLecturesTUBAF/SoftwareentwicklungSoSe2022_Projektaufgaben}{Link}
+  \item
+    Beispielprojekt -
+    \href{https://github.com/fb89zila/exam-repo_swe-sose21}{Link}
+  \end{itemize}
+\item
+  Einführung in die Softwareentwicklung
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Voraussetzung für den positiven Abschluss ist die erfolgreiche
+    Bearbeitung der letzten Übungsaufgabe.
+  \item
+    Es ist keine Anmeldung zur Prüfung notwendig!
+  \end{itemize}
+\end{itemize}
+
 \hypertarget{neues-aus-github-1}{%
-\section{Neues aus Github}\label{neues-aus-github-1}}
+\section{Neues aus GitHub}\label{neues-aus-github-1}}
 
-\textbf{Wann wird gearbeitet?}
+\hypertarget{statistiken-der-git-aktivituxe4tsbalken}{%
+\chapter{Statistiken der
+Git-Aktivitätsbalken}\label{statistiken-der-git-aktivituxe4tsbalken}}
 
-\begin{longtable}[]{@{}rrrrrrrrrrrrrrrrrrrrrr@{}}
+\begin{longtable}[]{@{}lllll@{}}
 \toprule
-Stunde & 0 & 1 & 2 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 &
-17 & 18 & 19 & 20 & 21 & 22 & 23\tabularnewline
+TeamKey & branch\_count & commit\_count & release\_count &
+stars\_count\tabularnewline
 \midrule
 \endhead
-1 & nan & nan & nan & nan & nan & nan & nan & 2 & nan & 3 & 2 & nan &
-nan & nan & 1 & nan & nan & nan & nan & nan & nan\tabularnewline
-2 & nan & nan & nan & nan & 2 & nan & nan & nan & 2 & 8 & nan & 10 & 24
-& 3 & nan & nan & nan & nan & nan & nan & nan\tabularnewline
-3 & nan & nan & nan & nan & nan & nan & nan & 1 & 4 & 6 & 7 & 25 & 22 &
-nan & nan & nan & nan & nan & 1 & nan & 2\tabularnewline
-4 & 2 & nan & nan & 2 & 2 & nan & 5 & 8 & 7 & nan & nan & 29 & 16 & 14 &
-12 & nan & 2 & 1 & nan & nan & nan\tabularnewline
-5 & nan & nan & 1 & nan & nan & 2 & nan & 12 & 10 & 3 & 1 & 2 & 2 & nan
-& 4 & 3 & nan & nan & nan & nan & nan\tabularnewline
-6 & nan & nan & nan & nan & nan & 1 & nan & nan & nan & 1 & 2 & 4 & 7 &
-7 & 2 & nan & nan & 4 & 1 & nan & nan\tabularnewline
-7 & nan & nan & nan & nan & nan & nan & nan & 2 & 4 & 3 & 8 & 5 & 4 & 2
-& 4 & nan & nan & nan & nan & nan & nan\tabularnewline
+0 & 2 & 8 & 1 & 2\tabularnewline
+1 & 3 & 2 & 1 & 0\tabularnewline
+2 & 2 & 5 & 1 & 0\tabularnewline
+3 & 1 & 0 & 0 & 0\tabularnewline
+4 & 2 & 11 & 1 & 0\tabularnewline
+5 & 1 & 17 & 1 & 0\tabularnewline
+6 & 3 & 12 & 2 & 0\tabularnewline
+7 & 2 & 28 & 0 & 0\tabularnewline
+8 & 2 & 2 & 2 & 0\tabularnewline
+9 & 2 & 4 & 0 & 1\tabularnewline
+10 & 1 & 15 & 1 & 0\tabularnewline
+11 & 1 & 6 & 1 & 0\tabularnewline
+12 & 2 & 10 & 4 & 0\tabularnewline
+13 & 3 & 24 & 1 & 0\tabularnewline
+14 & 3 & 11 & 1 & 2\tabularnewline
+15 & 2 & 13 & 1 & 0\tabularnewline
+16 & 2 & 5 & 0 & 0\tabularnewline
+17 & 2 & 6 & 1 & 0\tabularnewline
 \bottomrule
 \end{longtable}
 
-\textbf{Was ist ein guter Commit?}
+\hypertarget{commit-messages-1}{%
+\chapter{Commit Messages}\label{commit-messages-1}}
 
-Das folgende Diagramm zeigt die Commits pro Aufgabe
-
-\begin{longtable}[]{@{}rrrrrrrrrrrrrrrrrr@{}}
+\begin{longtable}[]{@{}ll@{}}
 \toprule
-Task & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 &
-15 & 16\tabularnewline
+Messag & Häufigkeit\tabularnewline
 \midrule
 \endhead
-3 & 7 & 15 & 12 & 8 & 18 & 10 & 5 & 8 & 45 & 21 & 5 & 8 & 18 & 8 & 6 & 6
-& 3\tabularnewline
-4 & nan & nan & nan & 15 & 13 & 18 & 3 & 5 & 5 & 9 & 4 & 3 & 19 & 2 & 3
-& 24 & nan\tabularnewline
-\bottomrule
-\end{longtable}
-
-\ldots{} und wie viele unterschiedliche Dateien wurden dabei editiert?
-
-\begin{longtable}[]{@{}rrrrrrrrrrrrrrrrrr@{}}
-\toprule
-Task & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 &
-15 & 16\tabularnewline
-\midrule
-\endhead
-3 & 5 & 3 & 2 & 15 & 4 & 5 & 2 & 6 & 3 & 16 & 2 & 2 & 7 & 2 & 2 & 4 &
+\texttt{Update\ CSharpBasics.md} & 40\tabularnewline
+\texttt{Update\ team.config} & 23\tabularnewline
+\texttt{Initial\ commit} & 18\tabularnewline
+\texttt{Inital\ task\ selection\ -\ Variant\_1.md} & 11\tabularnewline
+\texttt{Update\ uebung.md} & 10\tabularnewline
+\texttt{Create\ CSharpBasics.md} & 9\tabularnewline
+\texttt{Update\ CSharpBasics.txt} & 7\tabularnewline
+\texttt{Inital\ task\ selection\ -\ Variant\_0.md} & 7\tabularnewline
+\texttt{Add\ files\ via\ upload} & 5\tabularnewline
+\texttt{Update\ Aufgabe3.md} & 4\tabularnewline
+\texttt{Update\ csharpbasics.md} & 3\tabularnewline
+\texttt{Test} & 2\tabularnewline
+\texttt{tabelle} & 2\tabularnewline
+\texttt{Merge\ pull\ request\ \#2\ from\ Ifi-Softwareentwick..} &
 2\tabularnewline
-4 & nan & nan & nan & 26 & 11 & 7 & 5 & 6 & 8 & 6 & 5 & 7 & 7 & 1 & 2 &
-6 & nan\tabularnewline
+\texttt{Update\ converttxttomd.cs} & 2\tabularnewline
 \bottomrule
 \end{longtable}
 
 \hypertarget{uml-diagrammtypen}{%
 \section{UML Diagrammtypen}\label{uml-diagrammtypen}}
 
-\includegraphics{./img/13_UML/UML-Diagrammhierarchie.png} \footnote{https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/UML-Diagrammhierarchie.svg/1200px-UML-Diagrammhierarchie.svg.png,
+{[}OOPGeschichte{]}(./img/13\_UML/UML-Diagrammhierarchie.png "
+\footnote{https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/UML-Diagrammhierarchie.svg/1200px-UML-Diagrammhierarchie.svg.png,
   Autor ``Stkl''- derivative work: File: UML-Diagrammhierarchie.png:
-  Sae1962, CC BY-SA 4.0}
+  Sae1962, CC BY-SA 4.0}")
 
 Im folgenden werden wir uns aus den beiden Hauptkategorien jeweils
 folgende Diagrammtypen genauer anschauen:
@@ -14780,11 +14966,7 @@ Interaktionen beteiligt ist.
 
 \textbf{Beispiel}
 
-\begin{figure}
-\centering
 \includegraphics{./img/14_UML_II/SequenzCheckEmail.png}
-\caption{Aktivitätsdiagramme}
-\end{figure}
 
 \textbf{Bestandteile}
 
@@ -15506,7 +15688,6 @@ Bildet Beziehungen von einem Ganzen und seinen Teilen ab\strut
 Verwendung von Klassendiagrammen
 
 \begin{itemize}
-\tightlist
 \item
   \ldots{} unter Umbrello (UML Diagramm Generierung / Code Generierung)
 \item
@@ -15514,23 +15695,31 @@ Verwendung von Klassendiagrammen
   \href{https://docs.microsoft.com/de-de/visualstudio/ide/class-designer/how-to-add-class-diagrams-to-projects?view=vs-2019}{Link})
 \end{itemize}
 
+\begin{figure}
+\centering
+\includegraphics{./img/14_UML_II/ClassDesigner.png}
+\caption{ClassDesigner}
+\end{figure}
+
 !?\href{https://www.youtube.com/watch?v=syYyQ7LlcPc}{VisualStudio}
+
+\begin{itemize}
+\item
+  \ldots{} unter Visual Studio Code mit PlantUML oder UMLet (siehe
+  Codebeispiele zu dieser Vorlesung)
+\item
+  \ldots{} unter Visual Studio Code mit
+  \href{https://github.com/pierre3/PlantUmlClassDiagramGenerator}{PlantUmlClassDiagramGenerator}
+\end{itemize}
+
+\hypertarget{aufgaben-12}{%
+\section{Aufgaben}\label{aufgaben-12}}
 
 \begin{itemize}
 \tightlist
 \item
-  \ldots{} unter Visual Studio Code mit PlantUML
-\end{itemize}
-
-\begin{quote}
-\textbf{Aufgabe:} Wer findet eine ``automatisierbare'' Lösung?
-\end{quote}
-
-\hypertarget{aufgaben-13}{%
-\section{Aufgaben}\label{aufgaben-13}}
-
-\begin{itemize}
-\tightlist
+  {[} {]} Experimentieren Sie mit
+  \href{https://umbrello.kde.org/}{Umbrello}
 \item
   {[} {]} Experimentieren Sie mit der automatischen Extraktion von UML
   Diagrammen für Ihre Computer-Simulation aus den Übungen
@@ -15538,12 +15727,6 @@ Verwendung von Klassendiagrammen
   {[} {]} Evaluieren Sie das Add-On ``Class Designer'' für die Visual
   Studio Umgebung
 \end{itemize}
-
-\begin{figure}
-\centering
-\includegraphics{./img/14_UML_II/ClassDesigner.png}
-\caption{ClassDesigner}
-\end{figure}
 
 \hypertarget{modellierung-von-software-2}{%
 \chapter{Modellierung von Software}\label{modellierung-von-software-2}}
@@ -15892,7 +16075,7 @@ Kursinformationen\strut
 \begin{minipage}[t]{0.11\columnwidth}\raggedright
 \textbf{Semester}\strut
 \end{minipage} & \begin{minipage}[t]{0.83\columnwidth}\raggedright
-\texttt{Sommersemester\ 2021}\strut
+\texttt{Sommersemester\ 2022}\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.11\columnwidth}\raggedright
 \textbf{Hochschule:}\strut
@@ -15919,82 +16102,217 @@ Kursinformationen\strut
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{organisatorisches-1}{%
-\section{Organisatorisches}\label{organisatorisches-1}}
+\hypertarget{neues-aus-der-github-woche}{%
+\section{Neues aus der GitHub Woche}\label{neues-aus-der-github-woche}}
+
+\hypertarget{wann-arbeiten-sie-uxfcblicherweise}{%
+\section{Wann arbeiten Sie
+üblicherweise?}\label{wann-arbeiten-sie-uxfcblicherweise}}
+
+\begin{longtable}[]{@{}lllllllllllllll@{}}
+\toprule
+& 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 & 18 & 19 & 20 & 21 &
+22\tabularnewline
+\midrule
+\endhead
+Montag & & & & & 3 & 38 & 37 & & & & & & &\tabularnewline
+Dienstag & & & 36 & 36 & & 15 & 1 & & & & & 1 & & 1\tabularnewline
+Mittwoch & 19 & 12 & 1 & & & & & 3 & & & & & &\tabularnewline
+Donnerstag & & & & & & & & & & & & & 2 &\tabularnewline
+Freitag & & & 3 & & & & 3 & 1 & & & 3 & & &\tabularnewline
+\bottomrule
+\end{longtable}
+
+Zum Vergleich die Übungsslots:
 
 \begin{itemize}
 \tightlist
 \item
-  Alternative Prüfungsleistung für die Veranstaltung Softwareentwicklung
+  Mo 14 Uhr
 \item
-  Prüfungsvorleistung für Einführung in die Softwareentwicklung
+  Di 14 Uhr
+\item
+  Di 11 Uhr
+\item
+  Mi 9:15
 \end{itemize}
 
-\hypertarget{neues-aus-der-github-woche}{%
-\section{Neues aus der GitHub Woche}\label{neues-aus-der-github-woche}}
+\hypertarget{wie-stabil-sind-die-teams}{%
+\section{Wie stabil sind die Teams?}\label{wie-stabil-sind-die-teams}}
 
-Wie stabil sind die Teams?
-
-\begin{longtable}[]{@{}rlll@{}}
+\begin{longtable}[]{@{}lll@{}}
 \toprule
-teamKey & 3 & 4 & 5\tabularnewline
+teamKey & Task 3 & Task 4\tabularnewline
 \midrule
 \endhead
-0 & {[}2 3{]} & &\tabularnewline
-1 & {[}4 5{]} & {[}4 5{]} &\tabularnewline
-2 & {[}6 7{]} & {[}6 7{]} &\tabularnewline
-3 & {[}8 9{]} & {[}31 8 9{]} & {[}8 9{]}\tabularnewline
-4 & {[}10 11{]} & {[}10 11{]} & {[}10 11{]}\tabularnewline
-5 & {[}12 13{]} & {[}12 13{]} &\tabularnewline
-6 & {[}14{]} & {[}14{]} &\tabularnewline
-7 & {[}15 16{]} & {[}15{]} &\tabularnewline
-8 & {[}17 18{]} & {[}17{]} &\tabularnewline
-9 & {[}19 20{]} & {[}19 20{]} & {[}19{]}\tabularnewline
-10 & {[}21 22{]} & {[}21 22{]} &\tabularnewline
-11 & {[}23 24{]} & {[}23 24{]} &\tabularnewline
-12 & {[}25 26{]} & {[}26 25{]} & {[}25 26{]}\tabularnewline
-13 & {[}27 28{]} & {[}27 28{]} &\tabularnewline
-14 & {[}29 30 31{]} & {[}29 30{]} &\tabularnewline
-15 & {[}32 33{]} & {[}32 33{]} & {[}33 32{]}\tabularnewline
-16 & {[}34{]} & {[}34{]} & {[}34{]}\tabularnewline
-17 & & {[} 2 15{]} &\tabularnewline
+0 & {[}0, 1{]} & {[}0{]}\tabularnewline
+1 & {[}5{]} & {[}5{]}\tabularnewline
+2 & {[}8, 7{]} & {[}8, 7{]}\tabularnewline
+3 & {[}{]} & {[}{]}\tabularnewline
+4 & {[}9, 10{]} & {[}9, 10{]}\tabularnewline
+5 & {[}11, 12{]} & {[}11, 12{]}\tabularnewline
+6 & {[}13, 14{]} & {[}13, 14{]}\tabularnewline
+7 & {[}16, 15{]} & {[}16{]}\tabularnewline
+8 & {[}18, 19{]} & {[}18, 19{]}\tabularnewline
+9 & {[}20, 21{]} & {[}20, 21{]}\tabularnewline
+10 & {[}22, 23{]} & {[}22, 23{]}\tabularnewline
+11 & {[}24, 25{]} & {[}24, 25{]}\tabularnewline
+12 & {[}26, 27{]} & {[}26, 27{]}\tabularnewline
+13 & {[}28, 29{]} & {[}28{]}\tabularnewline
+14 & {[}30, 31{]} & {[}30, 31{]}\tabularnewline
+15 & {[}32, 33{]} & {[}32, 33{]}\tabularnewline
+16 & {[}34, 35{]} & {[}{]}\tabularnewline
+17 & {[}36, 37{]} & {[}36, 37{]}\tabularnewline
 \bottomrule
 \end{longtable}
+
+\hypertarget{exkurs---abhuxe4ngigkeitsmanagment-paketmanagement}{%
+\section{Exkurs - Abhängigkeitsmanagment /
+Paketmanagement}\label{exkurs---abhuxe4ngigkeitsmanagment-paketmanagement}}
+
+\begin{quote}
+\textbf{Merke:} Erfinde das Rad nicht neu!
+\end{quote}
+
+Wie schaffen es erfahrene Entwickler innerhalb kürzester Zeit Prototypen
+mit beeindruckender Funktionalität zu entwerfen? Sicher, die Erfahrung
+spielt hier eine Große Rolle aber auch die Wiederverwendung von
+existierendem Code. Häufig wiederkehrende Aufgaben wie zum Beispiel:
+
+\begin{itemize}
+\tightlist
+\item
+  das Logging
+\item
+  der Zugriff auf Datenquellen
+\item
+  mathematische Operationen
+\item
+  Datenkapselung und Abstraktion
+\item
+  \ldots{}
+\end{itemize}
+
+werden bereits durch umfangreiche Bibliotheken implementiert und werden
+entsprechend nicht neu geschrieben.
+
+Ok, dann ziehe ich mir eben die zugehörigen Repositories in mein Projekt
+und kann die Bibliotheken nutzen. In individuell genutzten
+Implementierungen mag das ein gangbarer Weg sein, aber das Wissen um die
+zugehörigen Abhängigkeiten - Welche Subbibliotheken und welches .NET
+Framework werden vorausgesetzt? - liegt so nur implizit vor.
+
+Entsprechend brauchen wir ein Tool, mit dem wir die Abhängigkeiten UND
+den eigentlichen Code kombinieren und einem Projekt hinzufügen können.
+\texttt{NuGet} löst diese Aufgabe für .NET und schließt auch gleich die
+Mechanismen zur Freigabe von Code ein. NuGet definiert dabei, wie Pakete
+für .NET erstellt, gehostet und verarbeitet werden.
+
+Ein \texttt{NuGet}-Paket ist eine gepackte Datei mit der Erweiterung
+\texttt{.nupkg} die: + den kompilierten Code (DLLs), + ein
+beschreibendes Manifest, in dem Informationen wie die Versionsnummer des
+Pakets, ggf. der Speicherort des Source Codes oder die Projektwebseite
+enthalten sind sowie + die Abhängigkeiten von anderen Paketen und dessen
+Versionen enthalten sind Ein Entwickler, der seinen Code veröffentlichen
+möchte generiert die zugehörige Struktur und läd diese auf einen
+\texttt{NuGet} Server. Unter dem \href{https://www.nuget.org/}{Link}
+kann dieser durchsucht werden.
+
+\textbf{Anwendungsbeispiel: Symbolisches Lösen von Mathematischen
+Gleichungen}
+
+Eine entsprechende Bibliothek steht unter
+\href{https://symbolics.mathdotnet.com/}{Projektwebseite}. Das Ganze
+wird als \texttt{Nuget} Paket gehostet
+\href{https://www.nuget.org/packages/MathNet.Symbolics/}{MathNet}.
+
+Unter der Annahme, dass wir \texttt{dotnet} als Buildtool benutzen ist
+die Einbindung denkbar einfach.
+
+\begin{verbatim}
+dotnet new console -o SymbolicMath
+cd SymbolicMath
+dotnet add package MathNet.Symbolics
+Determining projects to restore...
+Writing /tmp/tmpNsaYtc.tmp
+info : Adding PackageReference for package 'MathNet.Symbolics' into project '/home/zug/Desktop/Vorlesungen/VL_Softwareentwicklung/code/16_Testen/ConditionalBuild/ConditionalBuild.csproj'.
+info :   GET https://api.nuget.org/v3/registration5-gz-semver2/mathnet.symbolics/index.json
+...
+\end{verbatim}
+
+Danach findet sich in unserer Projektdatei \texttt{.csproj} ein
+entsprechender Eintrag
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{<Project}\OtherTok{ Sdk=}\StringTok{"Microsoft.NET.Sdk"}\KeywordTok{>}
+
+  \KeywordTok{<PropertyGroup>}
+    \KeywordTok{<OutputType>}\NormalTok{Exe}\KeywordTok{</OutputType>}
+    \KeywordTok{<TargetFramework>}\NormalTok{net5.0}\KeywordTok{</TargetFramework>}
+  \KeywordTok{</PropertyGroup>}
+
+  \KeywordTok{<ItemGroup>}
+    \KeywordTok{<PackageReference}\OtherTok{ Include=}\StringTok{"MathNet.Symbolics"}\OtherTok{ Version=}\StringTok{"0.24.0"} \KeywordTok{/>}
+  \KeywordTok{</ItemGroup>}
+\KeywordTok{</Project>}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{using}\NormalTok{ System;}
+\KeywordTok{using}\NormalTok{ System.}\FunctionTok{Collections}\NormalTok{.}\FunctionTok{Generic}\NormalTok{;}
+\KeywordTok{using}\NormalTok{ MathNet.}\FunctionTok{Symbolics}\NormalTok{;}
+\KeywordTok{using}\NormalTok{ Expr = MathNet.}\FunctionTok{Symbolics}\NormalTok{.}\FunctionTok{SymbolicExpression}\NormalTok{;  }\CommentTok{// Platzhalter für verkürzte Schreibweise}
+
+\KeywordTok{class}\NormalTok{ Program}
+\NormalTok{\{}
+  \KeywordTok{static} \DataTypeTok{void} \FunctionTok{Main}\NormalTok{(}\DataTypeTok{string}\NormalTok{[] args)}
+\NormalTok{  \{}
+\NormalTok{    Console.}\FunctionTok{WriteLine}\NormalTok{(}\StringTok{"Beispiele für die Verwendung des MathNet.Symbolics Paketes"}\NormalTok{);}
+    \DataTypeTok{var}\NormalTok{ x = Expr.}\FunctionTok{Variable}\NormalTok{(}\StringTok{"x"}\NormalTok{);}
+    \DataTypeTok{var}\NormalTok{ y = Expr.}\FunctionTok{Variable}\NormalTok{(}\StringTok{"y"}\NormalTok{);}
+    \DataTypeTok{var}\NormalTok{ a = Expr.}\FunctionTok{Variable}\NormalTok{(}\StringTok{"a"}\NormalTok{);}
+    \DataTypeTok{var}\NormalTok{ b = Expr.}\FunctionTok{Variable}\NormalTok{(}\StringTok{"b"}\NormalTok{);}
+    \DataTypeTok{var}\NormalTok{ c = Expr.}\FunctionTok{Variable}\NormalTok{(}\StringTok{"c"}\NormalTok{);}
+    \DataTypeTok{var}\NormalTok{ d = Expr.}\FunctionTok{Variable}\NormalTok{(}\StringTok{"d"}\NormalTok{);}
+\NormalTok{    Console.}\FunctionTok{WriteLine}\NormalTok{(}\StringTok{"a+a ="}\NormalTok{ + (a + a + a).}\FunctionTok{ToString}\NormalTok{());}
+\NormalTok{    Console.}\FunctionTok{WriteLine}\NormalTok{(}\StringTok{"(2 + 1 / x - 1) ="}\NormalTok{ + (}\DecValTok{2}\NormalTok{ + }\DecValTok{1}\NormalTok{ / x - }\DecValTok{1}\NormalTok{).}\FunctionTok{ToString}\NormalTok{());}
+\NormalTok{    Console.}\FunctionTok{WriteLine}\NormalTok{(}\StringTok{"((a / b / (c * a)) * (c * d / a) / d) ="}\NormalTok{ + ((a / b / (c * a)) * (c * d / a) / d).}\FunctionTok{ToString}\NormalTok{());}
+\NormalTok{    Console.}\FunctionTok{WriteLine}\NormalTok{(}\StringTok{"Der zugehörige Latex Code lautet "}\NormalTok{ + ((a / b / (c * a)) * (c * d / a) / d).}\FunctionTok{ToLaTeX}\NormalTok{());}
+\NormalTok{  \}}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MathNet.Symbolics" Version="0.24.0" />
+  </ItemGroup>
+</Project>
+\end{verbatim}
 
 \hypertarget{softwarefehler}{%
 \section{Softwarefehler}\label{softwarefehler}}
 
-Bekannte Softwarefehler und deren Folgen:
+Zu Erinnerung an die bereits diskutierten Softwarefehler \ldots{}
 
-\begin{itemize}
-\item
-  Beim Kampfflugzeug F-16 brachte der Autopilot das Flugzeug in
-  Rückenlage, wenn der Äquator überflogen wurde. Dies kam daher, dass
-  man keine „negativen`` Breitengrade als Eingabedaten bedacht hatte.
-  Dieser Fehler wurde sehr spät während der Entwicklung der F-16 anhand
-  eines Simulators entdeckt und beseitigt.
-\item
-  1999 verpasste die NASA-Sonde Mars Climate Orbiter den Landeanflug auf
-  den Mars, weil die Programmierer unterschiedliche Maßsysteme
-  verwendeten (ein Team verwendete das metrische und das andere das
-  angloamerikanische) und beim Datenaustausch es so zu falschen
-  Berechnungen kam. Eine Software wurde so programmiert, dass sie sich
-  nicht an die vereinbarte Schnittstelle hielt, in der die metrische
-  Einheit Newton × Sekunde festgelegt war. Die NASA verlor dadurch die
-  Sonde.
-\item
-  Zwischen 1985 und 1987 gab es mehrere Unfälle mit dem medizinischen
-  Bestrahlungsgerät Therac-25. Infolge einer Überdosis, die durch
-  fehlerhafte Programmierung und fehlende Sicherungsmaßnahmen verursacht
-  wurde, mussten Organe entfernt werden, und es verstarben drei
-  Patienten.
-\item
-  Das Jahr-2000-Problem, auch als Millennium-Bug (zu deutsch
-  „Millennium-Fehler``) oder Y2K-Bug bezeichnet, ist ein
-  Computer­problem, das im Wesentlichen durch die Behandlung von
-  Jahreszahlen als zweistellige Angabe innerhalb von Computersystemen
-  entstanden ist.
-\end{itemize}
+\begin{quote}
+1999 verpasste die NASA-Sonde Mars Climate Orbiter den Landeanflug auf
+den Mars, weil die Programmierer unterschiedliche Maßsysteme verwendeten
+(ein Team verwendete das metrische und das andere das
+angloamerikanische) und beim Datenaustausch es so zu falschen
+Berechnungen kam. Eine Software wurde so programmiert, dass sie sich
+nicht an die vereinbarte Schnittstelle hielt, in der die metrische
+Einheit Newton × Sekunde festgelegt war. Die NASA verlor dadurch die
+Sonde. \href{https://www.bernd-leitenberger.de/mco.shtml}{Quelle}
+\end{quote}
 
 Softwarefehler sind sowohl sicherheitstechnisch wie ökonomisch ein
 erhebliches Risiko. Eine Studie der Zeitschrift iX ermittelte 2013 für
@@ -16169,33 +16487,55 @@ Qualitätssicherung}\label{testen-als-teil-der-qualituxe4tssicherung}}
          v
 \end{verbatim}
 
-Der Modultest, auch Komponententest oder Unittest genannt, ist ein Test
-auf der Ebene der einzelnen Module der Software. Testgegenstand ist die
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+\begin{minipage}[b]{0.12\columnwidth}\raggedright
+Bezeichnung\strut
+\end{minipage} & \begin{minipage}[b]{0.36\columnwidth}\raggedright
+Ebene\strut
+\end{minipage} & \begin{minipage}[b]{0.44\columnwidth}\raggedright
+Durchführender / Ziel\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.12\columnwidth}\raggedright
+Modultest, Komponententest oder Unittest\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
 Funktionalität innerhalb einzelner abgrenzbarer Teile der Software
-(Module, Programme oder Unterprogramme, Units oder Klassen). Testziel
-dieser häufig durch den Softwareentwickler selbst durchgeführten Tests
-ist der Nachweis der technischen Lauffähigkeit und korrekter fachlicher
-(Teil-) Ergebnisse.
-
-Der Integrationstest bzw. Interaktionstest testet die Zusammenarbeit
-voneinander abhängiger Komponenten. Der Testschwerpunkt liegt auf den
-Schnittstellen der beteiligten Komponenten und soll korrekte Ergebnisse
-über komplette Abläufe hinweg nachweisen.
-
-Der Systemtest ist die Teststufe, bei der das gesamte System gegen die
-gesamten Anforderungen (funktionale und nicht-funktionale Anforderungen)
-getestet wird. Gewöhnlich findet der Test auf einer Testumgebung statt
-und wird mit Testdaten durchgeführt. Die Testumgebung soll die
-Produktivumgebung des Kunden simulieren, d.~h. ihr möglichst ähnlich
-sein. In der Regel wird der Systemtest durch die realisierende
-Organisation durchgeführt.
-
-Ein Abnahmetest, Verfahrenstest, Akzeptanztest oder auch User Acceptance
-Test (UAT) ist das Testen der gelieferten Software durch den Kunden. Der
-erfolgreiche Abschluss dieser Teststufe ist meist Voraussetzung für die
-rechtswirksame Übernahme der Software und deren Bezahlung. Dieser Test
-kann unter Umständen (z. B. bei neuen Anwendungen) bereits auf der
-Produktionsumgebung mit Kopien aus Echtdaten durchgeführt werden.
+(Module, Programme oder Unterprogramme, Units oder Klassen)\strut
+\end{minipage} & \begin{minipage}[t]{0.44\columnwidth}\raggedright
+häufig durch den Softwareentwickler selbst, Nachweis der technischen
+Lauffähigkeit und korrekter fachlicher (Teil-) Ergebnisse\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.12\columnwidth}\raggedright
+Integrationstest, Interaktionstest\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+Zusammenarbeit voneinander abhängiger Komponenten\strut
+\end{minipage} & \begin{minipage}[t]{0.44\columnwidth}\raggedright
+Testschwerpunkt liegt auf den Schnittstellen der beteiligten Komponenten
+und soll korrekte Ergebnisse über komplette Abläufe hinweg
+nachweisen\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.12\columnwidth}\raggedright
+Systemtest\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+Gesamtes System wird gegen die gesamten Anforderungen (funktionale und
+nicht-funktionale Anforderungen) getestet\strut
+\end{minipage} & \begin{minipage}[t]{0.44\columnwidth}\raggedright
+Test in einer Testumgebung statt / wird mit Testdaten durchgeführt -
+Simulation einer realistischen Umgebung\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.12\columnwidth}\raggedright
+Abnahmetest, Verfahrenstest, Akzeptanztest\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+Testen der gelieferten Software durch den Kunden\strut
+\end{minipage} & \begin{minipage}[t]{0.44\columnwidth}\raggedright
+Rechtlich bindende Evaluation der Software und deren Bezahlung, unter
+Umständen bereits auf der Produktionsumgebung mit Kopien aus Echtdaten
+durchgeführt\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
 
 \textbf{Warum geht es dann trotzdem schief?}
 
@@ -16270,6 +16610,62 @@ Welche Unterschiede sehen Sie in den Definitionen?
 
 Abbildung motiviert durch \footnote{Ian Sommerville: Software
   Engineering, Pearson Education, 6. Auflage, 2001}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Entwerfen der Testfälle
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Analyse der Anforderungen, Dokumentationen um erforderliche
+  Testbedingungen festzulegen
+\item
+  Nachvollziehbarkeit der Entscheidungen, Weiterentwicklung bei
+  Anpassungen in den Anforderungen bzw. der Spezifikation
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Spezifizieren der Testfälle
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Ausarbeitung der eigentlichen Beschreibung der Testfälle und Testdaten
+\item
+  Definition der erwarteten Resultate
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Testausführung
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  (variable) Reihung der Testfälle unter Berücksichtigung von Vor- und
+  Nachbedingungen um Quereffekte abzubilden
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Evaluation der Ergebnisse
+\end{enumerate}
 
 \hypertarget{klassifikation-testmethoden}{%
 \subsection{Klassifikation
@@ -16378,20 +16774,24 @@ der Software.
 \hypertarget{planung-von-tests}{%
 \section{Planung von Tests}\label{planung-von-tests}}
 
-Im folgenden sollen unterschiedliche Black- und White-Box-Tests
-angewandt werden um eine Klasse MyMathFunctions, die zwei Methoden
-implementiert, zu testen:
+Nehmen wir an, wir hätten eine Klasse MyMathFunctions mit zwei Methoden
+implementiert und sollen diese testen \ldots{}
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \KeywordTok{static} \KeywordTok{class}\NormalTok{ MyMathFunctions\{}
   \CommentTok{//Fakultät der Zahl i}
-  \KeywordTok{public} \DataTypeTok{int} \FunctionTok{fak}\NormalTok{(}\DataTypeTok{int}\NormalTok{ i) \{...\}}
+  \KeywordTok{public} \KeywordTok{static} \DataTypeTok{int} \FunctionTok{fak}\NormalTok{(}\DataTypeTok{int}\NormalTok{ i) \{...\}}
   \CommentTok{// Grösstergemeinsamer Teiler von i, j und k}
-  \KeywordTok{public} \DataTypeTok{int} \FunctionTok{ggt}\NormalTok{(}\DataTypeTok{int}\NormalTok{ i, }\DataTypeTok{int}\NormalTok{ j, }\DataTypeTok{int}\NormalTok{ k) \{...\}}
+  \KeywordTok{public} \KeywordTok{static} \DataTypeTok{int} \FunctionTok{ggt}\NormalTok{(}\DataTypeTok{int}\NormalTok{ i, }\DataTypeTok{int}\NormalTok{ j, }\DataTypeTok{int}\NormalTok{ k) \{...\}}
 \NormalTok{\}}
 \end{Highlighting}
 \end{Shaded}
+
+\begin{quote}
+\textbf{Frage:} Mit wie vielen Tests könnten wir die Korrektheit der
+Implementierung nachweisen?
+\end{quote}
 
 Ein vollständiges Testen aller \texttt{int} Werte (\(2^{31}\) bis
 \(2^{31}-1\)) bedeutet für die Funktion \texttt{fak()} \(2^{32}\) und
@@ -16422,8 +16822,6 @@ Für Black-Box-Testing existieren unterschiedliche Ausprägungen:
 \item
   Grenzwertanalyse
   \href{https://www.youtube.com/watch?v=GshMbff3mzw}{Link}
-\item
-  Ursache Wirkungsgraphen
 \item
   Zustandsbasierte Testmethoden
 \end{itemize}
@@ -16902,58 +17300,49 @@ Hierzu nutzen wir das xunit Framework. Eine Folge von Tests für unsere
 \begin{Highlighting}[]
 \KeywordTok{using}\NormalTok{ Xunit;}
 
-\KeywordTok{namespace}\NormalTok{ MyMathMethods.}\FunctionTok{Test}
+\KeywordTok{public} \KeywordTok{class}\NormalTok{ Test_DivideTwoValues}
 \NormalTok{\{}
-    \KeywordTok{public} \KeywordTok{class}\NormalTok{ Test_DivideTwoValues}
+\NormalTok{    [Fact]}
+    \KeywordTok{public} \DataTypeTok{void} \FunctionTok{Check_StateEqualPositiveInputs}\NormalTok{()}
 \NormalTok{    \{}
-\NormalTok{        [Fact]}
-        \KeywordTok{public} \DataTypeTok{void} \FunctionTok{Check_StateEqualPositiveInputs}\NormalTok{()}
-\NormalTok{        \{}
-            \CommentTok{// Arrange}
-            \DataTypeTok{double}\NormalTok{ result = }\DecValTok{0}\NormalTok{;}
-            \DataTypeTok{double}\NormalTok{ dividend = }\DecValTok{5}\NormalTok{;}
-            \DataTypeTok{double}\NormalTok{ divisor = dividend;}
-            \DataTypeTok{int}\NormalTok{ expected = }\DecValTok{0}\NormalTok{;}
+        \CommentTok{// Arrange}
+        \DataTypeTok{double}\NormalTok{ result = }\DecValTok{0}\NormalTok{;}
+        \DataTypeTok{double}\NormalTok{ dividend = }\DecValTok{5}\NormalTok{;}
+        \DataTypeTok{double}\NormalTok{ divisor = dividend;}
+        \DataTypeTok{int}\NormalTok{ expected = }\DecValTok{0}\NormalTok{;}
+        \CommentTok{// Act}
+        \DataTypeTok{var}\NormalTok{ state = Calculator.}\FunctionTok{DivideTwoValues}\NormalTok{(dividend, divisor, }\KeywordTok{ref}\NormalTok{ result);}
+        \CommentTok{// Assert}
+\NormalTok{        Assert.}\FunctionTok{Equal}\NormalTok{(expected, state);}
+\NormalTok{    \}}
 
-            \CommentTok{// Act}
-            \DataTypeTok{var}\NormalTok{ state = Calculator.}\FunctionTok{DivideTwoValues}\NormalTok{(dividend, divisor, }\KeywordTok{ref}\NormalTok{ result);}
+\NormalTok{    [Fact]}
+    \KeywordTok{public} \DataTypeTok{void} \FunctionTok{Check_StateZeroAsDivended}\NormalTok{()}
+\NormalTok{    \{}
+        \CommentTok{// Arrange}
+        \DataTypeTok{double}\NormalTok{ result = }\DecValTok{0}\NormalTok{;}
+        \DataTypeTok{double}\NormalTok{ dividend = }\DecValTok{5}\NormalTok{;}
+        \DataTypeTok{double}\NormalTok{ divisor = }\DecValTok{0}\NormalTok{;}
+        \DataTypeTok{int}\NormalTok{ expected = }\DecValTok{-1}\NormalTok{;}
+        \CommentTok{// Act}
+        \DataTypeTok{var}\NormalTok{ state = Calculator.}\FunctionTok{DivideTwoValues}\NormalTok{(dividend, divisor, }\KeywordTok{ref}\NormalTok{ result);}
+        \CommentTok{// Assert}
+\NormalTok{        Assert.}\FunctionTok{True}\NormalTok{(expected == state);}
+\NormalTok{    \}}
 
-            \CommentTok{// Assert}
-\NormalTok{            Assert.}\FunctionTok{Equal}\NormalTok{(expected, state);}
-\NormalTok{        \}}
-
-\NormalTok{        [Fact]}
-        \KeywordTok{public} \DataTypeTok{void} \FunctionTok{Check_StateZeroAsDivended}\NormalTok{()}
-\NormalTok{        \{}
-            \CommentTok{// Arrange}
-            \DataTypeTok{double}\NormalTok{ result = }\DecValTok{0}\NormalTok{;}
-            \DataTypeTok{double}\NormalTok{ dividend = }\DecValTok{5}\NormalTok{;}
-            \DataTypeTok{double}\NormalTok{ divisor = }\DecValTok{0}\NormalTok{;}
-            \DataTypeTok{int}\NormalTok{ expected = }\DecValTok{-1}\NormalTok{;}
-
-            \CommentTok{// Act}
-            \DataTypeTok{var}\NormalTok{ state = Calculator.}\FunctionTok{DivideTwoValues}\NormalTok{(dividend, divisor, }\KeywordTok{ref}\NormalTok{ result);}
-
-            \CommentTok{// Assert}
-\NormalTok{            Assert.}\FunctionTok{True}\NormalTok{(expected == state);}
-\NormalTok{        \}}
-
-\NormalTok{        [Theory]                                             }\CommentTok{// Übergabe von variablen Parametersets}
-\NormalTok{        [}\FunctionTok{InlineData}\NormalTok{(}\DecValTok{10}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{5}\NormalTok{)]}
-\NormalTok{        [}\FunctionTok{InlineData}\NormalTok{(}\DecValTok{5}\NormalTok{, }\DecValTok{2}\NormalTok{, }\FloatTok{2.5}\NormalTok{)]}
-\NormalTok{        [}\FunctionTok{InlineData}\NormalTok{(}\DataTypeTok{double}\NormalTok{.}\FunctionTok{MaxValue}\NormalTok{, }\DataTypeTok{double}\NormalTok{.}\FunctionTok{MaxValue}\NormalTok{, }\DecValTok{1}\NormalTok{)]    }\CommentTok{// Edge Cases}
-\NormalTok{        [}\FunctionTok{InlineData}\NormalTok{(}\DataTypeTok{double}\NormalTok{.}\FunctionTok{MaxValue}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DataTypeTok{double}\NormalTok{.}\FunctionTok{MaxValue}\NormalTok{)]}
-        \KeywordTok{public} \DataTypeTok{void} \FunctionTok{Check_ResultCalculation}\NormalTok{(}\DataTypeTok{double}\NormalTok{ dividend, }\DataTypeTok{double}\NormalTok{ divisor, }\DataTypeTok{double}\NormalTok{ expected)}
-\NormalTok{        \{}
-            \CommentTok{// Arrange}
-            \DataTypeTok{double}\NormalTok{ result = }\DecValTok{0}\NormalTok{;}
-
-            \CommentTok{// Act}
-            \DataTypeTok{var}\NormalTok{ state = Calculator.}\FunctionTok{DivideTwoValues}\NormalTok{(dividend, divisor, }\KeywordTok{ref}\NormalTok{ result);}
-
-            \CommentTok{// Assert}
-\NormalTok{            Assert.}\FunctionTok{Equal}\NormalTok{(expected, result);}
-\NormalTok{        \}}
+\NormalTok{    [Theory]                                             }\CommentTok{// Übergabe von variablen Parametersets}
+\NormalTok{    [}\FunctionTok{InlineData}\NormalTok{(}\DecValTok{10}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{5}\NormalTok{)]}
+\NormalTok{    [}\FunctionTok{InlineData}\NormalTok{(}\DecValTok{5}\NormalTok{, }\DecValTok{2}\NormalTok{, }\FloatTok{2.5}\NormalTok{)]}
+\NormalTok{    [}\FunctionTok{InlineData}\NormalTok{(}\DataTypeTok{double}\NormalTok{.}\FunctionTok{MaxValue}\NormalTok{, }\DataTypeTok{double}\NormalTok{.}\FunctionTok{MaxValue}\NormalTok{, }\DecValTok{1}\NormalTok{)]    }\CommentTok{// Edge Cases}
+\NormalTok{    [}\FunctionTok{InlineData}\NormalTok{(}\DataTypeTok{double}\NormalTok{.}\FunctionTok{MaxValue}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DataTypeTok{double}\NormalTok{.}\FunctionTok{MaxValue}\NormalTok{)]}
+    \KeywordTok{public} \DataTypeTok{void} \FunctionTok{Check_ResultCalculation}\NormalTok{(}\DataTypeTok{double}\NormalTok{ dividend, }\DataTypeTok{double}\NormalTok{ divisor, }\DataTypeTok{double}\NormalTok{ expected)}
+\NormalTok{    \{}
+        \CommentTok{// Arrange}
+        \DataTypeTok{double}\NormalTok{ result = }\DecValTok{0}\NormalTok{;}
+        \CommentTok{// Act}
+        \DataTypeTok{var}\NormalTok{ state = Calculator.}\FunctionTok{DivideTwoValues}\NormalTok{(dividend, divisor, }\KeywordTok{ref}\NormalTok{ result);}
+        \CommentTok{// Assert}
+\NormalTok{        Assert.}\FunctionTok{Equal}\NormalTok{(expected, result);}
 \NormalTok{    \}}
 \NormalTok{\}}
 \end{Highlighting}
@@ -17061,6 +17450,181 @@ Kursinformationen\strut
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
+\hypertarget{neues-aus-der-github-woche-1}{%
+\section{Neues aus der
+Github-Woche}\label{neues-aus-der-github-woche-1}}
+
+Wie stark arbeiten Sie kollaborativ und kooperativ?
+
+\begin{longtable}[]{@{}llll@{}}
+\toprule
+\begin{minipage}[b]{0.04\columnwidth}\raggedright
+TeamID\strut
+\end{minipage} & \begin{minipage}[b]{0.36\columnwidth}\raggedright
+author\_A\strut
+\end{minipage} & \begin{minipage}[b]{0.36\columnwidth}\raggedright
+author\_B\strut
+\end{minipage} & \begin{minipage}[b]{0.13\columnwidth}\raggedright
+CollaborationRatio\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.04\columnwidth}\raggedright
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+{[}.gitignore, Program.cs, project.assets.json, \ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+NaN\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedright
+0.00\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\raggedright
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+{[}README.md, IP.Tools class, Computer.simulatio\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+NaN\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedright
+0.00\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\raggedright
+2\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+{[}team.config, Program.cs{]}\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+{[}.gitignore, Program.cs, softwareentwicklung\_a\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedright
+0.25\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\raggedright
+4\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+{[}Program.cs, gitbefehle.md{]}\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+{[}.gitignore, Computer.csproj, Program.cs{]}\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedright
+0.25\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\raggedright
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+{[}.gitignore, Program.cs, softwareentwicklung\_a\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+{[}printmethode{]}\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedright
+0.00\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\raggedright
+6\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+{[}class-computer.cs, computer\_archive.2.cs, mai\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+{[}computer\_archive.cs, computer\_archive.2.cs, I\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedright
+0.20\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\raggedright
+7\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+{[}.gitignore, Archive.cs, Comnputer.cs, IPTools\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+NaN\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedright
+0.00\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\raggedright
+8\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+{[}.gitignore, Program.cs, user.csproj, Computer\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+{[}.gitignore, Computer.cs, übung04.csproj{]}\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedright
+0.40\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\raggedright
+9\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+{[}aufg1, aufg1.cs{]}\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+{[}aufg2.cs{]}\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedright
+0.00\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\raggedright
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+{[}Computer.cs, IPTools.cs, .gitignore, Program\ldots{}.\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+{[}Computer.cs, Program.cs, Archive.cs{]}\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedright
+0.33\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\raggedright
+11\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+{[}ComputerClass.cs, ClassComputer.cs, softwaree\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+{[}main.cs, .gitignore, Program.cs, softwareentw\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedright
+0.38\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\raggedright
+12\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+{[}Program.cs, softwareentwicklung\_aufgabe4\_sose\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+{[}Program.cs, .gitignore{]}\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedright
+0.66\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\raggedright
+13\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+{[}Schritt1.cs{]}\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+NaN\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedright
+0.00\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\raggedright
+14\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+{[}.gitignore, Program.cs, Computer.cs, .NETCore\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+{[}Computer.cs, Program.cs, softwareentwicklung\_\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedright
+0.16\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\raggedright
+15\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+{[}computer.cs, computerclass.cs, Aufgabe4.cspro\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+{[}Program.cs, Archiv.cs, IPTools.cs, .gitignore\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedright
+0.42\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\raggedright
+16\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+NaN\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+NaN\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedright
+0.00\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.04\columnwidth}\raggedright
+17\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+{[}Aufgabe04.csproj, Program.cs, daten\_speichern\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{0.36\columnwidth}\raggedright
+{[}.gitignore, Computer.cs, Program.cs, Archive.cs{]}\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\raggedright
+0.16\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
 \hypertarget{dokumentation}{%
 \section{Dokumentation}\label{dokumentation}}
 
@@ -17087,7 +17651,7 @@ entwickelt wurde.
 die Frage, ob das Ganze für den internen Gebrauch oder den externen
 Gebrauch, also zur Weitergabe an Kunden, realisiert werden muss.
 Letztgenannte Variante unterliegt einer Vielzahl von rechtlichen
-Normierungen und Standards.
+Normierungen und Standards!
 
 \emph{Klassifikation 2 - Inhalt}
 
@@ -17104,10 +17668,10 @@ Bezug\strut
 Installationsdokumentation\strut
 \end{minipage} & \begin{minipage}[t]{0.90\columnwidth}\raggedright
 Beschreibung der erforderlichen Hardware und Software, mögliche
-Betriebssysteme und -Versionen, vorausgesetzte Software-Umgebung wie
+Betriebssysteme und -Versionen, vorausgesetzte Software-Umgebung, wie
 etwa Standardbibliotheken und Laufzeitsysteme. Erläuterung der
 Prozeduren zur Installation, außerdem zur Pflege (Updates) und
-De-Installation, bei kleinen Produkten eine Readme-Datei.\strut
+De-Installation, bei kleinen Produkten eine Readme-Datei-Datei.\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.04\columnwidth}\raggedright
 Benutzerdokumentation\strut
@@ -17226,10 +17790,15 @@ ergeben sich die Schwerpunkte der Dokumentationsarbeit:
   Code-Kommentare, Hintergrundinformationen und Code-Beispiele
 \end{itemize}
 
+\begin{figure}
+\centering
 \includegraphics{https://www.plantuml.com/plantuml/png/XP1FRzD04CNl-oc6NDfAiKq27AXGL2ino6fIgZXHuOJMzjXPTVz4Esj2-VHuRLACP2cdrRxvpNkZTqUEMzSeoQwMvlXYHNrmC7yx-mYnuh-D3WkZff3g8WHZGJW2NbL22kwGGeYbXArV8TWYeVs9PSYkiiVLjs0j2jI4GLgYTg8IQ6zXa-xW-dFhKwBZGj8K214EpXtfDefguGvDxWCZVYB9S_9l80gZAQYC3OwIQtzgb4kJHugJGnkjqsNoa2KtZBqHkf1DYV39huiyYf-ofL7AwCNeB1FgAFrbvM9a-Gjgj5n6Uq9BBT2zr_iisSwcC16wpMu1YFK9TObsqeemkHbWyrR1NnUnTqEtHBkJA9xb6FY-zxiCVcYL3TUyHeNQdUUiuBRyUqUZQy9N1-04oSFkALtUhvCjguH4Y1_J7olpt7W7xeJH7bfzlT_F-ddsGWvLEKRC6JbZUNs6l9vzptR9Xh6kFWY2nJ2mQs5CxCa-jMjq-7zTwZExXiR-v-okcG70sByq2CCpzh_OPOreStRdQrJo3m00}
-Abbildung motiviert aus \footnote{Uwe Friedrichsen, Optimale
+\caption{Modelle}
+\end{figure}
+
+\emph{Abbildung motiviert aus \footnote{Uwe Friedrichsen, Optimale
   Systemdokumentation mit agilen Prinzipien, 06/11,
-  https://www.codecentric.de/publikation/optimale-systemdokumentation-mit-agilen-prinzipien/}
+  https://www.codecentric.de/publikation/optimale-systemdokumentation-mit-agilen-prinzipien/}}
 
 Entsprechend ergeben sich vielfältige Dokumentationstypen, die ggf.
 erfasst werden sollten:
@@ -17314,8 +17883,8 @@ werden.
 \NormalTok{  \}}
   \KeywordTok{public} \KeywordTok{static} \DataTypeTok{bool} \KeywordTok{operator}\NormalTok{ !=(Vector p1, Vector p2)\{}
     \CommentTok{// hier hatte ich keine Lust mehr}
-    \CommentTok{// TODO die Methode müsste noch implemenntiert werden.}
-    \KeywordTok{return} \KeywordTok{true}\NormalTok{;}
+    \CommentTok{// TODO die Methode müsste noch implementiert werden.}
+    \KeywordTok{return} \KeywordTok{true}\NormalTok{;     }
 \NormalTok{  \}}
 \NormalTok{\}}
 
@@ -17336,6 +17905,12 @@ werden.
 \NormalTok{\}}
 \end{Highlighting}
 \end{Shaded}
+
+\begin{quote}
+Anmerkung: Bauen Sie nie Rückgabewerte für nicht ausimplementierte
+Klassenelemente ein ohne eine
+\texttt{throw\ new\ NotImplementedException();} zu integrieren.
+\end{quote}
 
 Über entsprechende Tags lassen sich den Dokumentationsfragmenten
 Bedeutungen geben, die eine entsprechende Gliederung und Zuordnung
@@ -17501,8 +18076,10 @@ Kombination mit einem einfachen Kommentar.
 \end{Highlighting}
 \end{Shaded}
 
-Leider funktioniert dieser Mechanismus unter dem gleich vorzustellen
-Tool Doxygen nicht.
+\begin{quote}
+Anmerkung: Leider funktioniert dieser Mechanismus unter dem gleich
+vorzustellen Tool Doxygen nicht.
+\end{quote}
 
 \textbf{Konkrete Umsetzung mit C\#}
 
@@ -17593,137 +18170,6 @@ INPUT                 += README.md
 USE_MDFILE_AS_MAINPAGE = README.md
 \end{verbatim}
 
-\hypertarget{paketmanagement}{%
-\section{Paketmanagement}\label{paketmanagement}}
-
-\begin{quote}
-\textbf{Merke:} Erfinde das Rad nicht neu!
-\end{quote}
-
-Wie schaffen es erfahrene Entwickler innerhalb kürzester Zeit Prototypen
-mit beeindruckender Funktionalität zu entwerfen? Sicher, die Erfahrung
-spielt hier eine Große Rolle aber auch die Wiederverwendung von
-existierendem Code. Häufig wiederkehrende Aufgaben wie zum Beispiel:
-
-\begin{itemize}
-\tightlist
-\item
-  das Logging
-\item
-  der Zugriff auf Datenquellen
-\item
-  mathematische Operationen
-\item
-  Datenkapselung und Abstraktion
-\item
-  \ldots{}
-\end{itemize}
-
-werden bereits durch umfangreiche Bibliotheken implementiert und werden
-entsprechend nicht neu geschrieben.
-
-Ok, dann ziehe ich mir eben die zugehörigen Repositories in mein Projekt
-und kann die Bibliotheken nutzen. In individuell genutzten
-Implementierungen mag das ein gangbarer Weg sein, aber das Wissen um die
-zugehörigen Abhängigkeiten - Welche Subbibliotheken und welches .NET
-Framework werden vorausgesetzt? - liegt so nur implizit vor.
-
-Entsprechend brauchen wir ein Tool, mit dem wir die Abhängigkeiten UND
-den eigentlichen Code kombinieren und einem Projekt hinzufügen können.
-\texttt{NuGet} löst diese Aufgabe für .NET und schließt auch gleich die
-Mechanismen zur Freigabe von Code ein. NuGet definiert dabei, wie Pakete
-für .NET erstellt, gehostet und verarbeitet werden.
-
-Ein \texttt{NuGet}-Paket ist eine gepackte Datei mit der Erweiterung
-\texttt{.nupkg} die: + den kompilierten Code (DLLs), + ein
-beschreibendes Manifest, in dem Informationen wie die Versionsnummer des
-Pakets, ggf. der Speicherort des Source Codes oder die Projektwebseite
-enthalten sind sowie + die Abhängigkeiten von anderen Paketen und dessen
-Versionen enthalten sind Ein Entwickler, der seinen Code veröffentlichen
-möchte generiert die zugehörige Struktur und läd diese auf einen
-\texttt{NuGet} Server. Unter dem \href{https://www.nuget.org/}{Link}
-kann dieser durchsucht werden.
-
-\textbf{Anwendungsbeispiel: Symbolisches Lösen von Mathematischen
-Gleichungen}
-
-Eine entsprechende Bibliothek steht unter
-\href{https://symbolics.mathdotnet.com/}{Projektwebseite}. Das Ganze
-wird als \texttt{Nuget} Paket gehostet
-\href{https://www.nuget.org/packages/MathNet.Symbolics/}{MathNet}.
-
-Unter der Annahme, dass wir \texttt{dotnet} als Buildtool benutzen ist
-die Einbindung denkbar einfach.
-
-\begin{verbatim}
-dotnet new console -o SymbolicMath
-cd SymbolicMath
-dotnet add package MathNet.Symbolics
-Determining projects to restore...
-Writing /tmp/tmpNsaYtc.tmp
-info : Adding PackageReference for package 'MathNet.Symbolics' into project '/home/zug/Desktop/Vorlesungen/VL_Softwareentwicklung/code/16_Testen/ConditionalBuild/ConditionalBuild.csproj'.
-info :   GET https://api.nuget.org/v3/registration5-gz-semver2/mathnet.symbolics/index.json
-...
-\end{verbatim}
-
-Danach findet sich in unserer Projektdatei \texttt{.csproj} ein
-entsprechender Eintrag
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{<Project}\OtherTok{ Sdk=}\StringTok{"Microsoft.NET.Sdk"}\KeywordTok{>}
-
-  \KeywordTok{<PropertyGroup>}
-    \KeywordTok{<OutputType>}\NormalTok{Exe}\KeywordTok{</OutputType>}
-    \KeywordTok{<TargetFramework>}\NormalTok{net5.0}\KeywordTok{</TargetFramework>}
-  \KeywordTok{</PropertyGroup>}
-
-  \KeywordTok{<ItemGroup>}
-    \KeywordTok{<PackageReference}\OtherTok{ Include=}\StringTok{"MathNet.Symbolics"}\OtherTok{ Version=}\StringTok{"0.24.0"} \KeywordTok{/>}
-  \KeywordTok{</ItemGroup>}
-\KeywordTok{</Project>}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{using}\NormalTok{ System;}
-\KeywordTok{using}\NormalTok{ System.}\FunctionTok{Collections}\NormalTok{.}\FunctionTok{Generic}\NormalTok{;}
-\KeywordTok{using}\NormalTok{ MathNet.}\FunctionTok{Symbolics}\NormalTok{;}
-\KeywordTok{using}\NormalTok{ Expr = MathNet.}\FunctionTok{Symbolics}\NormalTok{.}\FunctionTok{SymbolicExpression}\NormalTok{;  }\CommentTok{// Platzhalter für verkürzte Schreibweise}
-
-\KeywordTok{class}\NormalTok{ Program}
-\NormalTok{\{}
-  \KeywordTok{static} \DataTypeTok{void} \FunctionTok{Main}\NormalTok{(}\DataTypeTok{string}\NormalTok{[] args)}
-\NormalTok{  \{}
-\NormalTok{    Console.}\FunctionTok{WriteLine}\NormalTok{(}\StringTok{"Beispiele für die Verwendung des MathNet.Symbolics Paketes"}\NormalTok{);}
-    \DataTypeTok{var}\NormalTok{ x = Expr.}\FunctionTok{Variable}\NormalTok{(}\StringTok{"x"}\NormalTok{);}
-    \DataTypeTok{var}\NormalTok{ y = Expr.}\FunctionTok{Variable}\NormalTok{(}\StringTok{"y"}\NormalTok{);}
-    \DataTypeTok{var}\NormalTok{ a = Expr.}\FunctionTok{Variable}\NormalTok{(}\StringTok{"a"}\NormalTok{);}
-    \DataTypeTok{var}\NormalTok{ b = Expr.}\FunctionTok{Variable}\NormalTok{(}\StringTok{"b"}\NormalTok{);}
-    \DataTypeTok{var}\NormalTok{ c = Expr.}\FunctionTok{Variable}\NormalTok{(}\StringTok{"c"}\NormalTok{);}
-    \DataTypeTok{var}\NormalTok{ d = Expr.}\FunctionTok{Variable}\NormalTok{(}\StringTok{"d"}\NormalTok{);}
-\NormalTok{    Console.}\FunctionTok{WriteLine}\NormalTok{(}\StringTok{"a+a ="}\NormalTok{ + (a + a + a).}\FunctionTok{ToString}\NormalTok{());}
-\NormalTok{    Console.}\FunctionTok{WriteLine}\NormalTok{(}\StringTok{"(2 + 1 / x - 1) ="}\NormalTok{ + (}\DecValTok{2}\NormalTok{ + }\DecValTok{1}\NormalTok{ / x - }\DecValTok{1}\NormalTok{).}\FunctionTok{ToString}\NormalTok{());}
-\NormalTok{    Console.}\FunctionTok{WriteLine}\NormalTok{(}\StringTok{"((a / b / (c * a)) * (c * d / a) / d) ="}\NormalTok{ + ((a / b / (c * a)) * (c * d / a) / d).}\FunctionTok{ToString}\NormalTok{());}
-\NormalTok{    Console.}\FunctionTok{WriteLine}\NormalTok{(}\StringTok{"Der zugehörige Latex Code lautet "}\NormalTok{ + ((a / b / (c * a)) * (c * d / a) / d).}\FunctionTok{ToLaTeX}\NormalTok{());}
-\NormalTok{  \}}
-\NormalTok{\}}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="MathNet.Symbolics" Version="0.24.0" />
-  </ItemGroup>
-</Project>
-\end{verbatim}
-
 \hypertarget{build-tools}{%
 \section{Build Tools}\label{build-tools}}
 
@@ -17735,8 +18181,9 @@ hinzu \ldots{} und für all diese Teilaspekte gibt es jeweils eigne
 Tools. Das möchte doch niemand manuell angehen!
 
 \begin{verbatim}
-mcs program.cs
-mono program.exe
+dotnet build myproject
+dotnet run myproject
+...
 doxygen Doxyfile
 ...
 \end{verbatim}
@@ -17838,13 +18285,13 @@ cd MyExcelGenerator
 cat MyExcelGenerator.csproj
 dotnet add package EPPlus
 cat MyExcelGenerator.csproj
-... Program.cs anpassen ... siehe Codebeispiel im Codeordner
+... Program.cs anpassen ...
 dotnet build
 dotnet run
 soffice -calc myworkbook.xlsx
 \end{verbatim}
 
-\texttt{dotnet} ermöglicht keine Defintion von Abhängigkeiten (ohne auf
+\texttt{dotnet} ermöglicht keine Definition von Abhängigkeiten (ohne auf
 MSBuild zurückzugreifen) standardisiert aber den Erstellungs- und
 Testprozess, sowie das Pakethandling!
 
@@ -17853,9 +18300,8 @@ Testprozess, sowie das Pakethandling!
 
 MSBuild ist Build-Tool, das insbesondere für das Erstellen von
 .NET-basierten Anwendungen genutzt wird. Microsofts Visual Studio ist in
-wesentlichem Maße von MSBuild abhängig; MSBuild selbst ist aber nicht
-von Visual Studio abhängig. Dadurch lassen sich mit MSBuild auch
-Visual-Studio-Projekte ohne den Einsatz von Visual Studio bauen.
+wesentlichem Maße von MSBuild abhängig; umgekehrt besteht diese
+Abhängigkeit nicht.
 
 Im Wesentlichen besteht MSBuild aus der Datei \texttt{msbuild.exe} und
 dll-Dateien, die auch im .NET Framework enthalten sind, und XML-Schemas,
@@ -17969,7 +18415,6 @@ $(EXE): $(OBJ)
 # Objects depend on these Libraries
 $(OBJ): $(INCL)
 
-
 # Clean Up Objects, Exectuables, Dumps out of source directory
 clean:
        $(RM) $(OBJ) $(EXE) core a.out
@@ -17980,7 +18425,7 @@ MERKE: Die Einschübe im MAKEFILE sind keine Leerzeichen, sondern
 Tabulatorshifts!
 \end{quote}
 
-Das Hilfsprogramm make ist Teil des POSIX-Standards.
+Das Hilfsprogramm \texttt{make} ist Teil des POSIX-Standards.
 
 \hypertarget{continuous-integration}{%
 \chapter{Continuous Integration}\label{continuous-integration}}
@@ -18002,7 +18447,7 @@ Kursinformationen\strut
 \begin{minipage}[t]{0.11\columnwidth}\raggedright
 \textbf{Semester}\strut
 \end{minipage} & \begin{minipage}[t]{0.83\columnwidth}\raggedright
-\texttt{Sommersemester\ 2021}\strut
+\texttt{Sommersemester\ 2022}\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.11\columnwidth}\raggedright
 \textbf{Hochschule:}\strut
@@ -18169,6 +18614,12 @@ aber ungeeignet für Projekte {[}persönliche Meinung des Vortragenden
 :-){]}.
 \end{quote}
 
+\begin{quote}
+\textbf{Hinweis:} Eine Beschreibung der Installationsprozedur für einen
+C\#-Kernel finden Sie unter
+\href{https://developers.refinitiv.com/en/article-catalog/article/using--net-core-in-jupyter-notebook}{Link}
+\end{quote}
+
 \hypertarget{continuous-integration-ci}{%
 \section{Continuous integration (CI)}\label{continuous-integration-ci}}
 
@@ -18235,7 +18686,7 @@ benötigt werden:
 
 \begin{quote}
 Merke: Unterschätzen Sie den Aufwand für die Realisierung und Wartung
-der Tool-Chain nicht. Häufig müssen hier zu Begimn des Projektes
+der Tool-Chain nicht. Häufig müssen hier zu Beginn des Projektes
 grundsätzliche Entscheidungen getroffen werden, die zumindest
 mittelfristige Auswirkungen auf das Projekt haben.
 \end{quote}
@@ -18819,7 +19270,7 @@ Kursinformationen\strut
 \begin{minipage}[t]{0.11\columnwidth}\raggedright
 \textbf{Semester}\strut
 \end{minipage} & \begin{minipage}[t]{0.83\columnwidth}\raggedright
-\texttt{Sommersemester\ 2021}\strut
+\texttt{Sommersemester\ 2022}\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.11\columnwidth}\raggedright
 \textbf{Hochschule:}\strut
@@ -18875,7 +19326,9 @@ das Ganze nicht mit unserem bisherigen Array-Konzept?
 \NormalTok{      Type valueType = myArray.}\FunctionTok{GetType}\NormalTok{();}
 \NormalTok{      Console.}\FunctionTok{WriteLine}\NormalTok{(}\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{myArray: Type is \{0\}"}\NormalTok{, valueType);}
 \NormalTok{      Console.}\FunctionTok{WriteLine}\NormalTok{(}\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{myArray is Array? \{0\}"}\NormalTok{, valueType.}\FunctionTok{IsArray}\NormalTok{);}
-      \CommentTok{//myArray.Add(7);}
+      
+\NormalTok{      Console.}\FunctionTok{WriteLine}\NormalTok{(}\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{Total length of the array = \{0:d\}"}\NormalTok{, myArray.}\FunctionTok{Length}\NormalTok{);}
+      \CommentTok{//myArray.Add(7);   // Methode existiert nicht!}
 \NormalTok{    \}}
 \NormalTok{\}}
 \end{Highlighting}
@@ -19726,7 +20179,7 @@ Kursinformationen\strut
 \begin{minipage}[t]{0.11\columnwidth}\raggedright
 \textbf{Semester}\strut
 \end{minipage} & \begin{minipage}[t]{0.83\columnwidth}\raggedright
-\texttt{Sommersemester\ 2021}\strut
+\texttt{Sommersemester\ 2022}\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.11\columnwidth}\raggedright
 \textbf{Hochschule:}\strut
@@ -19752,6 +20205,129 @@ Kursinformationen\strut
 \end{longtable}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{zur-erinnerung-und-in-erguxe4nzung}{%
+\section{\ldots{} zur Erinnerung und in
+Ergänzung}\label{zur-erinnerung-und-in-erguxe4nzung}}
+
+\begin{verbatim}
+                                     C# Typen
+                                         |
+                       .------------------------------------.
+                       |                                    |
+                   Werttypen                           Referenztypen
+                       |                                    |
+         .-------+-----+---+--------.        .-------+---------+-------.
+         |       |         |        |        |       |         |       |
+     Vordefi-  Enumer-  Structs   Tupel   Klassen  Inter    Arrays  Delegates
+ nierte Typen  ation                     (String) -faces
+         |
+         |      ...............................................................
+         |                           Benutzerdefinierte Typen
+         |
+         .----+------+-----------+-------------.
+         |           |           |             |
+     Character    Ganzzahl   Gleitkommazahl   Bool
+                     |
+             .------+---------.
+             |                |
+     mit Vorzeichen     vorzeichenlos                                            .
+\end{verbatim}
+
+Die bisher behandelten Userdatentypen \texttt{struct} und \texttt{class}
+erfahren in C\# 9.0 eine Erweiterung - \texttt{records}. Es wurden zwei
+Varianten integriert
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{record} ist nur eine Abkürzung für eine \texttt{record\ class}
+  - ein Referenztyp.
+\item
+  \texttt{record\ struct} ist ein Wertdatentyp.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{using}\NormalTok{ System;}
+
+\KeywordTok{public}\NormalTok{ record }\FunctionTok{PersonRecord}\NormalTok{(}\DataTypeTok{string}\NormalTok{ FirstName, }\DataTypeTok{string}\NormalTok{ LastName);}
+
+\KeywordTok{public} \KeywordTok{class}\NormalTok{ PersonClass}
+\NormalTok{\{}
+    \KeywordTok{public} \DataTypeTok{string}\NormalTok{ FirstName \{ }\KeywordTok{get}\NormalTok{; }\KeywordTok{set}\NormalTok{; \}}
+    \KeywordTok{public} \DataTypeTok{string}\NormalTok{ LastName \{ }\KeywordTok{get}\NormalTok{; }\KeywordTok{set}\NormalTok{; \}}
+\NormalTok{\}}
+
+\KeywordTok{public} \KeywordTok{class}\NormalTok{ Program}
+\NormalTok{\{}
+  \KeywordTok{public} \KeywordTok{static} \DataTypeTok{void} \FunctionTok{Main}\NormalTok{()}
+\NormalTok{  \{}
+      \CommentTok{// Darstellung mit Records}
+      \DataTypeTok{var}\NormalTok{ record_}\DecValTok{1}\NormalTok{ = }\KeywordTok{new} \FunctionTok{PersonRecord}\NormalTok{(}\StringTok{"Calvin"}\NormalTok{, }\StringTok{"Allen"}\NormalTok{);}
+      \DataTypeTok{var}\NormalTok{ record_}\DecValTok{2}\NormalTok{ = }\KeywordTok{new} \FunctionTok{PersonRecord}\NormalTok{(}\StringTok{"Calvin"}\NormalTok{, }\StringTok{"Allen"}\NormalTok{);}
+
+\NormalTok{      Console.}\FunctionTok{WriteLine}\NormalTok{(record_}\DecValTok{1}\NormalTok{);}
+\NormalTok{      Console.}\FunctionTok{WriteLine}\NormalTok{(record_}\DecValTok{1}\NormalTok{ == record_}\DecValTok{2}\NormalTok{);}
+      \CommentTok{//record_1.FirstName = "Tralla";}
+
+      \CommentTok{// Darstellung mit Klasseninstanzen}
+
+      \DataTypeTok{var}\NormalTok{ class_}\DecValTok{1}\NormalTok{ = }\KeywordTok{new} \FunctionTok{PersonClass}\NormalTok{()\{}
+\NormalTok{            FirstName = }\StringTok{"John"}\NormalTok{,}
+\NormalTok{            LastName = }\StringTok{"Doe"}
+\NormalTok{        \};}
+      \DataTypeTok{var}\NormalTok{ class_}\DecValTok{2}\NormalTok{ = }\KeywordTok{new} \FunctionTok{PersonClass}\NormalTok{()\{}
+\NormalTok{            FirstName = }\StringTok{"John"}\NormalTok{,}
+\NormalTok{            LastName = }\StringTok{"Doe"}
+\NormalTok{        \};}
+
+\NormalTok{      Console.}\FunctionTok{WriteLine}\NormalTok{(class_}\DecValTok{1}\NormalTok{);}
+\NormalTok{      Console.}\FunctionTok{WriteLine}\NormalTok{(class_}\DecValTok{1}\NormalTok{ == class_}\DecValTok{2}\NormalTok{);      }
+\NormalTok{  \}}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{<Project}\OtherTok{ Sdk=}\StringTok{"Microsoft.NET.Sdk"}\KeywordTok{>}
+  \KeywordTok{<PropertyGroup>}
+    \KeywordTok{<OutputType>}\NormalTok{Exe}\KeywordTok{</OutputType>}
+    \KeywordTok{<TargetFramework>}\NormalTok{net5.0}\KeywordTok{</TargetFramework>}
+  \KeywordTok{</PropertyGroup>}
+\KeywordTok{</Project>}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  die Klassen-Instanzen werden nicht als gleich angesehen, obwohl die
+  Daten in den Objekten gleich sind. Dies liegt daran, dass die beiden
+  Variablen auf unterschiedliche Objekte verweisen.
+\item
+  die Record-Instanzen werden als gleich angesehen. Dies liegt daran,
+  dass Datensätze bei der Überprüfung auf Gleichheit nur Daten
+  vergleichen.
+\item
+  die Records implementieren verschiedene Methoden automatisch
+  \texttt{ToString()}
+\item
+  Records sind per default immutable!
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{public}\NormalTok{ record Person}
+\NormalTok{\{}
+    \KeywordTok{public} \DataTypeTok{string}\NormalTok{ FirstName \{ }\KeywordTok{get}\NormalTok{; init; \}}
+    \CommentTok{//public string FirstName \{ get; set; \}}
+    \KeywordTok{public} \DataTypeTok{string}\NormalTok{ LastName \{ }\KeywordTok{get}\NormalTok{; init; \}}
+    \CommentTok{// public string LastName \{ get; set; \}}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
 
 \hypertarget{collections-1}{%
 \section{Collections}\label{collections-1}}
@@ -20512,7 +21088,7 @@ Kursinformationen\strut
 \begin{minipage}[t]{0.11\columnwidth}\raggedright
 \textbf{Semester}\strut
 \end{minipage} & \begin{minipage}[t]{0.83\columnwidth}\raggedright
-\texttt{Sommersemester\ 2021}\strut
+\texttt{Sommersemester\ 2022}\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.11\columnwidth}\raggedright
 \textbf{Hochschule:}\strut
@@ -20538,6 +21114,26 @@ Kursinformationen\strut
 \end{longtable}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{hinweise-zu-den-praktischen-pruxfcfungsprojekten}{%
+\section{Hinweise zu den praktischen
+Prüfungsprojekten}\label{hinweise-zu-den-praktischen-pruxfcfungsprojekten}}
+
+Was gab es an Feedbacks am Wochenende?
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{Rote Debug-Ausgaben auf schwarzem Grund sind weniger gut zu
+  lesen!}
+\item
+  \emph{Die Schriftgröße während der Vorlesung ist zu klein!}
+\item
+  \emph{Wie umfangreich sollen die praktischen Prüfungsleistungen sein?}
+  \href{https://github.com/ComputerScienceLecturesTUBAF/SoftwareentwicklungSoSe2022_Projektaufgaben}{Projektaufgaben}
+\item
+  \emph{Die praktischen Codebeispiele sind sehr abstrakt!}
+\end{itemize}
 
 \hypertarget{motivation-und-konzept-der-delegaten}{%
 \section{Motivation und Konzept der
@@ -20897,10 +21493,81 @@ vs.~Delegaten}\label{schnittstellen-vs.-delegaten}}
 
 Sowohl Delegaten als auch Schnittstellen ermöglichen einem
 Klassendesigner, Typdeklarationen und Implementierungen zu trennen. Eine
-bestimmte Schnittstelle kann von jeder Klasse oder Struktur geerbt und
+bestimmte Schnittstelle kann von jeder Klasse oder Struktur
 implementiert werden. Ein Delegat kann für eine Methode in einer
 beliebigen Klasse erstellt werden, sofern die Methode zur
 Methodensignatur des Delegaten passt.
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+\begin{minipage}[b]{0.48\columnwidth}\raggedright
+Delegaten\strut
+\end{minipage} & \begin{minipage}[b]{0.46\columnwidth}\raggedright
+Schnittstelle\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.48\columnwidth}\raggedright
+repräsentiert eine Methodensignatur\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright
+wenn eine Klasse eine Schnittstelle implementiert, dann implementiert
+sie deren gesamte Methoden\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.48\columnwidth}\raggedright
+lässt sich nur auf Methoden anwenden\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright
+deckt sowohl Methoden als auch Eigenschaften ab\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.48\columnwidth}\raggedright
+verwendbar, wenn ein Delegat im Scope verfügbar ist\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright
+kann nur verwendet werden, wenn die Klasse diese Schnittstelle
+implementiert\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.48\columnwidth}\raggedright
+wird für die Behandlung von Ereignissen verwendet\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright
+findet keine Anwendung bei der Behandlung von Ereignissen
+verwendet.\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.48\columnwidth}\raggedright
+kann auf anonyme Methoden zugreifen\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright
+kann nicht auf anonyme Methoden zugreifen.\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.48\columnwidth}\raggedright
+beim Zugriff auf eine Methode über Delegaten ist kein Zugriff auf das
+Objekt der Klasse erforderlich\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright
+beim Methodenzugriff benötigen Sie das Objekt der Klasse, die eine
+Schnittstelle implementiert\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.48\columnwidth}\raggedright
+unterstützt keine Vererbung\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright
+unterstützt Vererbung\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.48\columnwidth}\raggedright
+wird zur Laufzeit erstellt\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright
+wird zur Kompilierzeit erstellt\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.48\columnwidth}\raggedright
+kann statische Methoden und Methoden versiegelter Klassen
+einschließen.\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright
+schließt statische Methoden und Methoden versiegelter Klassen nicht
+ein\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.48\columnwidth}\raggedright
+kann jede Methode implementieren, die die gleiche Signatur wie der
+angegebene Delegat aufweist\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright
+in der implementierenden Klasse wird die Methode mit gleichen Namen und
+Signatur überschrieben\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
 
 \begin{quote}
 Merke: In beiden Fällen kann die Schnittstellenreferenz oder ein Delegat
@@ -20958,8 +21625,80 @@ Zuordnung nicht ideal. Da die Fähigkeit zum Vergleichen zur Klasse
 gehört und sich der Vergleichsalgorithmus zur Laufzeit nicht ändert, ist
 eine Einzelmethodenschnittstelle ideal.
 
-Vergleichen Sie dazu
-\href{https://docs.microsoft.com/de-de/dotnet/api/system.collections.generic.list-1.sort?view=net-5.0}{Link}!
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{using}\NormalTok{ System;}
+\KeywordTok{using}\NormalTok{ System.}\FunctionTok{Collections}\NormalTok{.}\FunctionTok{Generic}\NormalTok{;}
+
+\KeywordTok{public} \KeywordTok{class}\NormalTok{ Student :  IComparable<Student>}
+\NormalTok{\{}
+    \KeywordTok{public} \DataTypeTok{string}\NormalTok{ Name \{ }\KeywordTok{get}\NormalTok{; }\KeywordTok{set}\NormalTok{; \}}
+    \KeywordTok{public} \DataTypeTok{int}\NormalTok{ Matrikel \{ }\KeywordTok{get}\NormalTok{; }\KeywordTok{set}\NormalTok{; \}}
+
+    \KeywordTok{public} \KeywordTok{override} \DataTypeTok{string} \FunctionTok{ToString}\NormalTok{()}
+\NormalTok{    \{}
+        \KeywordTok{return} \StringTok{"ID: "}\NormalTok{ + Matrikel + }\StringTok{"   Name: "}\NormalTok{ + Name;}
+\NormalTok{    \}}
+
+    \KeywordTok{public} \DataTypeTok{int} \FunctionTok{CompareTo}\NormalTok{(Student compareStudent)}
+\NormalTok{    \{}
+        \KeywordTok{if}\NormalTok{ (compareStudent == }\KeywordTok{null}\NormalTok{)}
+            \KeywordTok{return} \DecValTok{1}\NormalTok{;}
+        \KeywordTok{else}
+            \KeywordTok{return} \KeywordTok{this}\NormalTok{.}\FunctionTok{Matrikel}\NormalTok{.}\FunctionTok{CompareTo}\NormalTok{(compareStudent.}\FunctionTok{Matrikel}\NormalTok{);}
+\NormalTok{    \}}
+\NormalTok{\}}
+
+\KeywordTok{public} \KeywordTok{class}\NormalTok{ Example}
+\NormalTok{\{}
+    \KeywordTok{public} \KeywordTok{static} \DataTypeTok{int} \FunctionTok{CompareStudentsByName}\NormalTok{(Student x, Student y)}
+\NormalTok{    \{}
+        \KeywordTok{if}\NormalTok{ (x.}\FunctionTok{Name}\NormalTok{ == }\KeywordTok{null}\NormalTok{ && y.}\FunctionTok{Name}\NormalTok{ == }\KeywordTok{null}\NormalTok{) }\KeywordTok{return} \DecValTok{0}\NormalTok{;}
+        \KeywordTok{else} \KeywordTok{if}\NormalTok{ (x.}\FunctionTok{Name}\NormalTok{ == }\KeywordTok{null}\NormalTok{) }\KeywordTok{return} \DecValTok{-1}\NormalTok{;}
+        \KeywordTok{else} \KeywordTok{if}\NormalTok{ (y.}\FunctionTok{Name}\NormalTok{ == }\KeywordTok{null}\NormalTok{) }\KeywordTok{return} \DecValTok{1}\NormalTok{;}
+        \KeywordTok{else} \KeywordTok{return}\NormalTok{ x.}\FunctionTok{Name}\NormalTok{.}\FunctionTok{CompareTo}\NormalTok{(y.}\FunctionTok{Name}\NormalTok{);}
+\NormalTok{    \}}
+
+    \KeywordTok{public} \KeywordTok{static} \DataTypeTok{void} \FunctionTok{Main}\NormalTok{()}
+\NormalTok{    \{}
+\NormalTok{        List<Student> students = }\KeywordTok{new}\NormalTok{ List<Student>();}
+\NormalTok{        students.}\FunctionTok{Add}\NormalTok{(}\KeywordTok{new} \FunctionTok{Student}\NormalTok{() \{ Name = }\StringTok{"Cotta"}\NormalTok{, Matrikel = }\DecValTok{1434}\NormalTok{ \});}
+\NormalTok{        students.}\FunctionTok{Add}\NormalTok{(}\KeywordTok{new} \FunctionTok{Student}\NormalTok{() \{ Name= }\StringTok{"Humboldt"}\NormalTok{, Matrikel = }\DecValTok{1234}\NormalTok{ \});}
+\NormalTok{        students.}\FunctionTok{Add}\NormalTok{(}\KeywordTok{new} \FunctionTok{Student}\NormalTok{() \{ Name = }\StringTok{"Zeuner"}\NormalTok{, Matrikel = }\DecValTok{1634}\NormalTok{ \}); ;}
+        \CommentTok{// Name intentionally left null.}
+\NormalTok{        students.}\FunctionTok{Add}\NormalTok{(}\KeywordTok{new} \FunctionTok{Student}\NormalTok{() \{  Matrikel = }\DecValTok{1334}\NormalTok{ \});}
+\NormalTok{        students.}\FunctionTok{Add}\NormalTok{(}\KeywordTok{new} \FunctionTok{Student}\NormalTok{() \{ Name = }\StringTok{"Hardenberg"}\NormalTok{, Matrikel = }\DecValTok{1444}\NormalTok{ \});}
+\NormalTok{        students.}\FunctionTok{Add}\NormalTok{(}\KeywordTok{new} \FunctionTok{Student}\NormalTok{() \{ Name = }\StringTok{"Winkler"}\NormalTok{, Matrikel = }\DecValTok{1534}\NormalTok{ \});}
+
+\NormalTok{        Console.}\FunctionTok{WriteLine}\NormalTok{(}\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{Before sort:"}\NormalTok{);}
+        \KeywordTok{foreach}\NormalTok{ (}\DataTypeTok{var}\NormalTok{ aStudent }\KeywordTok{in}\NormalTok{ students)}
+\NormalTok{        \{}
+\NormalTok{            Console.}\FunctionTok{WriteLine}\NormalTok{(aStudent);}
+\NormalTok{        \}}
+
+        \CommentTok{// Call Sort on the list. This will use the default compare method}
+\NormalTok{        students.}\FunctionTok{Sort}\NormalTok{();}
+
+\NormalTok{        Console.}\FunctionTok{WriteLine}\NormalTok{(}\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{After sort by matrikel number:"}\NormalTok{);}
+        \KeywordTok{foreach}\NormalTok{ (}\DataTypeTok{var}\NormalTok{ aStudent }\KeywordTok{in}\NormalTok{ students)}
+\NormalTok{        \{}
+\NormalTok{            Console.}\FunctionTok{WriteLine}\NormalTok{(aStudent);}
+\NormalTok{        \}}
+
+        \CommentTok{// This shows calling the Sort(Comparison(T) overload using}
+        \CommentTok{// a generic predefined delegate}
+\NormalTok{        Comparison<Student> handler = }\KeywordTok{new}\NormalTok{ Comparison<Student>(CompareStudentsByName);}
+\NormalTok{        students.}\FunctionTok{Sort}\NormalTok{(handler);}
+
+\NormalTok{        Console.}\FunctionTok{WriteLine}\NormalTok{(}\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{After sort by name:"}\NormalTok{);}
+        \KeywordTok{foreach}\NormalTok{ (}\DataTypeTok{var}\NormalTok{ aStudent }\KeywordTok{in}\NormalTok{ students)}
+\NormalTok{        \{}
+\NormalTok{            Console.}\FunctionTok{WriteLine}\NormalTok{(aStudent);}
+\NormalTok{        \}}
+\NormalTok{    \}}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
 
 \hypertarget{praktische-implementierung}{%
 \section{Praktische Implementierung}\label{praktische-implementierung}}
@@ -21035,10 +21774,6 @@ kann.
     \CommentTok{// Der existierende Delegat wird nun mit einer konkreten Methode}
     \CommentTok{// verknüpft}
 \NormalTok{    p = DoWork;}
-
-    \CommentTok{// alternativ könnte man auch einen neuen Delegaten anlegen}
-    \CommentTok{//Printer p1 = new Printer(DoWork);}
-    \FunctionTok{p}\NormalTok{(}\StringTok{"The delegate using the named method is called."}\NormalTok{);}
 \NormalTok{  \}}
 \NormalTok{\}}
 \end{Highlighting}
@@ -21296,7 +22031,7 @@ Kursinformationen\strut
 \begin{minipage}[t]{0.11\columnwidth}\raggedright
 \textbf{Semester}\strut
 \end{minipage} & \begin{minipage}[t]{0.83\columnwidth}\raggedright
-\texttt{Sommersemester\ 2021}\strut
+\texttt{Sommersemester\ 2022}\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.11\columnwidth}\raggedright
 \textbf{Hochschule:}\strut
@@ -21323,89 +22058,21 @@ Kursinformationen\strut
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{organisatorisches-2}{%
-\section{Organisatorisches}\label{organisatorisches-2}}
+\hypertarget{allgemeine-hinweise}{%
+\section{Allgemeine Hinweise}\label{allgemeine-hinweise}}
 
 \begin{quote}
-\textbf{1. Alternative Prüfungsleistung}
-\end{quote}
-
-\begin{longtable}[]{@{}rl@{}}
-\toprule
-\begin{minipage}[b]{0.17\columnwidth}\raggedleft
-Datum\strut
-\end{minipage} & \begin{minipage}[b]{0.77\columnwidth}\raggedright
-Bemerkung\strut
-\end{minipage}\tabularnewline
-\midrule
-\endhead
-\begin{minipage}[t]{0.17\columnwidth}\raggedleft
-22. Juni 2021\strut
-\end{minipage} & \begin{minipage}[t]{0.77\columnwidth}\raggedright
-Rückmeldung der Gruppen zur Teilnahme an der praktischen
-Prüfungsleistung (per Email an Prof.~Zug)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.17\columnwidth}\raggedleft
-\strut
-\end{minipage} & \begin{minipage}[t]{0.77\columnwidth}\raggedright
-Anlegen eines Repositories und Erläuterung Ihrer Zielstellungen im
-Wiki\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.17\columnwidth}\raggedleft
-bis 8. Juli 2021\strut
-\end{minipage} & \begin{minipage}[t]{0.77\columnwidth}\raggedright
-Spezifikation einer Fragestellung und zugehöriger Softwareentwurf\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.17\columnwidth}\raggedleft
-bis 15. Juli 2021\strut
-\end{minipage} & \begin{minipage}[t]{0.77\columnwidth}\raggedright
-Bestätigung der Idee und des Entwurfes\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.17\columnwidth}\raggedleft
-\strut
-\end{minipage} & \begin{minipage}[t]{0.77\columnwidth}\raggedright
-Bearbeitung der Aufgabenstellung in einem GitHub Projekt mit
-eingeladenen Betreuern\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.17\columnwidth}\raggedleft
-27. Juli 2021\strut
-\end{minipage} & \begin{minipage}[t]{0.77\columnwidth}\raggedright
-(Tag der Klausur) Abschluss der Bearbeitung, die Repos werden
-gespiegelt.\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\end{longtable}
-
-\begin{itemize}
-\tightlist
-\item
-  Einrichten eines eignen Repositories
-\item
-  Einladen des Partners
-\item
-  Einladen von Frau Dr.~Rudolf (\texttt{galinarudollf}) und mir
-  (\texttt{sebastianzug})
-\item
-  Einrichten eines Wikis für die Darstellung der Projektidee
-\end{itemize}
-
-\begin{quote}
-\textbf{2. Warum eigentlich LiaScript?}
+\textbf{1. Nächste Woche Freitag findet keine Vorlesung statt!}
 \end{quote}
 
 \begin{quote}
-\textbf{3. Tutor gesucht!}
+\textbf{2. Verwenden Sie einen \emph{Code Formater}, der Ihnen bei der
+Restrukturierung Ihres Codes hilft!}
 \end{quote}
 
-Für die Realisierung der Übungen in der Veranstaltung \emph{Prozedurale
-Programmierung} suchen wir einen motivierten Studierenden der Freude
-daran hat, Nicht-Informatikern den Einstieg in die Materie zu
-erleichtern. Gegenstand der Veranstaltung sind die Grundzüge der
-Programmierung in C, ein wenig Objektorientrierung in C++ und darauf
-aufbauend etwas Anwendung mit einem Mikrocontroller.
-
 \begin{quote}
-\textbf{4. Morgen keine Vorlesung!}
+\textbf{3. Evaluieren Sie die Hinweise der Code Analyse sorgfältig,
+entwerfen Sie ggf. eigene Regeln.}
 \end{quote}
 
 \hypertarget{nachgefragt}{%
@@ -21461,6 +22128,12 @@ der Sie angezeigt werden.
 \NormalTok{\}}
 \end{Highlighting}
 \end{Shaded}
+
+\begin{quote}
+\textbf{Frage:} Wie ließe sich das Codebeispiel verbessern?
+\end{quote}
+
+Nutzen Sie einen vorimplementierten (generischen) Delegaten
 
 \hypertarget{wiederholung}{%
 \section{Wiederholung}\label{wiederholung}}
@@ -21833,19 +22506,31 @@ Welche Informationen sollten an die Subscriber weitergereicht werden?
 Zum einen der auslösende Publisher (Wer ist verantwortlich?) und ggf.
 weitere Daten zum Event (Warum ist die Information eingetroffen?).
 
-Im Beispiel konzentrieren wir uns auf ein Default-Delegate, dass
+Im Beispiel konzentrieren wir uns auf die Default-Delegates, die
 Bestandteil der .NET Umgebung ist
 
-\texttt{EventHandler\ Delegate} siehe
-https://docs.microsoft.com/de-de/dotnet/api/system.eventhandler?view=netframework-4.8
-
-Der Delegat ist dabei wie folgt definiert:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\DataTypeTok{void} \FunctionTok{EventHandler}\NormalTok{(}\DataTypeTok{object}\NormalTok{ sender, EventArgs e)}
-\end{Highlighting}
-\end{Shaded}
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+\begin{minipage}[b]{0.14\columnwidth}\raggedright
+Delegate\strut
+\end{minipage} & \begin{minipage}[b]{0.28\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[b]{0.49\columnwidth}\raggedright
+Link\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.14\columnwidth}\raggedright
+\texttt{EventHandler\ Delegate}\strut
+\end{minipage} & \begin{minipage}[t]{0.28\columnwidth}\raggedright
+\texttt{void\ EventHandler(object\ sender,\ EventArgs\ e)\textasciigrave{}\textasciigrave{}\ \textbar{}\ {[}Link{]}(https://docs.microsoft.com/de-de/dotnet/api/system.eventhandler?view=net-6.0)\ \textbar{}\ \textbar{}}EventHandler
+Delegat\texttt{\textbar{}}EventHandler(object? sender, TEventArgs
+e);``\strut
+\end{minipage} & \begin{minipage}[t]{0.49\columnwidth}\raggedright
+\href{https://docs.microsoft.com/de-de/dotnet/api/system.eventhandler-1?view=net-6.0}{Link}\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -21980,6 +22665,12 @@ eine generischen Form von EventHandler mit der Signatur
 \end{Highlighting}
 \end{Shaded}
 
+\hypertarget{grafische-nutzer-interfaces}{%
+\subsection{Grafische Nutzer
+Interfaces}\label{grafische-nutzer-interfaces}}
+
+siehe Codebeispiel \texttt{wpf\_sharp} im Projektordner
+
 \hypertarget{threads}{%
 \chapter{Threads}\label{threads}}
 
@@ -22000,7 +22691,7 @@ Kursinformationen\strut
 \begin{minipage}[t]{0.11\columnwidth}\raggedright
 \textbf{Semester}\strut
 \end{minipage} & \begin{minipage}[t]{0.83\columnwidth}\raggedright
-\texttt{Sommersemester\ 2021}\strut
+\texttt{Sommersemester\ 2022}\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.11\columnwidth}\raggedright
 \textbf{Hochschule:}\strut
@@ -22027,321 +22718,41 @@ Kursinformationen\strut
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{neues-aus-github-2}{%
-\section{Neues aus GitHub}\label{neues-aus-github-2}}
-
-\begin{longtable}[]{@{}rllllllrlllllllllrl@{}}
-\toprule
-\begin{minipage}[b]{0.02\columnwidth}\raggedleft
-task\strut
-\end{minipage} & \begin{minipage}[b]{0.02\columnwidth}\raggedright
-0\strut
-\end{minipage} & \begin{minipage}[b]{0.02\columnwidth}\raggedright
-1\strut
-\end{minipage} & \begin{minipage}[b]{0.02\columnwidth}\raggedright
-2\strut
-\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedright
-3\strut
-\end{minipage} & \begin{minipage}[b]{0.03\columnwidth}\raggedright
-4\strut
-\end{minipage} & \begin{minipage}[b]{0.03\columnwidth}\raggedright
-5\strut
-\end{minipage} & \begin{minipage}[b]{0.01\columnwidth}\raggedleft
-6\strut
-\end{minipage} & \begin{minipage}[b]{0.03\columnwidth}\raggedright
-7\strut
-\end{minipage} & \begin{minipage}[b]{0.03\columnwidth}\raggedright
-8\strut
-\end{minipage} & \begin{minipage}[b]{0.03\columnwidth}\raggedright
-9\strut
-\end{minipage} & \begin{minipage}[b]{0.03\columnwidth}\raggedright
-10\strut
-\end{minipage} & \begin{minipage}[b]{0.03\columnwidth}\raggedright
-11\strut
-\end{minipage} & \begin{minipage}[b]{0.03\columnwidth}\raggedright
-12\strut
-\end{minipage} & \begin{minipage}[b]{0.03\columnwidth}\raggedright
-13\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright
-14\strut
-\end{minipage} & \begin{minipage}[b]{0.03\columnwidth}\raggedright
-15\strut
-\end{minipage} & \begin{minipage}[b]{0.01\columnwidth}\raggedleft
-16\strut
-\end{minipage} & \begin{minipage}[b]{0.03\columnwidth}\raggedright
-32\strut
-\end{minipage}\tabularnewline
-\midrule
-\endhead
-\begin{minipage}[t]{0.02\columnwidth}\raggedleft
-3\strut
-\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
-{[}2, 3{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
-{[}4, 5{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
-{[}6, 7{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
-{[}8, 9{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}10, 11{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}12, 13{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.01\columnwidth}\raggedleft
-14\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}15, 16{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}17, 18{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}19, 20{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}21, 22{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}23, 24{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}25, 26{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}27, 28{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-{[}29, 30, 31{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}32, 33{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.01\columnwidth}\raggedleft
-34\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-nan\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.02\columnwidth}\raggedleft
-4\strut
-\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
-{[}4, 5{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
-{[}6, 7{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
-{[}31, 8, 9{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}10, 11{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}12, 13{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.01\columnwidth}\raggedleft
-14\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}15{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}17, 18{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}19, 20{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}21, 22{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}23, 24{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}26, 25{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}27, 28{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-{[}29, 30{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}32, 33{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.01\columnwidth}\raggedleft
-34\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[} 2, 15{]}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.02\columnwidth}\raggedleft
-5\strut
-\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
-{[}4, 5{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
-{[}7, 6{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
-{[}8, 9{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}10, 11{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}13{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.01\columnwidth}\raggedleft
-3\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}17{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}19, 20{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}22, 21{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}24, 23{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}25, 26{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}33, 32{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.01\columnwidth}\raggedleft
-34\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[} 2, 15{]}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.02\columnwidth}\raggedleft
-6\strut
-\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
-{[}5, 4{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
-{[}7, 6{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
-{[}9 , 8{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}10, 11{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}13{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.01\columnwidth}\raggedleft
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}17{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}19, 20{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}21{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}24, 23{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}26, 25{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-{[}29, 30{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}33, 32{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.01\columnwidth}\raggedleft
-34\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[} 2, 15{]}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.02\columnwidth}\raggedleft
-7\strut
-\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
-{[}4{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
-{[}8, 9{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}11, 10{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.01\columnwidth}\raggedleft
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}20, 19{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}21{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}24, 23{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}26, 25{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}33, 32{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.01\columnwidth}\raggedleft
-34\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}15, 2{]}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.02\columnwidth}\raggedleft
-8\strut
-\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
-{[}9, 8{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.01\columnwidth}\raggedleft
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}19{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[}33, 32{]}\strut
-\end{minipage} & \begin{minipage}[t]{0.01\columnwidth}\raggedleft
-nan\strut
-\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
-{[} 2, 15{]}\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\end{longtable}
-
-\begin{quote}
-Offenbar ist die Teamkoordination die zentrale Herausforderung für die
-Umsetzung der Aufgaben. Um unsere Eingriffsmöglichkeiten hier besser
-abzustimmen möchten wir Sie bitten uns ein entsprechendes Feedback zur
-aktuellen Teamkonfiguration zu geben:
-\end{quote}
-
-Hier ist der Link: https://panel.ovgu.de/s/957ab2a9/de.html
-
 \hypertarget{motivation---threads}{%
 \section{Motivation - Threads}\label{motivation---threads}}
 
-\textbf{Threads Basics}
-
-Ein Ausführungs-Thread ist die kleinste Sequenz von programmierten
-Anweisungen, die unabhängig von einem Scheduler verwaltet werden kann,
-der typischerweise Teil des Betriebssystems ist. Die Implementierung von
-Threads und Prozessen unterscheidet sich von Betriebssystem zu
-Betriebssystem, aber in den meisten Fällen ist ein Thread ein
-Bestandteil eines Prozesses. Innerhalb eines Prozesses können mehrere
-Threads existieren, die gleichzeitig ausgeführt werden und Ressourcen
-wie Speicher gemeinsam nutzen, während verschiedene Prozesse diese
-Ressourcen nicht gemeinsam nutzen. Insbesondere teilen sich die Threads
-eines Prozesses seinen ausführbaren Code und die Werte seiner dynamisch
-zugewiesenen Variablen und seiner nicht thread-lokalen globalen
-Variablen zu einem bestimmten Zeitpunkt.
+Bisher haben wir rein sequentiell ablaufende Programme entworfen.
+Welches Problem generiert dieser Ansatz aber, wenn wir in unserer App
+einen Update-Service integrieren?
 
 \begin{figure}
 \centering
-\includegraphics{./img/23_Multithreading/ProcessVsThread.png}
-\caption{Vererbungsbeispiel}
+\includegraphics{./img/23_Multithreading/WindowsFormBlocked.png}
+\caption{BlockedGUI}
 \end{figure}
+
+\hypertarget{grundlagen}{%
+\subsection{Grundlagen}\label{grundlagen}}
+
+\begin{quote}
+Ein Ausführungs-Thread ist die kleinste Sequenz von programmierten
+Anweisungen, die unabhängig von einem Scheduler verwaltet werden kann,
+der typischerweise Teil des Betriebssystems ist.
+\end{quote}
+
+Die Implementierung von Threads und Prozessen unterscheidet sich von
+Betriebssystem zu Betriebssystem, aber in den meisten Fällen ist ein
+Thread ein Bestandteil eines Prozesses.
+
+Innerhalb eines Prozesses können mehrere Threads existieren, die
+gleichzeitig ausgeführt werden und Ressourcen wie Speicher gemeinsam
+nutzen, während verschiedene Prozesse diese Ressourcen nicht gemeinsam
+nutzen. Insbesondere teilen sich die Threads eines Prozesses seinen
+ausführbaren Code und die Werte seiner dynamisch zugewiesenen Variablen
+und seiner nicht thread-lokalen globalen Variablen zu einem bestimmten
+Zeitpunkt.
+
+\includegraphics{./img/23_Multithreading/ProcessVsThread.png}
 
 Auf eine Single-Core Rechner organisiert das Betriebssystem Zeitscheiben
 (unter Windows üblicherweise 20ms) um Nebenläufigkeit zu simulieren.
@@ -22349,6 +22760,24 @@ Eine Multiprozessor-Maschine kann aber auch direkt auf die
 Rechenkapazität eines weiteren Prozessors ausweichen und eine echte
 Parallelisierung umsetzen, die allerdings im Beispiel durch den
 gemeinsamen Zugriff auf die Konsole limitiert ist.
+
+\begin{quote}
+Vorteile von Multi-Threading Applikationen:
+
+\begin{itemize}
+\tightlist
+\item
+  Ausnutzung der Hardwarefähigkeiten (MultiCore-Systeme) zur
+  Effizienzsteigerung
+\item
+  Verhinderung eines ``Verhungerns'' der Anwendung
+\end{itemize}
+\end{quote}
+
+\hypertarget{erfassung-der-performance}{%
+\subsection{Erfassung der Performance}\label{erfassung-der-performance}}
+
+Wie messen wir aber die Geschwindigkeit eines Programms?
 
 \hypertarget{implmementierung-unter-c}{%
 \section{Implmementierung unter C}\label{implmementierung-unter-c}}
@@ -22360,14 +22789,14 @@ Definitionen:
 \begin{Highlighting}[]
 \KeywordTok{public} \KeywordTok{delegate} \DataTypeTok{void} \FunctionTok{ThreadStart}\NormalTok{();}
 \KeywordTok{public} \KeywordTok{enum} \FunctionTok{ThreadPriority}\NormalTok{ (Normal, AboveNormal, BelowNormal, Highest, Lowest);}
-\KeywordTok{public} \KeywordTok{enum} \FunctionTok{TheadState}\NormalTok{ (Unstarted, Running, Suspended, Stopped, Aborted, ...);}
+\KeywordTok{public} \KeywordTok{enum} \FunctionTok{ThreadState}\NormalTok{ (Unstarted, Running, Suspended, Stopped, Aborted, ...);}
 
 \KeywordTok{public} \KeywordTok{sealed} \KeywordTok{class}\NormalTok{ Thread\{}
   \KeywordTok{public} \FunctionTok{Thread}\NormalTok{ (ThreadStart startMethod);}
 \NormalTok{  ...}
   \KeywordTok{public} \DataTypeTok{string}\NormalTok{ Name \{}\KeywordTok{get}\NormalTok{; }\KeywordTok{set}\NormalTok{;\};}
   \KeywordTok{public}\NormalTok{ ThreadPriority Priority \{}\KeywordTok{get}\NormalTok{; }\KeywordTok{set}\NormalTok{;\};}
-  \KeywordTok{public}\NormalTok{ ThreadState TreadState \{}\KeywordTok{get}\NormalTok{;\};}
+  \KeywordTok{public}\NormalTok{ ThreadState ThreadState \{}\KeywordTok{get}\NormalTok{;\};}
   \KeywordTok{public} \DataTypeTok{bool}\NormalTok{ IsAlive \{}\KeywordTok{get}\NormalTok{;\};}
   \KeywordTok{public} \DataTypeTok{bool}\NormalTok{ IsBackground\{}\KeywordTok{get}\NormalTok{;\};}
   \KeywordTok{public} \DataTypeTok{void} \FunctionTok{Start}\NormalTok{();}
@@ -22382,9 +22811,6 @@ Um die grundlegende Verwendung des Typs \texttt{Thread} zu
 veranschaulichen, nehmen wir an, Sie haben eine Konsolenanwendung, in
 der die \texttt{CurrentThread}-Eigenschaft ein Thread-Objekt abruft, das
 den aktuell ausgeführten Thread repräsentiert.
-
-Das folgende Beispiel kann aus spezifischen Sicherheitsgründen nicht
-unter Rextester ausgeführt werden.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -22741,9 +23167,42 @@ Angabe der Größe des Stacks\strut
 \end{Highlighting}
 \end{Shaded}
 
-\textbf{Ergänzen Sie das oben aufgeführte Beispiel
-\texttt{ThreadApplicationPrinter} um die Möglichkeit das auszugebene
-Zeichen als Parameter zu übergeben!}
+\begin{quote}
+\textbf{Aufgabe:} Ergänzen Sie das schon benutzte Beispiel um die
+Möglichkeit das auszugebene Zeichen als Parameter zu übergeben!
+\end{quote}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{using}\NormalTok{ System;}
+\KeywordTok{using}\NormalTok{ System.}\FunctionTok{Threading}\NormalTok{;}
+
+\KeywordTok{class}\NormalTok{ Printer\{}
+  \DataTypeTok{char}\NormalTok{ ch;}
+  \DataTypeTok{int}\NormalTok{ sleepTime;}
+
+  \KeywordTok{public} \FunctionTok{Printer}\NormalTok{(}\DataTypeTok{char}\NormalTok{ c, }\DataTypeTok{int}\NormalTok{ t)\{}
+\NormalTok{    ch = c;}
+\NormalTok{    sleepTime = t;}
+\NormalTok{  \}}
+
+  \KeywordTok{public} \DataTypeTok{void} \FunctionTok{Print}\NormalTok{(}\DataTypeTok{int}\NormalTok{ count)\{}
+    \KeywordTok{for}\NormalTok{ (}\DataTypeTok{int}\NormalTok{ i = }\DecValTok{0}\NormalTok{; i<count;  i++)\{}
+\NormalTok{      Console.}\FunctionTok{Write}\NormalTok{(ch);}
+\NormalTok{      Thread.}\FunctionTok{Sleep}\NormalTok{(sleepTime);}
+\NormalTok{    \}}
+\NormalTok{  \}}
+\NormalTok{\}}
+
+\KeywordTok{class}\NormalTok{ Program \{}
+    \KeywordTok{public} \KeywordTok{static} \DataTypeTok{void} \FunctionTok{Main}\NormalTok{(}\DataTypeTok{string}\NormalTok{[] args)\{}
+\NormalTok{        Printer a = }\KeywordTok{new} \FunctionTok{Printer}\NormalTok{ (}\CharTok{'a'}\NormalTok{, }\DecValTok{10}\NormalTok{);}
+\NormalTok{        Thread PrinterA = }\KeywordTok{new} \FunctionTok{Thread}\NormalTok{(}\KeywordTok{new} \FunctionTok{ThreadStart}\NormalTok{(a.}\FunctionTok{Print}\NormalTok{));}
+\NormalTok{        PrinterA.}\FunctionTok{Start}\NormalTok{();}
+\NormalTok{    \}}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
 
 \hypertarget{datenaustausch-zwischen-threads}{%
 \subsection{Datenaustausch zwischen
@@ -22767,7 +23226,8 @@ Variablen ist entsprechend geschützt.
 \NormalTok{    \}}
 
     \KeywordTok{public} \KeywordTok{static} \DataTypeTok{void} \FunctionTok{Main}\NormalTok{(}\DataTypeTok{string}\NormalTok{[] args)\{}
-        \KeywordTok{new} \FunctionTok{Thread}\NormalTok{(Execute).}\FunctionTok{Start}\NormalTok{(}\StringTok{"New Tread :"}\NormalTok{);}
+\NormalTok{        Thread thread_A = }\KeywordTok{new} \FunctionTok{Thread}\NormalTok{(Execute);}
+\NormalTok{        thread_A.}\FunctionTok{Start}\NormalTok{(}\StringTok{"New Tread :"}\NormalTok{);}
         \FunctionTok{Execute}\NormalTok{(}\StringTok{"MainTread :"}\NormalTok{);}
 \NormalTok{    \}}
 \NormalTok{\}}
@@ -22814,6 +23274,37 @@ Welches Problem ergibt sich aber dabei?
 \NormalTok{        \}}
 \NormalTok{        Thread.}\FunctionTok{Sleep}\NormalTok{(}\DecValTok{10000}\NormalTok{);}
 \NormalTok{        Console.}\FunctionTok{WriteLine}\NormalTok{(}\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{ Fertig \{0\}"}\NormalTok{, InteractiveThreads.}\FunctionTok{count}\NormalTok{);}
+\NormalTok{    \}}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{using}\NormalTok{ System;}
+\KeywordTok{using}\NormalTok{ System.}\FunctionTok{Threading}\NormalTok{;}
+
+\KeywordTok{class}\NormalTok{ Calc  }
+\NormalTok{\{}
+    \DataTypeTok{int}\NormalTok{ paramA = }\DecValTok{0}\NormalTok{;}
+    \KeywordTok{public} \DataTypeTok{void} \FunctionTok{Inc}\NormalTok{()}
+\NormalTok{    \{}
+\NormalTok{        paramA = paramA + }\DecValTok{1}\NormalTok{;}
+\NormalTok{        Console.}\FunctionTok{WriteLine}\NormalTok{(}\StringTok{"Static funtion const = \{0\}"}\NormalTok{, paramA);}
+\NormalTok{    \}}
+\NormalTok{\}}
+
+\KeywordTok{class}\NormalTok{ Program}
+\NormalTok{\{}
+    \KeywordTok{public} \KeywordTok{static} \DataTypeTok{void} \FunctionTok{Main}\NormalTok{(}\DataTypeTok{string}\NormalTok{[] args)\{}
+\NormalTok{        Calc c = }\KeywordTok{new} \FunctionTok{Calc}\NormalTok{();}
+\NormalTok{        ThreadStart delThreadA = }\KeywordTok{new} \FunctionTok{ThreadStart}\NormalTok{(c.}\FunctionTok{Inc}\NormalTok{);}
+\NormalTok{        Thread newThread_A = }\KeywordTok{new} \FunctionTok{Thread}\NormalTok{(delThreadA);}
+\NormalTok{        newThread_A.}\FunctionTok{Start}\NormalTok{();}
+
+\NormalTok{        ThreadStart delThreadB = }\KeywordTok{new} \FunctionTok{ThreadStart}\NormalTok{(c.}\FunctionTok{Inc}\NormalTok{);}
+\NormalTok{        Thread newThread_B = }\KeywordTok{new} \FunctionTok{Thread}\NormalTok{(delThreadB);}
+\NormalTok{        newThread_B.}\FunctionTok{Start}\NormalTok{();}
 \NormalTok{    \}}
 \NormalTok{\}}
 \end{Highlighting}
@@ -22870,7 +23361,10 @@ Threads\tabularnewline
   \KeywordTok{public} \DataTypeTok{void} \FunctionTok{AddOne}\NormalTok{()\{}
     \KeywordTok{lock}\NormalTok{(}\KeywordTok{this}\NormalTok{)}
 \NormalTok{    \{}
-\NormalTok{        count = count + }\DecValTok{1}\NormalTok{;}
+\NormalTok{       count = count + }\DecValTok{1}\NormalTok{;}
+\NormalTok{       count = count + }\DecValTok{1}\NormalTok{;}
+\NormalTok{       count = count + }\DecValTok{1}\NormalTok{;}
+\NormalTok{       count = count + }\DecValTok{1}\NormalTok{;}
 \NormalTok{    \}}
 \NormalTok{    Console.}\FunctionTok{WriteLine}\NormalTok{(}\StringTok{"count \{0\}"}\NormalTok{, count);}
 \NormalTok{  \}}
@@ -22892,12 +23386,12 @@ Threads\tabularnewline
 \subsection{Hintergrund und
 Vordergrund-Threads}\label{hintergrund-und-vordergrund-threads}}
 
-Verwalteter Threads können als Hintergrund- oder Vordergrundthread
-definiert sein. Hintergrundthreads unterscheiden sich von
-Vordergrundthreads durch die Beibehaltung der Ausführungsumgebung nach
-dem Abschluss. Sobald alle Vordergrundthreads in einem verwalteten
-Prozess (wobei die EXE-Datei eine verwaltete Assembly ist) beendet sind,
-beendet das System alle Hintergrundthreads und fährt herunter.
+Threads können als Hintergrund- oder Vordergrundthread definiert sein.
+Hintergrundthreads unterscheiden sich von Vordergrundthreads durch die
+Beibehaltung der Ausführungsumgebung nach dem Abschluss. Sobald alle
+Vordergrundthreads in einem verwalteten Prozess (wobei die EXE-Datei
+eine verwaltete Assembly ist) beendet sind, beendet das System alle
+Hintergrundthreads.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -22947,6 +23441,11 @@ beendet das System alle Hintergrundthreads und fährt herunter.
 \NormalTok{\}}
 \end{Highlighting}
 \end{Shaded}
+
+\begin{quote}
+Wie verhält sich das Programm, wenn Sie
+\texttt{Printer\_.IsBackground\ =\ true;} einfügen?
+\end{quote}
 
 \hypertarget{ausnahmebehandlung-mit-threads}{%
 \subsection{Ausnahmebehandlung mit
@@ -23099,7 +23598,7 @@ Kursinformationen\strut
 \begin{minipage}[t]{0.11\columnwidth}\raggedright
 \textbf{Semester}\strut
 \end{minipage} & \begin{minipage}[t]{0.83\columnwidth}\raggedright
-\texttt{Sommersemester\ 2021}\strut
+\texttt{Sommersemester\ 2022}\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.11\columnwidth}\raggedright
 \textbf{Hochschule:}\strut
@@ -23129,7 +23628,45 @@ Kursinformationen\strut
 \hypertarget{logging}{%
 \section{Logging}\label{logging}}
 
-Unsere Ausgaben in der Console können auf Dauer ziemlich nerven \ldots{}
+Wie arbeiten wir bisher in Bezug auf Textausgaben?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{using}\NormalTok{ System;}
+\KeywordTok{using}\NormalTok{ System.}\FunctionTok{Reflection}\NormalTok{;}
+\KeywordTok{using}\NormalTok{ System.}\FunctionTok{ComponentModel}\NormalTok{.}\FunctionTok{Design}\NormalTok{;}
+
+\KeywordTok{public} \KeywordTok{class}\NormalTok{ Person \{}
+  \KeywordTok{public} \DataTypeTok{int}\NormalTok{ geburtsjahr;}
+  \KeywordTok{public} \DataTypeTok{string}\NormalTok{ name;}
+
+  \KeywordTok{public} \FunctionTok{Person}\NormalTok{()\{}
+\NormalTok{    geburtsjahr = }\DecValTok{1984}\NormalTok{;}
+\NormalTok{    name = }\StringTok{"Orwell"}\NormalTok{;}
+\NormalTok{    Console.}\FunctionTok{WriteLine}\NormalTok{(}\StringTok{"ctor of Person"}\NormalTok{);}
+\NormalTok{  \}}
+
+  \KeywordTok{public} \FunctionTok{Person}\NormalTok{(}\DataTypeTok{int}\NormalTok{ auswahl)\{}
+    \KeywordTok{if}\NormalTok{ (auswahl == }\DecValTok{1}\NormalTok{) \{name = }\StringTok{"Micky Maus"}\NormalTok{;\}}
+    \KeywordTok{else}\NormalTok{ \{name = }\StringTok{"Donald Duck"}\NormalTok{;\}}
+\NormalTok{  \}}
+\NormalTok{\}}
+
+\KeywordTok{public} \KeywordTok{class}\NormalTok{ Fußballspieler : Person \{}
+  \KeywordTok{public} \DataTypeTok{byte}\NormalTok{ rückennummer;}
+\NormalTok{\}}
+
+\KeywordTok{public} \KeywordTok{class}\NormalTok{ Program}
+\NormalTok{\{}
+  \KeywordTok{public} \KeywordTok{static} \DataTypeTok{void} \FunctionTok{Main}\NormalTok{(}\DataTypeTok{string}\NormalTok{[] args)\{}
+\NormalTok{    Fußballspieler champ = }\KeywordTok{new}\NormalTok{ Fußballspieler();}
+\NormalTok{    Console.}\FunctionTok{WriteLine}\NormalTok{(}\StringTok{"\{0,4\} - \{1\}"}\NormalTok{, champ.}\FunctionTok{geburtsjahr}\NormalTok{, champ.}\FunctionTok{name}\NormalTok{ );}
+\NormalTok{  \}}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+Dieses Vorgehen kann auf Dauer ziemlich nerven \ldots{}
 
 \begin{quote}
 Lösung: Verwenden Sie ein Logging Framework!
@@ -23138,28 +23675,26 @@ Lösung: Verwenden Sie ein Logging Framework!
 \begin{itemize}
 \tightlist
 \item
-  https://logging.apache.org/log4net/release/manual/configuration.html
+  https://github.com/NLog
 \item
-  https://blog.elmah.io/log4net-tutorial-the-complete-guide-for-beginners-and-pros/
+  https://riptutorial.com/nlog
 \end{itemize}
 
 \begin{verbatim}
-<log4net>
-    <!-- A1 is set to be a ConsoleAppender -->
-    <appender name="A1" type="log4net.Appender.ConsoleAppender">
- 
-        <!-- A1 uses PatternLayout -->
-        <layout type="log4net.Layout.PatternLayout">
-            <conversionPattern value="%-4timestamp [%thread] %-5level %logger %ndc - %message%newline" />
-        </layout>
-    </appender>
-    
-    <!-- Set root logger level to DEBUG and its only appender to A1 -->
-    <root>
-        <level value="DEBUG" />
-        <appender-ref ref="A1" />
-    </root>
-</log4net>
+<?xml version="1.0" encoding="utf-8" ?>
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <targets>
+        <target name="logfile" xsi:type="File" fileName="file.txt" />
+        <target name="logconsole" xsi:type="Console" />
+    </targets>
+
+    <rules>
+        <logger name="*" minlevel="Info" writeTo="logconsole" />
+        <logger name="*" minlevel="Debug" writeTo="logfile" />
+    </rules>
+</nlog>
 \end{verbatim}
 
 \hypertarget{tasks-1}{%
@@ -23282,17 +23817,16 @@ C\# stellt für die asynchrone Programmierung einen neuen Typen
 \texttt{Task} zur Verfügung und für die \texttt{await} und
 \texttt{async} Keywörter ein.
 
-Die \texttt{Task}-Klasse bildet einen einzelnen Vorgang ab, gibt keinen
-Wert zurück und wird in der Regel asynchron ausgeführt. \texttt{Task}
-Objekte sind eine der zentralen Komponenten von der aufgabenbasierte
-asynchrone Muster in .NET Framework 4 eingeführt wurden. Da die Arbeit,
-indem geleistet eine Task Objekt in der Regel führt asynchron auf einem
-Threadpool-Thread anstatt synchron auf dem Hauptanwendungsthread, Sie
-verwenden die Thread Status-Eigenschaften des Threads, als auch die
-\texttt{IsCanceled}, \texttt{IsCompleted}, und \texttt{IsFaulted}
-Eigenschaften, um den Status eines Vorgangs zu bestimmen. In den meisten
-Fällen wird ein Lambda-Ausdruck verwendet, um die eigentliche Aufgabe zu
-spezifizieren.
+Die \texttt{Task}-Klasse bildet einen Vorgang zur Lösung einer einzelnen
+Aufgabe ab, der keinen Wert zurück gibt und in der Regel asynchron
+ausgeführt wird. Task-Objekte sind eine der zentralen Komponenten von
+den aufgabenbasierten asynchronen Muster, die in .NET Framework 4
+eingeführt wurden. Ein \texttt{Task}-Objekt übernimmt eine Aufgabe, die
+asynchron auf einem Threadpool-Thread anstatt synchron auf dem
+Hauptanwendungsthread ausgeführt wird. Zum Überwachen des
+Bearbeitungsstatus stehen die Status-Eigenschaften des Threads und die
+Eigenschaften der Klasse \texttt{Task} zur Verfügung:
+\texttt{IsCanceled}, \texttt{IsCompleted}, und \texttt{IsFaulted}.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -23305,17 +23839,13 @@ spezifizieren.
   \KeywordTok{public} \DataTypeTok{void} \FunctionTok{Wait}\NormalTok{();}
 \NormalTok{  ...}
 \NormalTok{\}}
-
-\KeywordTok{public} \KeywordTok{class}\NormalTok{ Task<T>: Task\{}
-  \KeywordTok{public} \FunctionTok{Task}\NormalTok{ (Func<T> f);}
-\NormalTok{  ...}
-  \KeywordTok{public} \KeywordTok{static}\NormalTok{ Task<T> }\FunctionTok{Run}\NormalTok{ (Func <T> f);}
-\NormalTok{  ...}
-\NormalTok{\}}
 \end{Highlighting}
 \end{Shaded}
 
-Die Anwendung erfolgt dabei dem Muster:
+Instanziierung und Ausführung von Tasks:
+
+Die Instanziirung erfolgt über einen Konstruktor, die Ausführung wird
+durch den Aufruf der Methode Start veranlasst:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -23326,8 +23856,10 @@ Die Anwendung erfolgt dabei dem Muster:
 
 Hierbei wird deutlich, dass das \texttt{Task}-Objekt auf einem
 \texttt{Thread} aufbaut und lediglich eine höhere Abstraktionsstufe
-darstellt. Der verkürzte Aufruf mittels der statischen
-\texttt{Run}-Methode realisiert das gleiche Verhalten:
+darstellt.
+
+Der verkürzte Aufruf mittels der statischen \texttt{Run}-Methode
+realisiert das gleiche Verhalten:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -23335,17 +23867,35 @@ darstellt. Der verkürzte Aufruf mittels der statischen
 \end{Highlighting}
 \end{Shaded}
 
-Es wäre nun möglich diesen laufenden Task aus dem Main-Thread anhand
-seiner Variablen \texttt{IsCompleted} zu überwachen oder mit
-\texttt{join} erfassen, um die Fertigstellung zu erkennen. Dieses
-Verhalten lässt sich zwar auch mit Threads umsetzen, mit dem höheren
-Abstraktionsgrad lässt sich die Komplexität des Aufrufes aber
-reduzieren.
+An den Konstruktor und die Run-Methode können \texttt{Action}-Delegate
+übergeben werden, die den auszuführenden Code beinhalten. In den meisten
+Fällen wird zur Spezifikation der Aufgabe ein Lambda-Ausdruck wird
+verwendet. Der Konstruktor wird nur in erweiterten Szenarien verwendet,
+wo es erforderlich ist, die Instanziirung und der Start zu trennen.
 
-Um für die Durchführung einer einzelnen Aufgabe zu warten, rufen Sie die
-Task. \texttt{Wait} Methode. Ein Aufruf der Wait Methode blockiert den
-aufrufenden Thread, bis die Instanz der Klasse die Ausführung
-abgeschlossen hat.
+Die generische Klasse \texttt{Task\textless{}T\textgreater{}} bildet
+ebenfalls einen Vorgang zur Lösung einer einzelnen Aufgabe ab, gibt aber
+im Unterschied zu der nicht generischen \texttt{Task}-Klasse einen Wert
+zurück. Die Konstruktoren und die Run-Methode der Klasse bekommen einen
+\texttt{Func}-Delegat bzw. einen als Lambda-Ausderuck formulierten Code
+übergeben, der einen Rückgabewert liefert.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{public} \KeywordTok{class}\NormalTok{ Task<T>: Task\{}
+  \KeywordTok{public} \FunctionTok{Task}\NormalTok{ (Func<T> f);}
+\NormalTok{  ...}
+  \KeywordTok{public} \KeywordTok{static}\NormalTok{ Task<T> }\FunctionTok{Run}\NormalTok{ (Func <T> f);}
+\NormalTok{  ...}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+Über Property \texttt{IsCompleted} kann der laufende Task aus dem
+Main-Thread überwacht werden. Um für die Durchführung einer einzelnen
+Aufgabe zu warten, rufen Sie die \texttt{Task.Wait} Methode auf. Ein
+Aufruf der Wait-Methode blockiert den aufrufenden Thread, bis die
+Instanz der Klasse die Ausführung abgeschlossen hat.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -23364,11 +23914,11 @@ abgeschlossen hat.
    \KeywordTok{public} \KeywordTok{static} \DataTypeTok{void} \FunctionTok{Main}\NormalTok{()}
 \NormalTok{   \{}
 \NormalTok{      Action<}\DataTypeTok{object}\NormalTok{> action = (}\DataTypeTok{object}\NormalTok{ obj) =>}
-\NormalTok{                                    \{}
-\NormalTok{                                       Console.}\FunctionTok{WriteLine}\NormalTok{(}\StringTok{"Task=\{0\}, obj=\{1\}, Thread=\{2\}"}\NormalTok{,}
-\NormalTok{                                       Task.}\FunctionTok{CurrentId}\NormalTok{, obj,}
-\NormalTok{                                       Thread.}\FunctionTok{CurrentThread}\NormalTok{.}\FunctionTok{ManagedThreadId}\NormalTok{);}
-\NormalTok{                                    \};}
+\NormalTok{                        \{}
+\NormalTok{                           Console.}\FunctionTok{WriteLine}\NormalTok{(}\StringTok{"Task=\{0\}, obj=\{1\}, Thread=\{2\}"}\NormalTok{,}
+\NormalTok{                           Task.}\FunctionTok{CurrentId}\NormalTok{, obj,}
+\NormalTok{                           Thread.}\FunctionTok{CurrentThread}\NormalTok{.}\FunctionTok{ManagedThreadId}\NormalTok{);}
+\NormalTok{                        \};}
 
       \CommentTok{// Create a task but do not start it.}
 \NormalTok{      Task t1 = }\KeywordTok{new} \FunctionTok{Task}\NormalTok{(action, }\StringTok{"alpha"}\NormalTok{);}
@@ -23384,13 +23934,13 @@ abgeschlossen hat.
 
 
 \NormalTok{      Task t3 = Task.}\FunctionTok{Run}\NormalTok{( () => \{}
-                                  \CommentTok{// Just loop.}
-                                  \DataTypeTok{int}\NormalTok{ ctr = }\DecValTok{0}\NormalTok{;}
-                                  \KeywordTok{for}\NormalTok{ (ctr = }\DecValTok{0}\NormalTok{; ctr <= }\DecValTok{1000000}\NormalTok{; ctr++)}
-\NormalTok{                                  \{\}}
-\NormalTok{                                  Console.}\FunctionTok{WriteLine}\NormalTok{(}\StringTok{"Finished \{0\} loop iterations"}\NormalTok{,}
-\NormalTok{                                                    ctr);}
-\NormalTok{                               \} );}
+                        \CommentTok{// Just loop.}
+                        \DataTypeTok{int}\NormalTok{ ctr = }\DecValTok{0}\NormalTok{;}
+                        \KeywordTok{for}\NormalTok{ (ctr = }\DecValTok{0}\NormalTok{; ctr <= }\DecValTok{1000000}\NormalTok{; ctr++)}
+\NormalTok{                        \{\}}
+\NormalTok{                        Console.}\FunctionTok{WriteLine}\NormalTok{(}\StringTok{"Finished \{0\} loop iterations"}\NormalTok{,}
+\NormalTok{                                          ctr);}
+\NormalTok{                     \} );}
 \NormalTok{      t3.}\FunctionTok{Wait}\NormalTok{();}
 \NormalTok{   \}}
 \NormalTok{\}}
@@ -23398,10 +23948,10 @@ abgeschlossen hat.
 \end{Shaded}
 
 \texttt{Wait} ermöglicht auch die Beschränkung der Wartezeit auf ein
-bestimmtes Zeitintervall.Die \texttt{Wait(Int32)} und
+bestimmtes Zeitintervall. Die \texttt{Wait(Int32)} und
 \texttt{Wait(TimeSpan)} Methoden blockiert den aufrufenden Thread, bis
-die Aufgabe abgeschlossen ist oder ein Timeoutintervall abläuft, welcher
-Fall zuerst eintritt.
+die Aufgabe abgeschlossen oder ein Timeoutintervall abgelaufen ist, je
+nach dem welcher Fall zuerst eintritt.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -23470,18 +24020,19 @@ angezeigt.
 \end{Highlighting}
 \end{Shaded}
 
-Der Kanon der Möglichkeiten wird aber deutlich erweitert, wenn ein
-konkreter Rückgabewert genutzt werden soll. Anstatt wie bei Threads mit
-einer entsprechenden ``außen stehenden'' Variablen zu arbeiten, wird das
-Ergebnis im \texttt{Task}-Objekt selbst gespeichert und kann dann
-abgerufen werden. Dieser Aspekt wird über die generische Konfiguration
-des Tasks abgebildet:
+Der Kanon der Möglichkeiten wird durch die Klasse
+\texttt{Task\textless{}T\textgreater{}} deutlich erweitert. Anstatt die
+Ergebnisse wie bei Threads in eine ``außen stehende'' Variable (z.B.
+Datenfeld der einer Klasse) zu speichern, wird das Ergebnis im
+\texttt{Task}-Objekt selbst gespeichert und kann dann über die
+Eigenschaft \texttt{Result} abgerufen werden.
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{Task<}\DataTypeTok{int}\NormalTok{> task = Task.}\FunctionTok{Run}\NormalTok{(() => \{}\DataTypeTok{int}\NormalTok{ i;}
                                  \CommentTok{//... Anweisungsblock ...;}
-                                 \KeywordTok{return}\NormalTok{ i\});}
+                                 \KeywordTok{return}\NormalTok{ i;\});}
+\NormalTok{ Console.}\FunctionTok{WriteLine}\NormalTok{(}\StringTok{"Finished ith result \{0\}"}\NormalTok{, task.}\FunctionTok{Result}\NormalTok{);}
 \end{Highlighting}
 \end{Shaded}
 
@@ -23496,12 +24047,23 @@ Wie aber erfolgt die Rückgabe wann?
 \hypertarget{asynchrone-methoden}{%
 \subsection{Asynchrone Methoden}\label{asynchrone-methoden}}
 
+Ein Entwurfsmuster für Darstellung asynchroner Vorgänge in C\#, das die
+Klassen \texttt{Task}und \texttt{Task\textless{}TResult\textgreater{}}
+verwendet, ist TAP (task-based asynchronous pattern). Die
+Schlüsselwörter \texttt{async} und \texttt{await} sind das Kernstück der
+asynchronen Programmierung mit TAP.
+
+Die Initiierung und den Abschluss eines asynchronen Vorgangs wird in TAP
+in einer Methode realisiert, die das \texttt{async}-Suffix hat und
+dadurch eine \texttt{await}-Anweisung enthalten darf, wenn sie
+Awaitable-Typen zurückgibt, wie z. B. Task oder Task.
+
 Eine asynchrone Methode ruft einen Task auf, setzt die eigene
 Bearbeitung aber fort und wartet auf dessen Beendigung.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{aync }\DataTypeTok{void} \FunctionTok{DoAsync}\NormalTok{()\{}
+\NormalTok{async }\DataTypeTok{void} \FunctionTok{DoAsync}\NormalTok{()\{}
 \NormalTok{  Task<}\DataTypeTok{int}\NormalTok{> task = Task.}\FunctionTok{Run}\NormalTok{(() => \{}\DataTypeTok{int}\NormalTok{ i;}
                                    \CommentTok{// Berechnungen}
                                    \KeywordTok{return}\NormalTok{ i;\}}
@@ -23622,7 +24184,7 @@ Kursinformationen\strut
 \begin{minipage}[t]{0.11\columnwidth}\raggedright
 \textbf{Semester}\strut
 \end{minipage} & \begin{minipage}[t]{0.83\columnwidth}\raggedright
-\texttt{Sommersemester\ 2021}\strut
+\texttt{Sommersemester\ 2022}\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.11\columnwidth}\raggedright
 \textbf{Hochschule:}\strut
@@ -23648,6 +24210,149 @@ Kursinformationen\strut
 \end{longtable}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{fragen-aus-den-projekten}{%
+\section{Fragen aus den Projekten}\label{fragen-aus-den-projekten}}
+
+\begin{quote}
+Frage: Was ist eigentlich eine csv Datei?
+\end{quote}
+
+Das Dateiformat CSV \_comma-separated values\_und beschreibt den Aufbau
+einer Textdatei zur Speicherung oder zum Austausch einfach
+strukturierter Daten. Die Dateinamenserweiterung lautet .csv.
+
+\begin{verbatim}
+# Prüfungen im SoSe
+16.07.2022 8:00, Theoretische Physik, mündlich, 30min
+18.07.2022 10:00, Technische Mechanik, schriftlich, 2h
+...
+\end{verbatim}
+
+Wie werten wir das Ganze aus?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{using}\NormalTok{ System;}
+\KeywordTok{using}\NormalTok{ System.}\FunctionTok{Collections}\NormalTok{.}\FunctionTok{Generic}\NormalTok{;}
+\KeywordTok{using}\NormalTok{ System.}\FunctionTok{Collections}\NormalTok{;}
+\KeywordTok{using}\NormalTok{ System.}\FunctionTok{Linq}\NormalTok{;}
+\KeywordTok{using}\NormalTok{ System.}\FunctionTok{Text}\NormalTok{;}
+\KeywordTok{using}\NormalTok{ Microsoft.}\FunctionTok{VisualBasic}\NormalTok{.}\FunctionTok{FileIO}\NormalTok{;}
+
+\KeywordTok{class}\NormalTok{ Student\{}
+     \KeywordTok{public} \DataTypeTok{string}\NormalTok{ name;}
+     \KeywordTok{public} \DataTypeTok{int}\NormalTok{ id;}
+     \KeywordTok{public} \DataTypeTok{string}\NormalTok{ topic;}
+
+     \KeywordTok{public} \KeywordTok{override} \DataTypeTok{string} \FunctionTok{ToString}\NormalTok{()\{}
+          \KeywordTok{return}\NormalTok{ $}\StringTok{"\{this.id\} - \{this.name\}"}\NormalTok{;}
+\NormalTok{     \}}
+\NormalTok{\}}
+
+\KeywordTok{class}\NormalTok{ ReadingCSV}
+\NormalTok{\{}
+   \KeywordTok{public} \KeywordTok{static} \DataTypeTok{void} \FunctionTok{Main}\NormalTok{()}
+\NormalTok{    \{}
+        \DataTypeTok{var}\NormalTok{ path = @}\StringTok{"Data.csv"}\NormalTok{;}
+\NormalTok{        List<Student> studentList = }\KeywordTok{new}\NormalTok{ List<Student>();}
+        \KeywordTok{using}\NormalTok{ (TextFieldParser csvReader = }\KeywordTok{new} \FunctionTok{TextFieldParser}\NormalTok{(path))}
+\NormalTok{        \{}
+\NormalTok{            csvReader.}\FunctionTok{CommentTokens}\NormalTok{ = }\KeywordTok{new} \DataTypeTok{string}\NormalTok{[] \{ }\StringTok{"#"}\NormalTok{ \};}
+\NormalTok{            csvReader.}\FunctionTok{SetDelimiters}\NormalTok{(}\KeywordTok{new} \DataTypeTok{string}\NormalTok{[] \{ }\StringTok{","}\NormalTok{ \});}
+\NormalTok{            csvReader.}\FunctionTok{HasFieldsEnclosedInQuotes}\NormalTok{ = }\KeywordTok{true}\NormalTok{;}
+\NormalTok{            csvReader.}\FunctionTok{ReadLine}\NormalTok{();}
+
+            \KeywordTok{while}\NormalTok{ (!csvReader.}\FunctionTok{EndOfData}\NormalTok{)}
+\NormalTok{            \{}
+                \CommentTok{// Read current line fields, pointer moves to the next line.}
+                \DataTypeTok{string}\NormalTok{[] fields = csvReader.}\FunctionTok{ReadFields}\NormalTok{();}
+                \DataTypeTok{var}\NormalTok{ newRecord = }\KeywordTok{new}\NormalTok{ Student}
+\NormalTok{                \{}
+\NormalTok{                       id = Int32.}\FunctionTok{Parse}\NormalTok{(fields[}\DecValTok{0}\NormalTok{]),}
+\NormalTok{                       name = fields[}\DecValTok{1}\NormalTok{],}
+\NormalTok{                       topic = fields[}\DecValTok{2}\NormalTok{]}
+\NormalTok{                \};}
+\NormalTok{                studentList.}\FunctionTok{Add}\NormalTok{(newRecord);}
+\NormalTok{            \}}
+\NormalTok{        \}}
+        \KeywordTok{foreach}\NormalTok{(}\DataTypeTok{var}\NormalTok{ student }\KeywordTok{in}\NormalTok{ studentList)\{}
+\NormalTok{             Console.}\FunctionTok{WriteLine}\NormalTok{(student);}
+\NormalTok{        \}}
+\NormalTok{    \}}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{<Project}\OtherTok{ Sdk=}\StringTok{"Microsoft.NET.Sdk"}\KeywordTok{>}
+  \KeywordTok{<PropertyGroup>}
+    \KeywordTok{<OutputType>}\NormalTok{Exe}\KeywordTok{</OutputType>}
+    \KeywordTok{<TargetFramework>}\NormalTok{net5.0}\KeywordTok{</TargetFramework>}
+  \KeywordTok{</PropertyGroup>}
+\KeywordTok{</Project>}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+StudentID, StudentName, Topic
+1, Humboldt, Geography
+2, Hardenberg, Geography
+3, Rammler, Process engineering
+4, Winkler, Chemistry
+5, Reich, Chemistry
+\end{verbatim}
+
+Alternative Umsetzung mit \texttt{DataFrames}
+\href{https://dotnet.microsoft.com/en-us/apps/machinelearning-ai/ml-dotnet}{Link}.
+Dafür muss das Paket \texttt{ML.NET} installiert werden (vgl. erweiterte
+Projektkonfigurationsdatei).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{using}\NormalTok{ System;}
+\KeywordTok{using}\NormalTok{ System.}\FunctionTok{Collections}\NormalTok{.}\FunctionTok{Generic}\NormalTok{;}
+\KeywordTok{using}\NormalTok{ Microsoft.}\FunctionTok{Data}\NormalTok{.}\FunctionTok{Analysis}\NormalTok{;}
+
+\KeywordTok{class}\NormalTok{ ReadingCSV}
+\NormalTok{\{}
+   \KeywordTok{public} \KeywordTok{static} \DataTypeTok{void} \FunctionTok{Main}\NormalTok{()}
+\NormalTok{    \{}
+        \DataTypeTok{var}\NormalTok{ path = @}\StringTok{"Data.csv"}\NormalTok{;}
+        \DataTypeTok{var}\NormalTok{ students = DataFrame.}\FunctionTok{LoadCsv}\NormalTok{(path, separator:}\CharTok{','}\NormalTok{,header:}\KeywordTok{true}\NormalTok{);}
+
+\NormalTok{        Console.}\FunctionTok{WriteLine}\NormalTok{(students.}\FunctionTok{Info}\NormalTok{());}
+        \DataTypeTok{var}\NormalTok{ topicStat = students[}\StringTok{"Topics"}\NormalTok{].}\FunctionTok{ValueCounts}\NormalTok{();}
+\NormalTok{        Console.}\FunctionTok{WriteLine}\NormalTok{(topicStat);}
+\NormalTok{    \}}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{<Project}\OtherTok{ Sdk=}\StringTok{"Microsoft.NET.Sdk"}\KeywordTok{>}
+  \KeywordTok{<PropertyGroup>}
+    \KeywordTok{<OutputType>}\NormalTok{Exe}\KeywordTok{</OutputType>}
+    \KeywordTok{<TargetFramework>}\NormalTok{net5.0}\KeywordTok{</TargetFramework>}
+  \KeywordTok{</PropertyGroup>}
+  \KeywordTok{<ItemGroup>}
+    \KeywordTok{<PackageReference}\OtherTok{ Include=}\StringTok{"Microsoft.Data.Analysis"}\OtherTok{ Version=}\StringTok{"0.19.1"} \KeywordTok{/>}
+\KeywordTok{</ItemGroup>}
+
+\KeywordTok{</Project>}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+StudentID, StudentName, Topic
+1, Humboldt, Geography
+2, Hardenberg, Geography
+3, Rammler, Process engineering
+4, Winkler, Chemistry
+5, Reich, Chemistry
+\end{verbatim}
 
 \hypertarget{motivation-2}{%
 \section{Motivation}\label{motivation-2}}
@@ -24073,11 +24778,13 @@ werden. Andere Verfahren wie \emph{ActiveX Data Objects} ADO und
 Abfragestrings. Diese können erst zur Laufzeit interpretiert werden;
 dann wirken Fehler gravierender und sind schwieriger zu analysieren.
 
+\begin{quote}
 Innerhalb des Quellprogramms in C\# oder VB.NET präsentiert LINQ die
 Abfrage-Ergebnisse als streng typisierte Aufzählungen. Somit
 gewährleistet es Typsicherheit bereits zur Übersetzungszeit wobei ein
-minimaler Codeeinsatz zur Realisierung von Filter-, Sortier- und
+minimaler Codeeinsatz zurRealisierung von Filter-, Sortier- und
 Gruppiervorgänge in Datenquellen investiert wird.
+\end{quote}
 
 \begin{figure}
 \centering
@@ -24130,8 +24837,8 @@ Deklaration von Klassen (etwas) auf den Kopf. Sie ermöglichen es
 zusätzliche Funktionalität ``anzuhängen''.
 \end{quote}
 
-Das folgende Beispiel unterstreicht den Unterschied zur bisher nur
-angedeuteten Methode der partiellen Methoden, die eine verteilte
+Das folgende Beispiel unterstreicht den Unterschied zur bereits
+vorgestellten Methode der partiellen Methoden, die eine verteilte
 Implementierung einer Klasse erlaubt. Hierfür muss der Quellcode
 vorliegen, die Erweiterungsmethode \texttt{Print()} kann auch auf eine
 Bibliothek angewandt werden.
@@ -24140,24 +24847,40 @@ Bibliothek angewandt werden.
 \begin{Highlighting}[]
 \KeywordTok{using}\NormalTok{ System;}
 
-\KeywordTok{partial} \KeywordTok{class}\NormalTok{ myString}
+\CommentTok{// Ergänzung mit partiellen Implementierungen - Nur zur Abgrenzung im}
+\CommentTok{// enthalten Beispiel}
+
+\CommentTok{//  .----- Explizite Erlaubnis zur Erweiterung}
+\CommentTok{//  v}
+\KeywordTok{public} \KeywordTok{partial} \KeywordTok{class}\NormalTok{ MyPartitalString}
 \NormalTok{\{}
    \KeywordTok{public} \DataTypeTok{string}\NormalTok{ content;}
-   \KeywordTok{public} \FunctionTok{myString}\NormalTok{(}\DataTypeTok{string}\NormalTok{ content)}
+   \KeywordTok{public} \FunctionTok{MyPartitalString}\NormalTok{(}\DataTypeTok{string}\NormalTok{ content)}
 \NormalTok{   \{}
      \KeywordTok{this}\NormalTok{.}\FunctionTok{content}\NormalTok{ = content;}
 \NormalTok{   \}}
 \NormalTok{\}}
 
-\KeywordTok{partial} \KeywordTok{class}\NormalTok{ myString}
+\KeywordTok{public} \KeywordTok{partial} \KeywordTok{class}\NormalTok{ MyPartitalString}
 \NormalTok{\{}
    \KeywordTok{public} \DataTypeTok{void} \FunctionTok{sayHello}\NormalTok{() => Console.}\FunctionTok{WriteLine}\NormalTok{(}\StringTok{"Say Hello!"}\NormalTok{);}
+\NormalTok{\}}
+
+\CommentTok{////////////////////////////////////////////////////////////////////////////}
+
+\KeywordTok{class}\NormalTok{ MyString}
+\NormalTok{\{}
+   \KeywordTok{public} \DataTypeTok{string}\NormalTok{ content;}
+   \KeywordTok{public} \FunctionTok{MyString}\NormalTok{(}\DataTypeTok{string}\NormalTok{ content)}
+\NormalTok{   \{}
+     \KeywordTok{this}\NormalTok{.}\FunctionTok{content}\NormalTok{ = content;}
+\NormalTok{   \}}
 \NormalTok{\}}
 
 \CommentTok{// Erweiterungsmethode in einer separaten Klasse}
 \KeywordTok{static} \KeywordTok{class}\NormalTok{ Exporter}
 \NormalTok{\{}
-    \KeywordTok{public} \KeywordTok{static} \DataTypeTok{void} \FunctionTok{Print}\NormalTok{(}\KeywordTok{this}\NormalTok{ myString input, }\DataTypeTok{string}\NormalTok{ newString)}
+    \KeywordTok{public} \KeywordTok{static} \DataTypeTok{void} \FunctionTok{print}\NormalTok{(}\KeywordTok{this}\NormalTok{ MyString input, }\DataTypeTok{string}\NormalTok{ newString)}
 \NormalTok{    \{}
 \NormalTok{       Console.}\FunctionTok{WriteLine}\NormalTok{(input.}\FunctionTok{content}\NormalTok{ + newString);}
 \NormalTok{    \}}
@@ -24167,9 +24890,11 @@ Bibliothek angewandt werden.
 \NormalTok{\{}
     \KeywordTok{public} \KeywordTok{static} \DataTypeTok{void} \FunctionTok{Main}\NormalTok{(}\DataTypeTok{string}\NormalTok{[] args)}
 \NormalTok{    \{}
-\NormalTok{      myString text = }\KeywordTok{new} \FunctionTok{myString}\NormalTok{(}\StringTok{"Bla fasel"}\NormalTok{);}
-\NormalTok{      text.}\FunctionTok{sayHello}\NormalTok{();}
-\NormalTok{      text.}\FunctionTok{Print}\NormalTok{(}\StringTok{"-Hossa"}\NormalTok{);}
+\NormalTok{      MyPartitalString text1 = }\KeywordTok{new} \FunctionTok{MyPartitalString}\NormalTok{(}\StringTok{"Bla fasel"}\NormalTok{);}
+\NormalTok{      text1.}\FunctionTok{sayHello}\NormalTok{();}
+
+\NormalTok{      MyString text2 = }\KeywordTok{new} \FunctionTok{MyString}\NormalTok{(}\StringTok{"Bla fasel"}\NormalTok{);}
+\NormalTok{      text2.}\FunctionTok{print}\NormalTok{(}\StringTok{"-Hossa"}\NormalTok{);}
 \NormalTok{    \}}
 \NormalTok{\}}
 \end{Highlighting}
@@ -24259,7 +24984,9 @@ alle anderen Arten von Klassenmembern sind ausgeschlossen.
 \NormalTok{\{}
     \KeywordTok{public} \KeywordTok{static} \DataTypeTok{void} \FunctionTok{Main}\NormalTok{(}\DataTypeTok{string}\NormalTok{[] args)}
 \NormalTok{    \{}
-        \DataTypeTok{var}\NormalTok{ v = }\KeywordTok{new}\NormalTok{ \{text = }\StringTok{"Das ist ein Text"}\NormalTok{, zahl = }\DecValTok{1}\NormalTok{\};}
+        \CommentTok{//          .---- Hier steckt der Unterschied - keine Typangabe}
+        \CommentTok{//          v}
+        \DataTypeTok{var}\NormalTok{ v = }\KeywordTok{new}\NormalTok{  \{text = }\StringTok{"Das ist ein Text"}\NormalTok{, zahl = }\DecValTok{1}\NormalTok{\};}
 \NormalTok{        Console.}\FunctionTok{WriteLine}\NormalTok{($}\StringTok{"text = \{v.text\}, zahl = \{v.zahl\}"}\NormalTok{);}
 \NormalTok{        Console.}\FunctionTok{WriteLine}\NormalTok{(v);}
         \CommentTok{//v.text = "asfsa";}
@@ -24315,9 +25042,11 @@ Transformieren Sie folgendes Codefragment in eine UML Darstellung.
 \KeywordTok{using}\NormalTok{ System.}\FunctionTok{Collections}\NormalTok{;}
 \KeywordTok{using}\NormalTok{ System.}\FunctionTok{Collections}\NormalTok{.}\FunctionTok{Generic}\NormalTok{;}
 
-
 \KeywordTok{class}\NormalTok{ myStrings : IEnumerable<}\DataTypeTok{string}\NormalTok{>\{}
+   \CommentTok{// eigentliche Daten}
    \KeywordTok{public} \DataTypeTok{string}\NormalTok{ []  str_arr = }\KeywordTok{new} \DataTypeTok{string}\NormalTok{[] \{}\StringTok{"one"}\NormalTok{ , }\StringTok{"two"}\NormalTok{ ,}\StringTok{"three"}\NormalTok{, }\StringTok{"four"}\NormalTok{, }\StringTok{"five"}\NormalTok{\};}
+
+   \CommentTok{// "Verwaltungsoverhead"}
    \KeywordTok{public}\NormalTok{ IEnumerator<}\DataTypeTok{string}\NormalTok{> }\FunctionTok{GetEnumerator}\NormalTok{()}
 \NormalTok{   \{}
 \NormalTok{       IEnumerator<}\DataTypeTok{string}\NormalTok{> r = }\KeywordTok{new} \FunctionTok{StringEnumerator}\NormalTok{(}\KeywordTok{this}\NormalTok{);}
@@ -24332,18 +25061,22 @@ Transformieren Sie folgendes Codefragment in eine UML Darstellung.
 \KeywordTok{class}\NormalTok{ StringEnumerator : IEnumerator<}\DataTypeTok{string}\NormalTok{>\{}
     \DataTypeTok{int}\NormalTok{ index;}
 \NormalTok{    myStrings sp;}
+
     \KeywordTok{public} \FunctionTok{StringEnumerator}\NormalTok{ (myStrings str_obj)\{}
 \NormalTok{       index = }\DecValTok{-1}\NormalTok{ ;}
 \NormalTok{       sp = str_obj ;}
 \NormalTok{    \}}
+
     \DataTypeTok{object}\NormalTok{ IEnumerator.}\FunctionTok{Current}\NormalTok{\{}
 \NormalTok{      get}
 \NormalTok{        \{ }\KeywordTok{return}\NormalTok{ sp.}\FunctionTok{str_arr}\NormalTok{[ index ] ; \}}
 \NormalTok{    \}}
+
     \KeywordTok{public} \DataTypeTok{string}\NormalTok{ Current\{}
 \NormalTok{      get}
 \NormalTok{        \{ }\KeywordTok{return}\NormalTok{ sp.}\FunctionTok{str_arr}\NormalTok{[ index ] ; \}}
 \NormalTok{    \}}
+
     \KeywordTok{public} \DataTypeTok{bool} \FunctionTok{MoveNext}\NormalTok{( )\{}
        \KeywordTok{if}\NormalTok{ ( index < sp.}\FunctionTok{str_arr}\NormalTok{.}\FunctionTok{Length}\NormalTok{ - }\DecValTok{1}\NormalTok{ )\{}
 \NormalTok{           index++ ;}
@@ -24351,9 +25084,11 @@ Transformieren Sie folgendes Codefragment in eine UML Darstellung.
 \NormalTok{       \}}
        \KeywordTok{return} \KeywordTok{false}\NormalTok{ ;}
 \NormalTok{    \}}
+
     \KeywordTok{public} \DataTypeTok{void} \FunctionTok{Reset}\NormalTok{( )\{}
 \NormalTok{       index = }\DecValTok{-1}\NormalTok{ ;}
 \NormalTok{    \}}
+
     \KeywordTok{public} \DataTypeTok{void} \FunctionTok{Dispose}\NormalTok{()\{}
       \CommentTok{// pass}
 \NormalTok{    \}}
@@ -24387,9 +25122,10 @@ https://stackoverflow.com/questions/169973/when-should-i-use-a-list-vs-a-linkedl
 \section{LINQ - Grundlagen}\label{linq---grundlagen}}
 
 Sie können LINQ zur Abfrage beliebiger aufzählbarer Auflistungen wie
-List, Array oder Dictionary\textless{}TKey,TValue\textgreater{}
-verwenden. Die Auflistung kann entweder benutzerdefiniert sein oder von
-einer .NET Framework-API zurückgegeben werden.
+\texttt{List\textless{}T\textgreater{}}, \texttt{Array} oder
+\texttt{Dictionary\textless{}TKey,TValue\textgreater{}} verwenden. Die
+Auflistung kann entweder benutzerdefiniert sein oder von einer .NET
+Framework-API zurückgegeben werden.
 
 Alle LINQ-Abfrageoperationen bestehen aus drei unterschiedlichen
 Aktionen:
@@ -24414,25 +25150,22 @@ realisiert sich dies wie folgt:
 \KeywordTok{using}\NormalTok{ System.}\FunctionTok{Collections}\NormalTok{.}\FunctionTok{Generic}\NormalTok{;}
 \KeywordTok{using}\NormalTok{ System.}\FunctionTok{Linq}\NormalTok{;}
 
-
-    \KeywordTok{class}\NormalTok{ Program \{}
-        \KeywordTok{public} \KeywordTok{static} \DataTypeTok{void} \FunctionTok{Main}\NormalTok{(}\DataTypeTok{string}\NormalTok{[] args)\{}
-          \CommentTok{// Spezifikation der Datenquelle}
-          \DataTypeTok{int}\NormalTok{[] scores = }\KeywordTok{new} \DataTypeTok{int}\NormalTok{[] \{ }\DecValTok{97}\NormalTok{, }\DecValTok{92}\NormalTok{, }\DecValTok{81}\NormalTok{, }\DecValTok{60}\NormalTok{ \};}
-
-          \CommentTok{// Definition der Abfrage}
-\NormalTok{          IEnumerable<}\DataTypeTok{int}\NormalTok{> scoreQuery =}
-\NormalTok{              from score }\KeywordTok{in}\NormalTok{ scores    }\CommentTok{// Bezug zur Datenquelle}
-\NormalTok{              where score > }\DecValTok{80}        \CommentTok{// Filterkriterium}
-\NormalTok{              select score;           }\CommentTok{// "Projektion" des Rückgabewertes}
-
-          \CommentTok{// Execute the query.}
-          \KeywordTok{foreach}\NormalTok{ (}\DataTypeTok{int}\NormalTok{ i }\KeywordTok{in}\NormalTok{ scoreQuery)}
-\NormalTok{          \{}
-\NormalTok{              Console.}\FunctionTok{Write}\NormalTok{(i + }\StringTok{" "}\NormalTok{);}
-\NormalTok{          \}}
-\NormalTok{        \}}
+\KeywordTok{class}\NormalTok{ Program \{}
+    \KeywordTok{public} \KeywordTok{static} \DataTypeTok{void} \FunctionTok{Main}\NormalTok{(}\DataTypeTok{string}\NormalTok{[] args)\{}
+      \CommentTok{// Spezifikation der Datenquelle}
+      \DataTypeTok{int}\NormalTok{[] scores = }\KeywordTok{new} \DataTypeTok{int}\NormalTok{[] \{ }\DecValTok{55}\NormalTok{, }\DecValTok{97}\NormalTok{, }\DecValTok{92}\NormalTok{, }\DecValTok{81}\NormalTok{, }\DecValTok{60}\NormalTok{ \};}
+      \CommentTok{// Definition der Abfrage}
+\NormalTok{      IEnumerable<}\DataTypeTok{int}\NormalTok{> scoreQuery =}
+\NormalTok{          from score }\KeywordTok{in}\NormalTok{ scores    }\CommentTok{// Bezug zur Datenquelle}
+\NormalTok{          where score > }\DecValTok{80}        \CommentTok{// Filterkriterium}
+\NormalTok{          select score;           }\CommentTok{// "Projektion" des Rückgabewertes}
+      \CommentTok{// Execute the query.}
+      \KeywordTok{foreach}\NormalTok{ (}\DataTypeTok{int}\NormalTok{ i }\KeywordTok{in}\NormalTok{ scoreQuery)}
+\NormalTok{      \{}
+\NormalTok{          Console.}\FunctionTok{Write}\NormalTok{(i + }\StringTok{" "}\NormalTok{);}
+\NormalTok{      \}}
 \NormalTok{    \}}
+\NormalTok{\}}
 \end{Highlighting}
 \end{Shaded}
 
@@ -24554,7 +25287,6 @@ werden, da diese nicht aus der Datenquelle ermittelt werden kann.
 \KeywordTok{using}\NormalTok{ System;}
 \KeywordTok{using}\NormalTok{ System.}\FunctionTok{Collections}\NormalTok{.}\FunctionTok{Generic}\NormalTok{;}
 \KeywordTok{using}\NormalTok{ System.}\FunctionTok{Linq}\NormalTok{;}
-
 
 \KeywordTok{public} \KeywordTok{class}\NormalTok{ Student}
 \NormalTok{\{}
@@ -25016,10 +25748,6 @@ Der Datensatz steht zum Download unter https://osf.io/d2vyg/ bereit.
 Lesen Sie aus den Daten die jeweils am häufigsten vergebenen Vornamen
 aus und bestimmen Sie deren Anteil innerhalb des Jahrganges.
 
-https://github.com/liaScript/CsharpCourse/tree/master/code/25\_LINQII
-
-Welche Möglichkeiten der Analyse sehen Sie?
-
 \hypertarget{entwurfsmuster}{%
 \chapter{Entwurfsmuster}\label{entwurfsmuster}}
 
@@ -25040,7 +25768,7 @@ Kursinformationen\strut
 \begin{minipage}[t]{0.11\columnwidth}\raggedright
 \textbf{Semester}\strut
 \end{minipage} & \begin{minipage}[t]{0.83\columnwidth}\raggedright
-\texttt{Sommersemester\ 2021}\strut
+\texttt{Sommersemester\ 2022}\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.11\columnwidth}\raggedright
 \textbf{Hochschule:}\strut
@@ -25085,7 +25813,7 @@ annehmen kann.
 Bezeichnung & Bedeutung im Kontext der Objektorierung\tabularnewline
 \midrule
 \endhead
-Etwas & Instanz einer Objektinstanz aus einer
+Etwas & Instanz einer Klasse aus einer
 Vererbungshierachie\tabularnewline
 Situation & Typ der Instanz beim Aufruf\tabularnewline
 Gestalt & ausgeführter Code\tabularnewline
@@ -25114,7 +25842,7 @@ Wir unterscheiden entsprechend den dynamischen und den statischen Typ
 der Variablen A. Eine Referenz des Typs \texttt{A} zeigt auf eine
 Instanz von \texttt{B} oder \texttt{C}.
 
-Der dynamische Typ kann zur Laufzeit geprüft (\texttt{is}) durch
+Der dynamische Typ kann zur Laufzeit geprüft (\texttt{is}) und durch
 Cast-Operationen (\texttt{as}) angepasst werden.
 
 Dieser Mechanismus wird beim sogenannten Boxing und Unboxing deutlich:
@@ -25179,9 +25907,10 @@ Ebene der Basisklasse und der erbenden Klasse besteht.
 
 \begin{quote}
 Merke: Polymorphie bezieht sich auf Methoden mit einer gleichen
-Signatur. Unterscheidet sich diese sprechen wir von Überladen. Die
-Signatur wird durch die Parameterzahl, -typ, art (\texttt{ref},
-\texttt{out}) und die Sichtbarkeitsattribute bestimmt.
+Signatur. Die Signatur wird durch die Parameterzahl, -typ, art
+(\texttt{ref}, \texttt{out}) und die Sichtbarkeitsattribute bestimmt.
+Unterscheiden sich die Methoden im Bezug auf Parameter sprechen wir vom
+Überladen von Methoden.
 \end{quote}
 
 Die Implementierung in \texttt{Square} kann die aus \texttt{Shape}
@@ -25212,6 +25941,7 @@ ignorieren, verdecken oder überschreiben.
 \NormalTok{    sh.}\FunctionTok{Draw}\NormalTok{();}
 \NormalTok{    Square sq = }\KeywordTok{new} \FunctionTok{Square}\NormalTok{();}
 \NormalTok{    sq.}\FunctionTok{Draw}\NormalTok{(}\StringTok{"Tralla"}\NormalTok{);}
+    \CommentTok{//sq.Draw();}
 \NormalTok{  \}}
 \NormalTok{\}}
 \end{Highlighting}
@@ -25248,7 +25978,7 @@ und \texttt{override} das Verhalten:
   \texttt{override} realisiert eine ``angepasste'' Implementierung der
   Methode der Basisklasse
 \item
-  \texttt{new} implmentiert eine völlig neue Methode, die keinen Bezug
+  \texttt{new} implementiert eine völlig neue Methode, die keinen Bezug
   mehr zur Basisklassenfunktion hat
 \end{itemize}
 
@@ -25284,19 +26014,27 @@ Konzept mit abstrakten Elementen zusammen?
   ist selbst abstrakt.
 \end{itemize}
 
-\hypertarget{design-pattern}{%
-\section{Design Pattern}\label{design-pattern}}
+\hypertarget{design-pattern-entwurfsmuster}{%
+\section{Design Pattern
+(Entwurfsmuster)}\label{design-pattern-entwurfsmuster}}
 
-Design Pattern sind spezielle Muster für Interaktionen und Zusammenhänge
-der Bestandteile einer Softwarelösung. Sie präsentieren
-Implementierungsmodelle, die für häufig wiederkehrende Abläufe
-(Generierung und Maskierung von Objekten) eine flexible und gut wartbare
-Realisierung sicherstellen. Dafür werden die Abläufe abstrahiert und auf
-generisch anwendbare Muster reduziert, die dann mit domänenspezifische
-Bezeichnern versehen nicht nur für die vereinfachte Umsetzung sondern
-auch für die Kommunikation dazu genutzt werden. Dies vereinfacht die
-Interaktion zwischen Softwarearchitekten, Programmierer und andere
-Projektmitglieder.
+\begin{itemize}
+\tightlist
+\item
+  Design Pattern sind spezielle Muster für Interaktionen und
+  Zusammenhänge der Bestandteile einer Softwarelösung.
+\item
+  Sie präsentieren Implementierungsmodelle, die für häufig
+  wiederkehrende Abläufe (Generierung und Maskierung von Objekten) eine
+  flexible und gut wartbare Realisierung sicherstellen.
+\item
+  Dafür werden die Abläufe abstrahiert und auf generisch anwendbare
+  Muster reduziert, die dann mit domänenspezifische Bezeichnern versehen
+  nicht nur für die vereinfachte Umsetzung sondern auch für die
+  Kommunikation dazu genutzt werden. Dies vereinfacht die Interaktion
+  zwischen Softwarearchitekten, Programmierer und andere
+  Projektmitglieder.
+\end{itemize}
 
 \begin{quote}
 Design Pattern sind Strukturen, Modelle, Schablonen und Muster, die sich
@@ -25336,7 +26074,8 @@ Dabei sollte ein Muster:
 \hypertarget{kategorien}{%
 \subsection{Kategorien}\label{kategorien}}
 
-In welchen Kategorien werden Design Pattern üblicherweise strukturiert:
+Kategorien von Design Pattern aus dem Entwurfsmusterkatalog des
+Autorenquartetts Gang of Four (GoF):
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -25371,7 +26110,9 @@ Das Singleton ist ein in der Softwareentwicklung eingesetztes
 Entwurfsmuster und gehört zur Kategorie der Erzeugungsmuster. Es stellt
 sicher, dass von einer Klasse genau ein Objekt existiert. Dieses
 Singleton ist darüber hinaus üblicherweise global verfügbar. Es soll
-sicher gestellt werden, dass ein Resourcenzugriff kanalisiert wird.
+sicher gestellt werden, dass ein Resourcenzugriff kanalisiert wird, z.B.
+die Protokoll-Ausgabe in eine Datei erfolgt oder Druckaufträge in einen
+einzigen Puffer geschrieben werden.
 
 \begin{figure}
 \centering
@@ -25417,7 +26158,7 @@ Möglichkeiten sehen sie?
 
 \begin{quote}
 ACHTUNG: Auf den ersten Blick mag die folgende Lösung plausibel
-erscheinen, sie hat aber einen zentralen Markel! Welche Einschränkung
+erscheinen, sie hat aber einen zentralen Makel! Welche Einschränkung
 sehen Sie?
 \end{quote}
 
@@ -25451,12 +26192,12 @@ sehen Sie?
 \end{Highlighting}
 \end{Shaded}
 
-Von \emph{Lazy Creation} spricht man, wenn das einzige Objekt der Klasse
-erst erzeugt wird, wenn es benötigt wird. Ziel ist, dass der
-Speicherbedarf und die Rechenzeit für die Instantiierung des Objektes
-nur dann aufgewendet werden, wenn das Objekt wirklich benötigt wird.
-Hierzu wird der Konstruktor ausschließlich beim ersten Aufruf der
-Funktion \texttt{getInstance()} aufgerufen.
+Von \emph{Lazy Creation} (verzögerte Instanziierung) spricht man, wenn
+das einzige Objekt der Klasse erst erzeugt wird, wenn es benötigt wird.
+Ziel ist, dass der Speicherbedarf und die Rechenzeit für die
+Instantiierung des Objektes nur dann aufgewendet werden, wenn das Objekt
+wirklich benötigt wird. Hierzu wird der Konstruktor ausschließlich beim
+ersten Aufruf der Funktion \texttt{getInstance()} aufgerufen.
 
 Unter Rextester gelingt es leider nicht die Threads so zu konfigurieren,
 dass mehrere Instanzen der Klasse entstehen. Wenn Sie aber den
@@ -25500,6 +26241,9 @@ Effekt gut beobachten.
 \NormalTok{\}}
 \end{Highlighting}
 \end{Shaded}
+
+Bei nebenläufigen (verteilten) Systemen gilt es auch sicherzustellen,
+dass wirklich nur eine Instanz existiert.
 
 Welche Lösung sehen Sie?
 
@@ -25643,13 +26387,13 @@ inkompatiblen Schnittstellen ermöglich.
 \KeywordTok{using}\NormalTok{ System;}
 \KeywordTok{using}\NormalTok{ System.}\FunctionTok{Collections}\NormalTok{.}\FunctionTok{Generic}\NormalTok{;}
 
-\KeywordTok{public} \KeywordTok{interface}\NormalTok{ ITarget\{}
+\KeywordTok{public} \KeywordTok{interface}\NormalTok{ ITarget\{       }\CommentTok{//Ziel}
 \NormalTok{  List<}\DataTypeTok{string}\NormalTok{> }\FunctionTok{GetEmployeeList}\NormalTok{();}
 \NormalTok{\}}
 
-\KeywordTok{public} \KeywordTok{class}\NormalTok{ ThirdPartyBillingSystem}
+\KeywordTok{public} \KeywordTok{class}\NormalTok{ ThirdPartyBillingSystem }\CommentTok{//Klient}
 \NormalTok{\{}
-  \KeywordTok{private}\NormalTok{ ITarget employeeSource;}
+  \KeywordTok{private}\NormalTok{ ITarget employeeSource; }
   \KeywordTok{public} \FunctionTok{ThirdPartyBillingSystem}\NormalTok{(ITarget employeeSource)\{}
    \KeywordTok{this}\NormalTok{.}\FunctionTok{employeeSource}\NormalTok{ = employeeSource;}
 \NormalTok{  \}}
@@ -25663,7 +26407,7 @@ inkompatiblen Schnittstellen ermöglich.
 \NormalTok{  \}}
 \NormalTok{\}}
 
-\KeywordTok{public} \KeywordTok{class}\NormalTok{ HRSystem\{}
+\KeywordTok{public} \KeywordTok{class}\NormalTok{ HRSystem\{  }\CommentTok{//Dienst}
   \KeywordTok{public} \DataTypeTok{string}\NormalTok{[][] }\FunctionTok{GetEmployees}\NormalTok{()\{}
     \DataTypeTok{string}\NormalTok{[][] employees = }\KeywordTok{new} \DataTypeTok{string}\NormalTok{[}\DecValTok{4}\NormalTok{][];}
 \NormalTok{    employees[}\DecValTok{0}\NormalTok{] = }\KeywordTok{new} \DataTypeTok{string}\NormalTok{[] \{ }\StringTok{"100"}\NormalTok{, }\StringTok{"Deepak"}\NormalTok{, }\StringTok{"Team Leader"}\NormalTok{ \};}
@@ -25674,7 +26418,7 @@ inkompatiblen Schnittstellen ermöglich.
 \NormalTok{  \}}
 \NormalTok{\}}
 
-\KeywordTok{public} \KeywordTok{class}\NormalTok{ EmployeeAdapter : HRSystem, ITarget\{}
+\KeywordTok{public} \KeywordTok{class}\NormalTok{ EmployeeAdapter : HRSystem, ITarget\{  }\CommentTok{//Adapter}
   \KeywordTok{public}\NormalTok{ List<}\DataTypeTok{string}\NormalTok{> }\FunctionTok{GetEmployeeList}\NormalTok{()\{}
 \NormalTok{    List<}\DataTypeTok{string}\NormalTok{> employeeList = }\KeywordTok{new}\NormalTok{ List<}\DataTypeTok{string}\NormalTok{>();}
     \DataTypeTok{string}\NormalTok{[][] employees = }\FunctionTok{GetEmployees}\NormalTok{();}
@@ -25820,6 +26564,59 @@ Familie von Erzeugern.\strut
 \caption{Adapter}
 \end{figure}
 
+Beispiel:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{// https://de.wikipedia.org/wiki/Fabrikmethode}
+\KeywordTok{abstract} \KeywordTok{class}\NormalTok{ Mahlzeit \{ \}}
+
+\CommentTok{// konkretes Produkt}
+\KeywordTok{class}\NormalTok{ Pizza : Mahlzeit \{ \}}
+
+\CommentTok{// noch ein konkretes Produkt}
+\KeywordTok{class}\NormalTok{ Rostwurst : Mahlzeit \{ \}}
+
+\CommentTok{// Erzeuger}
+\KeywordTok{abstract} \KeywordTok{class}\NormalTok{ Restaurant \{}
+    \CommentTok{// Die abstrakte Factory-Methode, die von Erzeugern implementiert werden muss.}
+    \KeywordTok{protected} \KeywordTok{abstract} \DataTypeTok{void} \FunctionTok{MahlzeitZubereiten}\NormalTok{();}
+
+    \CommentTok{// Diese Methode benutzt die Factory-Methode.}
+    \KeywordTok{public} \DataTypeTok{void} \FunctionTok{MahlzeitLiefern}\NormalTok{() \{}
+        \FunctionTok{MahlzeitZubereiten}\NormalTok{(); }\CommentTok{// Aufruf der Factory-Methode}
+\NormalTok{    \}}
+\NormalTok{\}}
+
+\CommentTok{// konkreter Erzeuger für konkretes Produkt "Pizza"}
+\KeywordTok{class}\NormalTok{ Pizzeria : Restaurant \{}
+    \CommentTok{// Implementierung der abstrakten Methode der Basisklasse}
+    \KeywordTok{protected} \KeywordTok{override} \DataTypeTok{void} \FunctionTok{MahlzeitZubereiten}\NormalTok{() \{}
+        \CommentTok{//Objekt der Klasse Pizza erzeugen}
+\NormalTok{    \}}
+\NormalTok{\}}
+
+\CommentTok{// konkreter Erzeuger für konkretes Produkt "Rostwurst"}
+\KeywordTok{class}\NormalTok{ Rostwurstbude : Restaurant \{}
+    \CommentTok{// Implementierung der abstrakten Methode der Basisklasse}
+    \KeywordTok{protected} \KeywordTok{override} \DataTypeTok{void} \FunctionTok{MahlzeitZubereiten}\NormalTok{() \{}
+        \CommentTok{//Objekt der Klasse Rostwurst erzeugen}
+\NormalTok{    \}}
+\NormalTok{\}}
+
+\KeywordTok{class}\NormalTok{ Program}
+\NormalTok{\{}
+    \KeywordTok{public} \KeywordTok{static} \DataTypeTok{void} \FunctionTok{Main}\NormalTok{() \{}
+\NormalTok{       Pizzeria daToni=}\KeywordTok{new} \FunctionTok{Pizzeria}\NormalTok{();}
+\NormalTok{       daToni.}\FunctionTok{MahlzeitLiefern}\NormalTok{();}
+
+\NormalTok{       Rostwurstbude brunosImbiss=}\KeywordTok{new} \FunctionTok{Rostwurstbude}\NormalTok{();}
+\NormalTok{       brunosImbiss.}\FunctionTok{MahlzeitLiefern}\NormalTok{();}
+\NormalTok{       \}}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
 \hypertarget{verhaltensmuster-state-pattern}{%
 \subsection{Verhaltensmuster State
 Pattern}\label{verhaltensmuster-state-pattern}}
@@ -25840,7 +26637,7 @@ folgendes Bild:
 & Happy & Neutral & Aggressive\tabularnewline
 \midrule
 \endhead
-Happy & DealingWith, Addressed & &\tabularnewline
+Happy & DealingWith, Addressed & DealingWith &\tabularnewline
 Neutral & & Addressed & DealingWith, Addresssed\tabularnewline
 Aggressive & Provoked & Provoked & Provoked\tabularnewline
 \bottomrule
@@ -25939,11 +26736,10 @@ einzigen Klasse und switch-case Statements.
 
 Welche Probleme sehen Sie?
 
-Wie wäre es mit folgender neuen Anforderung: Um die Modellierung
-``spielbar'' zu sollen Wahrscheinlichkeiten beim Übergang eingeführt
-werden. Damit muss jeder Transition eine eigene Zahl zugeordnet werden,
-die vom aktuellen Zustand, der Transition und einer Zufallsvariablen
-abhängt.
+Wie wäre es mit folgender neuen Anforderung: Um die Modellierung zu
+erweitern sollen Wahrscheinlichkeiten beim Übergang eingeführt werden.
+Damit muss jeder Transition eine eigene Zahl zugeordnet werden, die vom
+aktuellen Zustand, der Transition und einer Zufallsvariablen abhängt.
 
 \begin{itemize}
 \item
@@ -26083,7 +26879,7 @@ wird die Anwendung, hier die Klasse \texttt{Character} entwickelt.
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Was müssen Sie tuen, um einen weitere Zustand hinzuzufügen?
+  Was müssen Sie tun, um einen weitere Zustand hinzuzufügen?
 \item
   Wie können wir eine zusätzliche Transition integrieren?
 \item
@@ -26091,33 +26887,382 @@ wird die Anwendung, hier die Klasse \texttt{Character} entwickelt.
   realisiert werden?
 \end{enumerate}
 
-\hypertarget{aufgabe-der-woche-1}{%
-\section{Aufgabe der Woche}\label{aufgabe-der-woche-1}}
+\hypertarget{anti-pattern}{%
+\section{Anti-Pattern}\label{anti-pattern}}
 
-Bitte geben Sie uns ein Feedback!
+Anti-Pattern bilden das Gegenstück zu Pattern und sind Lösungsansätze,
+die ungünstig oder gar schädlich sind.
 
-https://panel.ovgu.de/s/c9845e6d/de.html
-
-\hypertarget{ausblick}{%
-\section{Ausblick}\label{ausblick}}
-
-Und nun \ldots{} Wie geht es weiter?
-
-Im nächsten Semester mit der Veranstaltung Robotikprojekt bestehend aus
-zwei Teilen:
+\textbf{Projektmanagement-Anti-Pattern}
 
 \begin{itemize}
 \tightlist
 \item
-  theoretische Vorbereitung im Wintersemester (abstrakte Einführung in
-  C++ mit der Perspektive Softwareentwurf, Einführung in ROS,
-  Robotikanwendungen)
+  Blendwerk - nicht fertige Funktionen, welche als fertig vorgetäuscht
+  werden.
 \item
-  praktische Umsetzung im Sommersemester 2022
+  Aufgeblähte Software - Software, die mit unnötigen Zusatzfunktionen
+  oder Ressourcenverschwendung aufgebläht wird und damit den
+  eigentlichen Anwendungszweck kaum oder gar nicht verbessert.
+\item
+  \ldots{}
 \end{itemize}
+
+\textbf{Entwurfs-Anti-Pattern}
+
+\begin{itemize}
+\tightlist
+\item
+  Gasfabrik - unnötig komplexe Systementwürfe für relativ simple
+  Probleme bezeichnet.
+\item
+  Gottobjekt (Gottklasse, Blob) - ein Objekt, das zu viel weiß bzw.
+  macht. Die Aufteilung nach Verantwortlichkeiten, Kapselung und die
+  Einhaltung von Entwurfsmustern helfen, diesem Muster zu begegnen.
+\item
+  \ldots{}
+\end{itemize}
+
+\textbf{Programmierungs-Anti-Pattern}
+
+\begin{itemize}
+\tightlist
+\item
+  Zwiebel - Programmcode, bei dem neue Funktionalität um (oder über) die
+  alte gelegt wird.
+\item
+  Copy and Paste - Programmierer entwickelt den Code nicht neu, sondern
+  bedient sich sich bereits existenter Quelltexte.
+\item
+  Magische Werte - hartkodierte und nur mit besonderem Wissen über die
+  konkrete Verwendung zu verstehende Werte.
+\item
+  \ldots{}
+\end{itemize}
+
+\textbf{Organisations-, Management- bzw. Prozess-Anti-Pattern}
+
+\begin{itemize}
+\item
+  Wunderwaffe - ist ein bevorzugter Lösungsweg, der als universell
+  anwendbar angesehen wird.
+
+  ``if all you have is a hammer, everything looks like a nail.'' --
+  Abraham Maslow
+\item
+  Das Rad neu erfinden - die stetige Neuerstellung von Software -- ohne
+  bestehende Lösungen oder Frameworks zu nutzen.
+\item
+  Das quadratische Rad neu erfinden - die Bereitstellung einer
+  schlechten Lösung, wenn eine gute Lösung bereits existiert.
+\item
+  \ldots{}
+\end{itemize}
+
+\hypertarget{anwendungsbeispiele}{%
+\chapter{Anwendungsbeispiele}\label{anwendungsbeispiele}}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+\begin{minipage}[b]{0.11\columnwidth}\raggedright
+Parameter\strut
+\end{minipage} & \begin{minipage}[b]{0.83\columnwidth}\raggedright
+Kursinformationen\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+\textbf{Veranstaltung:}\strut
+\end{minipage} & \begin{minipage}[t]{0.83\columnwidth}\raggedright
+\texttt{Vorlesung\ Softwareentwicklung}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+\textbf{Semester}\strut
+\end{minipage} & \begin{minipage}[t]{0.83\columnwidth}\raggedright
+\texttt{Sommersemester\ 2022}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+\textbf{Hochschule:}\strut
+\end{minipage} & \begin{minipage}[t]{0.83\columnwidth}\raggedright
+\texttt{Technische\ Universität\ Freiberg}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+\textbf{Inhalte:}\strut
+\end{minipage} & \begin{minipage}[t]{0.83\columnwidth}\raggedright
+\texttt{Überblick\ und\ Ausblick}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+\textbf{Link auf den GitHub:}\strut
+\end{minipage} & \begin{minipage}[t]{0.83\columnwidth}\raggedright
+\href{https://github.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/blob/master/27_Anwendungen.md}{https://github.com/TUBAF-IfI-LiaScript/VL\_Softwareentwicklung/blob/master/26\_DesignPattern.md}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+\textbf{Autoren}\strut
+\end{minipage} & \begin{minipage}[t]{0.83\columnwidth}\raggedright
+@author\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{auswertung-der-gitaktivituxe4ten}{%
+\section{Auswertung der
+Gitaktivitäten}\label{auswertung-der-gitaktivituxe4ten}}
 
 \begin{figure}
 \centering
-\includegraphics{https://raw.githubusercontent.com/ComputerScienceLecturesTUBAF/RobotikProjekt-SoSe21/main/imgs/Husky03.jpeg}
-\caption{Husky}
+\includegraphics{./img/27_Anwendungen/Results_GitActivities.png}
+\caption{pdflatexScreenshoot}
 \end{figure}
+
+\hypertarget{secrets}{%
+\section{Secrets}\label{secrets}}
+
+Wie gehen wir mit Schlüsseln, Passwörtern usw. in unseren Codes um?
+
+Zielstellung: + Komfortable Handhabung im Projekt + Projektübergreifende
+Verwendung (?) + Speicherung ohne Weiterleitung an Repositories
+
+Ein Lösungsansatz ist die Verwendung von
+\href{https://www.nuget.org/packages/Microsoft.Extensions.Configuration.UserSecrets}{Microsoft.Extensions.Configuration.UserSecrets}
+
+\begin{verbatim}
+dotnet new console -o secret_example
+dotnet add package Microsoft.Extensions.Configuration.UserSecrets
+dotnet user-secrets init
+dotnet user-secrets set "ServiceAPIKey" "1213234435"
+\end{verbatim}
+
+Das war es schon. Nun finden Sie unter
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{\textasciitilde{}/.microsoft/usersecrets/\textless{}user\_secrets\_id\textgreater{}/secrets.json}
+  (Linux/macOS)
+\item
+  \texttt{\%APPDATA\%\textbackslash{}Microsoft\textbackslash{}UserSecrets\textbackslash{}\textless{}user\_secrets\_id\textgreater{}\textbackslash{}secrets.json}
+  (Windows)
+\end{itemize}
+
+den Eintrag
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{\{}
+  \DataTypeTok{"ServiceAPIKey"}\FunctionTok{:} \StringTok{"1213234435"}
+\FunctionTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+Aus dem Programm heraus können Sie darauf unmittelbar zurückgreifen.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{using}\NormalTok{ Microsoft.}\FunctionTok{Extensions}\NormalTok{.}\FunctionTok{Configuration}\NormalTok{;}
+
+\DataTypeTok{var}\NormalTok{ config = }\KeywordTok{new} \FunctionTok{ConfigurationBuilder}\NormalTok{().}\FunctionTok{AddUserSecrets}\NormalTok{<Program>().}\FunctionTok{Build}\NormalTok{();}
+\DataTypeTok{string}\NormalTok{ APIsecret = config[}\StringTok{"ServiceAPIKey"}\NormalTok{];}
+
+\NormalTok{Console.}\FunctionTok{WriteLine}\NormalTok{(APIsecret);}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{anwendungsbeispiel}{%
+\section{Anwendungsbeispiel}\label{anwendungsbeispiel}}
+
+Lassen Sie die Inhalte der Lehrveranstaltung anhand eines Codereviews
+Revue passieren lassen.
+
+https://cobwebsonmymind.wordpress.com/2011/04/13/thingspeak-net-class/
+
+Wir fokussieren uns auf zwei Methoden für das grundsätzliche Schreiben
+eines Wertes auf den Server.
+
+\begin{quote}
+\textbf{Aufgabe:} Bewerten Sie den Code im Hinblick auf:
+
+\begin{itemize}
+\tightlist
+\item
+  Verwendbarkeit des Beispiels
+\item
+  Entwurfsqualität
+\item
+  Implementierung
+\end{itemize}
+\end{quote}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{using}\NormalTok{ System;}
+\KeywordTok{using}\NormalTok{ System.}\FunctionTok{Data}\NormalTok{;}
+\KeywordTok{using}\NormalTok{ System.}\FunctionTok{Configuration}\NormalTok{;}
+\KeywordTok{using}\NormalTok{ System.}\FunctionTok{Web}\NormalTok{;}
+\KeywordTok{using}\NormalTok{ System.}\FunctionTok{Web}\NormalTok{.}\FunctionTok{Security}\NormalTok{;}
+\KeywordTok{using}\NormalTok{ System.}\FunctionTok{Web}\NormalTok{.}\FunctionTok{UI}\NormalTok{;}
+\KeywordTok{using}\NormalTok{ System.}\FunctionTok{Web}\NormalTok{.}\FunctionTok{UI}\NormalTok{.}\FunctionTok{HtmlControls}\NormalTok{;}
+\KeywordTok{using}\NormalTok{ System.}\FunctionTok{Web}\NormalTok{.}\FunctionTok{UI}\NormalTok{.}\FunctionTok{WebControls}\NormalTok{;}
+\KeywordTok{using}\NormalTok{ System.}\FunctionTok{Web}\NormalTok{.}\FunctionTok{UI}\NormalTok{.}\FunctionTok{WebControls}\NormalTok{.}\FunctionTok{WebParts}\NormalTok{;}
+\KeywordTok{using}\NormalTok{ System.}\FunctionTok{Text}\NormalTok{;}
+\KeywordTok{using}\NormalTok{ System.}\FunctionTok{Net}\NormalTok{;}
+\KeywordTok{using}\NormalTok{ System.}\FunctionTok{IO}\NormalTok{;}
+
+\KeywordTok{namespace}\NormalTok{ ThingSpeak}
+\NormalTok{\{}
+    \KeywordTok{public} \KeywordTok{class}\NormalTok{ ThingSpeak}
+\NormalTok{    \{}
+        \KeywordTok{private} \DataTypeTok{const} \DataTypeTok{string}\NormalTok{ _url = }\StringTok{"http://api.thingspeak.com/"}\NormalTok{;}
+        \KeywordTok{private} \DataTypeTok{const} \DataTypeTok{string}\NormalTok{ _APIKey = }\StringTok{"YOUR_KEY_HERE"}\NormalTok{;}
+
+        \KeywordTok{public} \KeywordTok{static}\NormalTok{ Boolean }\FunctionTok{SendDataToThingSpeak}\NormalTok{(}\DataTypeTok{string}\NormalTok{ field1, }\DataTypeTok{string}\NormalTok{ field2, }\DataTypeTok{string}\NormalTok{ field3, }\DataTypeTok{string}\NormalTok{ field4, }\DataTypeTok{string}\NormalTok{ field5, }\DataTypeTok{string}\NormalTok{ field6, }\DataTypeTok{string}\NormalTok{ field7, }\DataTypeTok{string}\NormalTok{ field8, }\KeywordTok{out}\NormalTok{ Int16 TSResponse)}
+\NormalTok{        \{}
+\NormalTok{            StringBuilder sbQS = }\KeywordTok{new} \FunctionTok{StringBuilder}\NormalTok{();}
+
+            \CommentTok{// Build the querystring}
+\NormalTok{            sbQS.}\FunctionTok{Append}\NormalTok{(_url + }\StringTok{"update?key="}\NormalTok{ + _APIKey);}
+            \KeywordTok{if}\NormalTok{ (field1 != }\KeywordTok{null}\NormalTok{) sbQS.}\FunctionTok{Append}\NormalTok{(}\StringTok{"&field1="}\NormalTok{ + HttpUtility.}\FunctionTok{UrlEncode}\NormalTok{(field1));}
+            \KeywordTok{if}\NormalTok{ (field2 != }\KeywordTok{null}\NormalTok{) sbQS.}\FunctionTok{Append}\NormalTok{(}\StringTok{"&field2="}\NormalTok{ + HttpUtility.}\FunctionTok{UrlEncode}\NormalTok{(field2));}
+            \KeywordTok{if}\NormalTok{ (field3 != }\KeywordTok{null}\NormalTok{) sbQS.}\FunctionTok{Append}\NormalTok{(}\StringTok{"&field3="}\NormalTok{ + HttpUtility.}\FunctionTok{UrlEncode}\NormalTok{(field3));}
+            \KeywordTok{if}\NormalTok{ (field4 != }\KeywordTok{null}\NormalTok{) sbQS.}\FunctionTok{Append}\NormalTok{(}\StringTok{"&field4="}\NormalTok{ + HttpUtility.}\FunctionTok{UrlEncode}\NormalTok{(field4));}
+            \KeywordTok{if}\NormalTok{ (field5 != }\KeywordTok{null}\NormalTok{) sbQS.}\FunctionTok{Append}\NormalTok{(}\StringTok{"&field5="}\NormalTok{ + HttpUtility.}\FunctionTok{UrlEncode}\NormalTok{(field5));}
+            \KeywordTok{if}\NormalTok{ (field6 != }\KeywordTok{null}\NormalTok{) sbQS.}\FunctionTok{Append}\NormalTok{(}\StringTok{"&field6="}\NormalTok{ + HttpUtility.}\FunctionTok{UrlEncode}\NormalTok{(field6));}
+            \KeywordTok{if}\NormalTok{ (field7 != }\KeywordTok{null}\NormalTok{) sbQS.}\FunctionTok{Append}\NormalTok{(}\StringTok{"&field7="}\NormalTok{ + HttpUtility.}\FunctionTok{UrlEncode}\NormalTok{(field7));}
+            \KeywordTok{if}\NormalTok{ (field8 != }\KeywordTok{null}\NormalTok{) sbQS.}\FunctionTok{Append}\NormalTok{(}\StringTok{"&field8="}\NormalTok{ + HttpUtility.}\FunctionTok{UrlEncode}\NormalTok{(field8));}
+            \CommentTok{// The response will be a "0" if there is an error or the entry_id if > 0}
+\NormalTok{            TSResponse = Convert.}\FunctionTok{ToInt16}\NormalTok{(}\FunctionTok{PostToThingSpeak}\NormalTok{(sbQS.}\FunctionTok{ToString}\NormalTok{()));}
+            \KeywordTok{if}\NormalTok{ (TSResponse > }\DecValTok{0}\NormalTok{)}
+\NormalTok{            \{}
+                \KeywordTok{return} \KeywordTok{true}\NormalTok{;}
+\NormalTok{            \}}
+            \KeywordTok{else}
+\NormalTok{            \{}
+                \KeywordTok{return} \KeywordTok{false}\NormalTok{;}
+\NormalTok{            \}}
+
+\NormalTok{        \}}
+
+        \KeywordTok{private} \KeywordTok{static} \DataTypeTok{string} \FunctionTok{PostToThingSpeak}\NormalTok{(}\DataTypeTok{string}\NormalTok{ QueryString)}
+\NormalTok{        \{}
+\NormalTok{            StringBuilder sbResponse = }\KeywordTok{new} \FunctionTok{StringBuilder}\NormalTok{();}
+            \DataTypeTok{byte}\NormalTok{[] buf = }\KeywordTok{new} \DataTypeTok{byte}\NormalTok{[}\DecValTok{8192}\NormalTok{];}
+
+            \CommentTok{// Hit the URL with the querystring and put the response in webResponse}
+\NormalTok{            HttpWebRequest myRequest = (HttpWebRequest)WebRequest.}\FunctionTok{Create}\NormalTok{(QueryString);}
+\NormalTok{            HttpWebResponse webResponse = (HttpWebResponse)myRequest.}\FunctionTok{GetResponse}\NormalTok{();}
+            \KeywordTok{try}
+\NormalTok{            \{}
+\NormalTok{                Stream myResponse = webResponse.}\FunctionTok{GetResponseStream}\NormalTok{();}
+                \DataTypeTok{int}\NormalTok{ count = }\DecValTok{0}\NormalTok{;}
+                \CommentTok{// Read the response buffer and return}
+                \KeywordTok{do}
+\NormalTok{                \{}
+\NormalTok{                    count = myResponse.}\FunctionTok{Read}\NormalTok{(buf, }\DecValTok{0}\NormalTok{, buf.}\FunctionTok{Length}\NormalTok{);}
+                    \KeywordTok{if}\NormalTok{ (count != }\DecValTok{0}\NormalTok{)}
+\NormalTok{                    \{}
+\NormalTok{                        sbResponse.}\FunctionTok{Append}\NormalTok{(Encoding.}\FunctionTok{ASCII}\NormalTok{.}\FunctionTok{GetString}\NormalTok{(buf, }\DecValTok{0}\NormalTok{, count));}
+\NormalTok{                    \}}
+\NormalTok{                \}}
+                \KeywordTok{while}\NormalTok{ (count > }\DecValTok{0}\NormalTok{);}
+                \KeywordTok{return}\NormalTok{ sbResponse.}\FunctionTok{ToString}\NormalTok{();}
+\NormalTok{            \}}
+            \KeywordTok{catch}\NormalTok{ (WebException ex)}
+\NormalTok{            \{}
+                \KeywordTok{return} \StringTok{"0"}\NormalTok{;}
+\NormalTok{            \}}
+
+\NormalTok{        \}}
+\NormalTok{    \}}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+Ablauf eines Schreibprozesses:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Initiierung:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    der Nutzer spezifiziert die Kanalkonfiguration und den Kanalnamen
+  \end{itemize}
+\item
+  Laufzeit:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Schreiben der Werte
+  \item
+    Versenden
+  \item
+    Evaluation des Erfolgs und ``Markierung'' der bereits versandten
+    Daten
+  \end{itemize}
+\end{enumerate}
+
+\hypertarget{resumee}{%
+\section{Resumee}\label{resumee}}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+Woche & Tag & Inhalt der Vorlesung\tabularnewline
+\midrule
+\endhead
+1 & 4. April & Organisation, Einführung von GitHub und
+LiaScript\tabularnewline
+& 8. April & Softwareentwicklung als Prozess\tabularnewline
+2 & 11. April & Konzepte von Dotnet und C\#\tabularnewline
+& 15. April & \emph{Karfreitag}\tabularnewline
+3 & 18. April & \emph{Ostermontag}\tabularnewline
+& 22. April & Elemente der Sprache C\# (Datentypen)\tabularnewline
+4 & 25. April & Elemente der Sprache C\# (Forts.
+Datentypen)\tabularnewline
+& 29. April & Elemente der Sprache C\# (Ein-/Ausgaben)\tabularnewline
+5 & 2. Mai & Programmfluss und Funktionen\tabularnewline
+& 6. Mai & Strukturen / Konzepte der OOP\tabularnewline
+6 & 9. Mai & Säulen Objektorientierter Programmierung\tabularnewline
+& 13. Mai & Klassenelemente in C\# / Vererbung\tabularnewline
+7 & 16. Mai & Klassenelemente in C\# / Vererbung\tabularnewline
+& 20. Mai & Versionsmanagement im
+Softwareentwicklungsprozess\tabularnewline
+8 & 23. Mai & UML Konzepte\tabularnewline
+& 27. Mai & UML Diagrammtypen\tabularnewline
+9 & 30. Mai & UML Anwendungsbeispiel\tabularnewline
+& 3. Juni & Testen\tabularnewline
+10 & 6. Juni & \emph{Pfingstmontag}\tabularnewline
+& 10. Juni & Dokumentation und Build Toolchains\tabularnewline
+11 & 13. Juni & Continuous Integration in GitHub\tabularnewline
+& 17. Juni & Generics\tabularnewline
+12 & 20. Juni & Container\tabularnewline
+& 24. Juni & Delegaten\tabularnewline
+13 & 27. Juni & Events\tabularnewline
+& 1. Juli & Threadkonzepte in C\#\tabularnewline
+14 & 4. Juli & Taskmodell\tabularnewline
+& 8. Juli & Language Integrated Query\tabularnewline
+15 & 11. Juli & Design Pattern\tabularnewline
+& 15. Juli & Anwendungungsfälle\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{quote}
+\textbf{Frage}: Und was kann ich jetzt damit anfangen?
+\end{quote}
+
+\begin{quote}
+\textbf{Und was kann ich jetzt damit anstellen?}
+\end{quote}
+
+Siehe Mini-Godot Projekt im Projektordner :-)
+
+\hypertarget{evaluation-der-lehrveranstaltung}{%
+\section{Evaluation der
+Lehrveranstaltung}\label{evaluation-der-lehrveranstaltung}}
+
+\begin{quote}
+\textbf{Danke für Ihr Interesse! Viel Erfolg bei den Prüfungen}
+\end{quote}
